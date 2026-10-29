@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yatindra Nath Yadav 'Rahi' | यतीन्द्र नाथ यादव 'राही'</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Yatra+One&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{maroon:'#4a0e17',deepRed:'#781d28',crimson:'#9b111e',gold:'#d4af37',amberGold:'#f3c642',cream:'#fdfbf7',charcoal:'#1a1818'}},fontFamily:{devanagari:['"Tiro Devanagari Hindi"','serif'],yatra:['"Yatra One"','cursive'],rozha:['"Rozha One"','serif'],sans:['"Plus Jakarta Sans"','sans-serif']}}}}</script>
+<style>
+.gold-gradient-text{background:linear-gradient(135deg,#f7d070 0%,#d4af37 50%,#aa820a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-bg{background:linear-gradient(135deg,#1a0508 0%,#2d0a12 50%,#1a0508 100%)}
+.glass-card{background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(212,175,55,0.3)}
+.nav-link{position:relative}
+.nav-link::after{content:'';position:absolute;bottom:-2px;left:50%;width:0;height:2px;background:linear-gradient(90deg,#d4af37,#f3c642);transition:width 0.3s ease,left 0.3s ease}
+.nav-link:hover::after{width:100%;left:0}
+.mobile-menu{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+.mobile-menu.open{max-height:400px}
+.photo-card{aspect-ratio:3/4}
+.photo-card img{width:100%;height:100%;object-fit:cover}
+.placeholder-card{aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;border:2px dashed rgba(212,175,55,0.25);background:rgba(255,255,255,0.02)}
+.text-outline{text-shadow:0 0 4px #000,0 0 8px #000,1px 1px 2px #000,-1px -1px 2px #000,1px -1px 2px #000,-1px 1px 2px #000}
+.text-outline-gold{text-shadow:0 0 4px #000,0 0 8px #000,1px 1px 2px #000,-1px -1px 2px #000,1px -1px 2px #000,-1px 1px 2px #000}
+</style>
+</head>
+<body style="background:url('https://i.imgur.com/g1Upa2q.jpg') center/cover no-repeat fixed;background-size:cover" class="bg-[#120406] text-white font-sans selection:bg-brand-gold selection:text-brand-charcoal min-h-screen">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-40 bg-black/40 backdrop-blur-sm">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-32 flex items-center justify-between">
+    <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 group">
+      <img src="https://i.imgur.com/W6t2NCzh.jpeg" alt="Yatindra Nath Rahi" class="w-28 h-28 rounded-full border-2 border-brand-gold object-cover object-top shadow-xl group-hover:scale-105 transition-transform">
+      <div>
+        <h1 class="font-yatra text-xl sm:text-2xl leading-tight tracking-wide text-brand-amberGold group-hover:text-white transition-colors">Yatindra Nath Yadav 'Rahi'</h1>
+        <p class="text-xs text-amber-100 font-devanagari text-outline">यतीन्द्र नाथ यादव 'राही' · @rahi100-yatindranath</p>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="nav-link flex items-center gap-2 text-sm font-medium text-amber-100/90 hover:text-brand-amberGold transition-colors font-sans">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="nav-link flex items-center gap-2 text-sm font-medium text-amber-100/90 hover:text-brand-amberGold transition-colors font-sans">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+        <span>YouTube</span>
+      </a>
+      <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="nav-link flex items-center gap-2 text-sm font-medium text-amber-100/90 hover:text-brand-amberGold transition-colors font-sans">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44
