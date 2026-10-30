@@ -10,43 +10,388 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<script>tailwind.config={theme:{extend:{colors:{brand:{maroon:'#4a0e17',deepRed:'#781d28',crimson:'#9b111e',gold:'#d4af37',amberGold:'#f3c642',cream:'#fdfbf7',charcoal:'#1a1818'}},fontFamily:{devanagari:['"Tiro Devanagari Hindi"','serif'],yatra:['"Yatra One"','cursive'],rozha:['"Rozha One"','serif'],sans:['"Plus Jakarta Sans"','sans-serif']}}}}</script>
+<script>
+tailwind.config={
+  theme:{
+    extend:{
+      colors:{
+        brand:{
+          maroon:'#4a0e17',
+          deepRed:'#781d28',
+          crimson:'#9b111e',
+          gold:'#d4af37',
+          amberGold:'#f3c642',
+          cream:'#fdfbf7',
+          charcoal:'#1a1818'
+        }
+      },
+      fontFamily:{
+        devanagari:['"Tiro Devanagari Hindi"','serif'],
+        yatra:['"Yatra One"','cursive'],
+        rozha:['"Rozha One"','serif'],
+        sans:['"Plus Jakarta Sans"','sans-serif']
+      }
+    }
+  }
+}
+</script>
 <style>
-.gold-gradient-text{background:linear-gradient(135deg,#f7d070 0%,#d4af37 50%,#aa820a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero-bg{background:linear-gradient(135deg,#1a0508 0%,#2d0a12 50%,#1a0508 100%)}
-.glass-card{background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(212,175,55,0.3)}
-.nav-link{position:relative}
-.nav-link::after{content:'';position:absolute;bottom:-2px;left:50%;width:0;height:2px;background:linear-gradient(90deg,#d4af37,#f3c642);transition:width 0.3s ease,left 0.3s ease}
-.nav-link:hover::after{width:100%;left:0}
-.mobile-menu{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
-.mobile-menu.open{max-height:400px}
-.photo-card{aspect-ratio:3/4}
-.photo-card img{width:100%;height:100%;object-fit:cover}
-.placeholder-card{aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;border:2px dashed rgba(212,175,55,0.25);background:rgba(255,255,255,0.02)}
-.text-outline{text-shadow:0 0 4px #000,0 0 8px #000,1px 1px 2px #000,-1px -1px 2px #000,1px -1px 2px #000,-1px 1px 2px #000}
-.text-outline-gold{text-shadow:0 0 4px #000,0 0 8px #000,1px 1px 2px #000,-1px -1px 2px #000,1px -1px 2px #000,-1px 1px 2px #000}
+body.bg-lightened {
+  background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)), url('familycollage.jpg') center/cover no-repeat fixed;
+  background-size: cover;
+}
+
+.text-stroke-black {
+  text-shadow: 
+    -1.5px -1.5px 0 #000,  
+     1.5px -1.5px 0 #000,
+    -1.5px  1.5px 0 #000,
+     1.5px  1.5px 0 #000,
+     0px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #ffe082 0%, #ffca28 50%, #ffa000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 3px #000000);
+}
+
+.glass-card {
+  background: rgba(18, 4, 6, 0.78);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #d4af37, #f3c642);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.mobile-menu.open {
+  max-height: 500px;
+}
+
+.photo-card {
+  aspect-ratio: 3/4;
+}
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#toastAlert {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 </style>
 </head>
-<body style="background:url('https://i.imgur.com/g1Upa2q.jpg') center/cover no-repeat fixed;background-size:cover" class="bg-[#120406] text-white font-sans selection:bg-brand-gold selection:text-brand-charcoal min-h-screen">
+<body class="bg-lightened text-white font-sans selection:bg-brand-gold selection:text-brand-charcoal min-h-screen">
 
-<!-- HEADER -->
-<header class="sticky top-0 z-40 bg-black/40 backdrop-blur-sm">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-32 flex items-center justify-between">
-    <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 group">
-      <img src="https://i.imgur.com/W6t2NCzh.jpeg" alt="Yatindra Nath Rahi" class="w-28 h-28 rounded-full border-2 border-brand-gold object-cover object-top shadow-xl group-hover:scale-105 transition-transform">
+<!-- Spaced Evenly Header -->
+<header class="sticky top-0 z-40 bg-black/80 backdrop-blur-md border-b border-white/20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 h-28 flex items-center justify-between gap-6">
+    
+    <!-- Profile Info -->
+    <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 group shrink-0">
+      <img src="https://i.imgur.com/W6t2NCzh.jpeg" alt="Yatindra Nath Rahi" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-brand-gold object-cover object-top shadow-xl group-hover:scale-105 transition-transform">
       <div>
-        <h1 class="font-yatra text-xl sm:text-2xl leading-tight tracking-wide text-brand-amberGold group-hover:text-white transition-colors">Yatindra Nath Yadav 'Rahi'</h1>
-        <p class="text-xs text-amber-100 font-devanagari text-outline">यतीन्द्र नाथ यादव 'राही' · @rahi100-yatindranath</p>
+        <h1 class="font-yatra text-lg sm:text-xl leading-tight tracking-wide text-brand-amberGold text-stroke-black group-hover:text-white transition-colors">Yatindra Nath Yadav 'Rahi'</h1>
+        <p class="text-[11px] sm:text-xs text-amber-100 font-devanagari text-stroke-black">यतीन्द्र नाथ यादव 'राही' · @rahi100-yatindranath</p>
       </div>
     </a>
-    <nav class="hidden md:flex items-center gap-8">
-      <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="nav-link flex items-center gap-2 text-sm font-medium text-amber-100/90 hover:text-brand-amberGold transition-colors font-sans">
+
+    <!-- Desktop Navigation: Evenly Spaced -->
+    <nav class="hidden lg:flex items-center justify-center flex-1 max-w-xl gap-8 px-4">
+      <a href="#published-works" class="nav-link flex items-center gap-1.5 text-sm font-semibold text-brand-amberGold text-stroke-black hover:text-white transition-colors">
+        <i data-lucide="book-open" class="w-4 h-4 text-brand-gold"></i>
+        <span>Published Works</span>
+      </a>
+      <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="nav-link flex items-center gap-1.5 text-sm font-medium text-amber-100 text-stroke-black hover:text-brand-amberGold transition-colors">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
         <span>LinkedIn</span>
       </a>
-      <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="nav-link flex items-center gap-2 text-sm font-medium text-amber-100/90 hover:text-brand-amberGold transition-colors font-sans">
+      <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="nav-link flex items-center gap-1.5 text-sm font-medium text-amber-100 text-stroke-black hover:text-brand-amberGold transition-colors">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span>YouTube</span>
       </a>
-      <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="nav-link flex items-center gap-2 text-sm font-medium text-amber-100/90 hover:text-brand-amberGold transition-colors font-sans">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44
+      <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="nav-link flex items-center gap-1.5 text-sm font-medium text-amber-100 text-stroke-black hover:text-brand-amberGold transition-colors">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+        <span>Facebook</span>
+      </a>
+    </nav>
+
+    <!-- Action Buttons -->
+    <div class="hidden sm:flex items-center gap-3.5 shrink-0">
+      <a href="contact.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm rounded-full shadow-lg transition-all hover:scale-105 border border-black/50">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <span class="text-stroke-black">Email</span>
+      </a>
+      <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="inline-flex items-center gap-1.5 px-4 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs sm:text-sm rounded-full shadow-lg transition-all hover:scale-105 border border-black/50">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+        <span class="text-stroke-black">Subscribe</span>
+      </a>
+    </div>
+
+    <!-- Mobile Toggle -->
+    <button id="menuToggle" class="lg:hidden flex items-center p-2 text-amber-100 hover:text-brand-amberGold transition-colors text-stroke-black">
+      <i data-lucide="menu" class="w-7 h-7"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown -->
+  <div id="mobileMenu" class="mobile-menu lg:hidden bg-[#120406]/95 border-t border-white/20">
+    <nav class="flex flex-col px-5 py-4 gap-2">
+      <div class="flex items-center gap-3 py-2">
+        <a href="contact.html" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs rounded-full shadow">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span class="text-stroke-black">Email Me</span>
+        </a>
+        <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-full shadow">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+          <span class="text-stroke-black">Subscribe</span>
+        </a>
+      </div>
+      <a href="#published-works" onclick="document.getElementById('mobileMenu').classList.remove('open')" class="flex items-center gap-3 py-2 text-sm font-semibold text-brand-amberGold text-stroke-black">
+        <i data-lucide="book-open" class="w-4 h-4 text-brand-gold"></i>
+        <span>Published Works · प्रकाशित रचनाएँ</span>
+      </a>
+      <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-black">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        <span>LinkedIn · लिंक्डइन</span>
+      </a>
+      <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-black">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+        <span>YouTube · यूट्यूब</span>
+      </a>
+      <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-black">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+        <span>Facebook · फेसबुक</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative pt-12 pb-20 px-4 sm:px-6 overflow-hidden">
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/75 border-2 border-brand-gold text-brand-amberGold text-xs sm:text-sm font-devanagari text-stroke-black shadow-2xl">
+        <i data-lucide="feather" class="w-3.5 h-3.5 text-brand-gold"></i>
+        <span>Poetry » काव्य रस धारा » Literature » साहित्यिक चेतना » Children's Songs · बालगीत</span>
+      </div>
+    </div>
+
+    <h2 class="text-3xl sm:text-5xl md:text-6xl font-yatra leading-tight sm:leading-snug mb-8 text-white text-stroke-black">
+      The Rhythm of Life in Words,<br>
+      <span class="block gold-gradient-text mt-4">शब्दों में जीवन की लय</span>
+    </h2>
+
+    <p class="text-base sm:text-lg text-white max-w-2xl mx-auto mb-4 leading-relaxed font-semibold text-stroke-black">
+      Connect with the official platform of renowned poet and author <strong>Yatindra Nath 'Rahi'</strong> — भारतीय एवं अंतर्राष्ट्रीय कवि सम्मेलनों, बालगीतों और भावपूर्ण रचनाओं का मंच।
+    </p>
+
+    <p class="text-base sm:text-lg text-white max-w-2xl mx-auto mb-8 leading-relaxed font-devanagari font-semibold text-stroke-black">
+      प्रसिद्ध कवि एवं साहित्यकार <strong>यतीन्द्र नाथ यादव 'राही'</strong> के आधिकारिक मंच से जुड़ें। ऊपर दिए गए मेन्यू से LinkedIn, YouTube एवं Facebook पर उपलब्ध सभी प्रस्तुतियाँ देखें।
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto pt-4">
+      <a href="https://youtube.com/playlist?list=PLDTxOwYwOkIo&si=LM8lEeQSRjZDP3hl" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg">
+        <div class="text-sm font-bold text-brand-amberGold text-stroke-black">Literary Dialogue</div>
+        <div class="text-xs text-amber-100 font-devanagari text-stroke-black">साहित्य संवाद</div>
+      </a>
+      <a href="https://youtube.com/playlist?list=PLDK2s7rjexk8&si=TKS4ZCvGlLSfrlY2" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg">
+        <div class="text-sm font-bold text-brand-amberGold text-stroke-black">Children's Songs</div>
+        <div class="text-xs text-amber-100 font-devanagari text-stroke-black">बालगीत · तुन-तुन-तुन्ना</div>
+      </a>
+      <a href="https://youtube.com/playlist?list=PLF0V20ta12Ws&si=mjoPs7SgHPjLHYKZ" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg">
+        <div class="text-sm font-bold text-brand-amberGold text-stroke-black">International</div>
+        <div class="text-xs text-amber-100 font-devanagari text-stroke-black">अंतर्राष्ट्रीय · ISC Abu Dhabi</div>
+      </a>
+      <a href="https://youtube.com/playlist?list=PLLdbL-ovl_Yk&si=LR5ti1boijhKhjLE" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg">
+        <div class="text-sm font-bold text-brand-amberGold text-stroke-black">Secret of long Life</div>
+        <div class="text-xs text-amber-100 font-devanagari text-stroke-black">लंबे जीवन का रहस्य</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Published Works Gallery Section -->
+<section id="published-works" class="max-w-6xl mx-auto px-4 sm:px-6 pb-16 scroll-mt-36">
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4 bg-black/60 p-4 rounded-xl border border-brand-gold/30 backdrop-blur-sm">
+    <div>
+      <span class="text-xs font-mono uppercase tracking-wider text-brand-gold text-stroke-black">Published Works · प्रकाशित रचनाएँ</span>
+      <h3 class="text-2xl sm:text-3xl font-yatra text-white mt-1 text-stroke-black">Literary Publications & Covers</h3>
+      <p class="text-sm text-amber-100 font-devanagari mt-1 text-stroke-black">प्रकाशित पुस्तकों एवं काव्य संकलनों के मुख्य पृष्ठ</p>
+    </div>
+    <div class="text-xs text-amber-100 max-w-sm text-stroke-black">Click any cover to preview or download. · किसी भी मुख्य पृष्ठ पर क्लिक करें।</div>
+  </div>
+  
+  <div id="gallery" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"></div>
+</section>
+
+<!-- Featured on Social Media Section -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 border-t border-brand-gold/30">
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4 bg-black/60 p-4 rounded-xl border border-brand-gold/30 backdrop-blur-sm">
+    <div>
+      <span class="text-xs font-mono uppercase tracking-wider text-brand-gold text-stroke-black">Literary Collection · साहित्यिक संकलन</span>
+      <h3 class="text-2xl sm:text-3xl font-yatra text-white mt-1 text-stroke-black">Featured on Social Media</h3>
+      <p class="text-sm text-amber-100 font-devanagari mt-1 text-stroke-black">सोशल मीडिया पर उपलब्ध मुख्य शृंखलाएं</p>
+    </div>
+    <div class="text-xs text-amber-100 max-w-sm text-stroke-black">Click any card to visit the platform directly. · किसी भी कार्ड पर क्लिक करके सीधा संबंधित प्लेटफ़ॉर्म पर जाएं।</div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 group shadow-xl">
+      <div>
+        <div class="w-10 h-10 rounded-lg bg-black/90 text-brand-gold flex items-center justify-center mb-4 border border-brand-gold/40 group-hover:scale-110 transition-transform">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </div>
+        <h4 class="text-lg font-yatra text-brand-gold mb-1 text-stroke-black group-hover:text-white transition-colors">LinkedIn Profile</h4>
+        <p class="text-xs text-brand-amberGold font-devanagari mb-3 text-stroke-black">लिंक्डइन प्रोफ़ाइल</p>
+        <p class="text-xs text-white leading-relaxed mb-2 text-stroke-black">Literary achievements, poetry recital experiences and literary journey on the professional network.</p>
+        <p class="text-xs text-white font-devanagari leading-relaxed mb-4 text-stroke-black">प्रोफ़ेशनल नेटवर्क पर यतीन्द्र नाथ यादव 'राही' की साहित्यिक उपलब्धियाँ एवं यात्रा का विवरण।</p>
+      </div>
+      <div class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold group-hover:text-white transition-colors text-stroke-black">
+        <span>View on LinkedIn</span><i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 group shadow-xl">
+      <div>
+        <div class="w-10 h-10 rounded-lg bg-black/90 text-brand-gold flex items-center justify-center mb-4 border border-brand-gold/40 group-hover:scale-110 transition-transform">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+        </div>
+        <h4 class="text-lg font-yatra text-brand-gold mb-1 text-stroke-black group-hover:text-white transition-colors">YouTube Channel</h4>
+        <p class="text-xs text-brand-amberGold font-devanagari mb-3 text-stroke-black">यूट्यूब चैनल</p>
+        <p class="text-xs text-white leading-relaxed mb-2 text-stroke-black">Grand poetry symposiums, children's song series and international poetry recitations — all videos in one place.</p>
+        <p class="text-xs text-white font-devanagari leading-relaxed mb-4 text-stroke-black">भव्य कवि सम्मेलन, तुन-तुन-तुन्ना बालगीत श्रृंखला एवं अंतर्राष्ट्रीय काव्य पाठ — सभी वीडियो एक स्थान पर।</p>
+      </div>
+      <div class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold group-hover:text-white transition-colors text-stroke-black">
+        <span>View on YouTube</span><i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+      </div>
+    </a>
+
+    <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 group shadow-xl">
+      <div>
+        <div class="w-10 h-10 rounded-lg bg-black/90 text-brand-gold flex items-center justify-center mb-4 border border-brand-gold/40 group-hover:scale-110 transition-transform">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+        </div>
+        <h4 class="text-lg font-yatra text-brand-gold mb-1 text-stroke-black group-hover:text-white transition-colors">Facebook Profile</h4>
+        <p class="text-xs text-brand-amberGold font-devanagari mb-3 text-stroke-black">फेसबुक प्रोफ़ाइल</p>
+        <p class="text-xs text-white leading-relaxed mb-2 text-stroke-black">Special literary dialogues, poetry readings and glimpses of literary gatherings with senior writers.</p>
+        <p class="text-xs text-white font-devanagari leading-relaxed mb-4 text-stroke-black">वरिष्ठ साहित्यकारों के साथ विशेष साहित्यिक संवाद, काव्य पाठ एवं गोष्ठी की झलकियाँ।</p>
+      </div>
+      <div class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold group-hover:text-white transition-colors text-stroke-black">
+        <span>View on Facebook</span><i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-8 px-4 text-center text-xs text-amber-100 bg-black/85 border-t border-brand-gold/30">
+  <p class="mb-2 text-stroke-black">© 2026 Yatindra Nath 'Rahi' — All rights reserved. · यतीन्द्र नाथ यादव 'राही' — सर्वाधिकार सुरक्षित।</p>
+  <div class="flex flex-wrap items-center justify-center gap-4 font-mono text-[11px]">
+    <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-black">LinkedIn</a>
+    <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-black">YouTube</a>
+    <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-black">Facebook</a>
+  </div>
+</footer>
+
+<!-- Toast Alert on Card Click -->
+<div id="toastAlert" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 translate-y-4 duration-300">
+  <div class="bg-black/90 text-brand-gold border-2 border-brand-gold px-6 py-3.5 rounded-full shadow-2xl flex items-center gap-3 backdrop-blur-md">
+    <i data-lucide="info" class="w-5 h-5 text-brand-amberGold shrink-0"></i>
+    <div class="text-center font-semibold text-xs sm:text-sm">
+      <span>PDF copy coming soon</span>
+      <span class="mx-1 text-white">·</span>
+      <span class="font-devanagari text-white">पीडीएफ प्रति शीघ्र उपलब्ध होगी</span>
+    </div>
+  </div>
+</div>
+
+<script>
+const cardImages = [
+  "Abhee.jpeg",
+  "Anjuri.jpeg",
+  "Bahon.jpeg",
+  "Chuppiyan.jpeg",
+  "Jindagee.jpeg",
+  "Kandhon.jpeg",
+  "Kuhreele.jpeg",
+  "Mahapran.jpeg",
+  "Mahashor.jpeg",
+  "Reshami.jpeg",
+  "Ret.jpeg",
+  "Sandhya.jpeg",
+  "Titalee.jpeg"
+];
+
+const gallery = document.getElementById('gallery');
+const toastAlert = document.getElementById('toastAlert');
+let toastTimer = null;
+
+function showPdfNotice() {
+  if (toastTimer) clearTimeout(toastTimer);
+  toastAlert.classList.remove('opacity-0', 'translate-y-4');
+  toastAlert.classList.add('opacity-100', 'translate-y-0');
+  
+  toastTimer = setTimeout(() => {
+    toastAlert.classList.add('opacity-0', 'translate-y-4');
+    toastAlert.classList.remove('opacity-100', 'translate-y-0');
+  }, 3000);
+}
+
+cardImages.forEach((url, i) => {
+  const div = document.createElement('div');
+  div.className = 'glass-card rounded-xl overflow-hidden hover:border-brand-gold transition-all duration-300 group shadow-lg cursor-pointer transform hover:-translate-y-1';
+  div.onclick = showPdfNotice;
+
+  if (url) {
+    div.innerHTML = '<div class="photo-card relative"><img src="' + url + '" alt="Published Work ' + (i + 1) + '" class="group-hover:scale-105 transition-transform duration-300" loading="lazy"><div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><span class="bg-black/70 text-[10px] text-brand-gold px-2.5 py-1 rounded-full border border-brand-gold/60">PDF Coming Soon</span></div></div>';
+  } else {
+    div.innerHTML = '<div class="photo-card flex items-center justify-center p-4 text-center text-amber-200/50 group-hover:text-brand-gold transition-colors"><i data-lucide="file-text" class="w-8 h-8"></i><span class="text-[10px] font-mono block mt-1">' + (i + 1) + '</span></div>';
+  }
+  gallery.appendChild(div);
+});
+
+lucide.createIcons();
+
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+menuToggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+function burstConfetti() {
+  if (typeof confetti === 'function') {
+    confetti({
+      particleCount: 70,
+      spread: 60,
+      origin: { y: 0.7 },
+      colors: ['#d4af37', '#f3c642', '#e53e3e', '#ffffff']
+    });
+  }
+}
+</script>
+</body>
+</html>
