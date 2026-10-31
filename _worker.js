@@ -54,7 +54,7 @@ export default {
       }
     }
 
-    // 2. Fallback to serve static assets (index.html, static scripts, images)
+    // 2. Fallback to serve all static assets
     return env.ASSETS.fetch(request);
   }
 };
