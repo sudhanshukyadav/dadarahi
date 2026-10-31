@@ -343,7 +343,16 @@ const cardImages = [
   "Reshami.jpeg",
   "Ret.jpeg",
   "Sandhya.jpeg",
-  "Titalee.jpeg"
+  "Titalee.jpeg",
+  "bansuri.jpeg",
+  "dard.jpeg",
+  "ghronde.jpeg",
+  "dadeeman.jpeg",
+  "khushbu.jpeg",
+  "patthar.jpeg",
+  "moun.jpeg",
+  "astmit.jpeg",
+  "Panv.jpeg"
 ];
 
 const gallery = document.getElementById('gallery');
@@ -361,37 +370,30 @@ function showPdfNotice() {
   }, 3000);
 }
 
+// Gallery rendering
+gallery.innerHTML = '';
 cardImages.forEach((url, i) => {
   const div = document.createElement('div');
   div.className = 'glass-card rounded-xl overflow-hidden hover:border-brand-gold transition-all duration-300 group shadow-lg cursor-pointer transform hover:-translate-y-1';
   div.onclick = showPdfNotice;
 
-  if (url) {
-    div.innerHTML = '<div class="photo-card relative"><img src="' + url + '" alt="Published Work ' + (i + 1) + '" class="group-hover:scale-105 transition-transform duration-300" loading="lazy"><div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><span class="bg-black/70 text-[10px] text-brand-gold px-2.5 py-1 rounded-full border border-brand-gold/60">PDF Coming Soon</span></div></div>';
-  } else {
-    div.innerHTML = '<div class="photo-card flex items-center justify-center p-4 text-center text-amber-200/50 group-hover:text-brand-gold transition-colors"><i data-lucide="file-text" class="w-8 h-8"></i><span class="text-[10px] font-mono block mt-1">' + (i + 1) + '</span></div>';
-  }
+  div.innerHTML = `
+    <div class="photo-card relative">
+      <img src="${url}" alt="Published Work ${i + 1}" class="group-hover:scale-105 transition-transform duration-300" loading="lazy">
+      <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+        <span class="bg-black/70 text-[10px] text-brand-gold px-2.5 py-1 rounded-full border border-brand-gold/60">PDF Coming Soon</span>
+      </div>
+    </div>
+  `;
   gallery.appendChild(div);
 });
 
 lucide.createIcons();
+</script>
+const gallery = document.getElementById('gallery');
+const toastAlert = document.getElementById('toastAlert');
+let toastTimer = null;
 
-const menuToggle = document.getElementById('menuToggle');
-const mobileMenu = document.getElementById('mobileMenu');
-menuToggle.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-});
-
-function burstConfetti() {
-  if (typeof confetti === 'function') {
-    confetti({
-      particleCount: 70,
-      spread: 60,
-      origin: { y: 0.7 },
-      colors: ['#d4af37', '#f3c642', '#e53e3e', '#ffffff']
-    });
-  }
-}
 </script>
 </body>
 </html>
