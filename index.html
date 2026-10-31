@@ -726,5 +726,52 @@ if (menuToggle && mobileMenu) {
 // Initialize Lucide icons
 lucide.createIcons();
 </script>
+<script>
+  const videoModal = document.getElementById('videoModal');
+  const modalIframe = document.getElementById('modalIframe');
+  const videoModalContainer = document.getElementById('videoModalContainer');
+
+  function openYouTubeVideo(id) {
+    if (!videoModal || !modalIframe || !videoModalContainer) return;
+
+    modalIframe.src = `https://www.youtube.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0&playsinline=1`;
+    videoModal.classList.remove('hidden');
+    videoModal.classList.add('flex');
+
+    if (videoModalContainer.requestFullscreen) {
+      videoModalContainer.requestFullscreen().catch(() => {});
+    } else if (videoModalContainer.webkitRequestFullscreen) {
+      try {
+        videoModalContainer.webkitRequestFullscreen();
+      } catch (_) {}
+    }
+  }
+
+  function closeVideoModal() {
+    if (!videoModal || !modalIframe) return;
+
+    if (document.fullscreenElement || document.webkitFullscreenElement) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      } else if (document.webkitExitFullscreen) {
+        try {
+          document.webkitExitFullscreen();
+        } catch (_) {}
+      }
+    }
+
+    modalIframe.src = '';
+    videoModal.classList.add('hidden');
+    videoModal.classList.remove('flex');
+  }
+
+  videoModal?.addEventListener('click', (e) => {
+    if (e.target === videoModal) closeVideoModal();
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeVideoModal();
+  });
+</script>
 </body>
 </html>
