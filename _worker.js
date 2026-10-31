@@ -2,11 +2,12 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    // 1. Process Callback Submissions
+    // 1. API endpoint to handle form submission
     if (url.pathname === "/api/callback" && request.method === "POST") {
       try {
         const { name, email, phone, preferred_time, note } = await request.json();
 
+        // Validate required fields
         if (!name || !email || !phone) {
           return new Response(JSON.stringify({ error: "Name, Email, and Phone are required." }), {
             status: 400,
@@ -14,21 +15,24 @@ export default {
           });
         }
 
+        // Validate international phone format
         const phoneRegex = /^\+[1-9]\d{1,14}$/;
         const sanitizedPhone = phone.replace(/[\s\-\(\)]/g, "");
 
         if (!phoneRegex.test(sanitizedPhone)) {
-          return new Response(JSON.stringify({ error: "Phone number must be in international format starting with '+'." }), {
+          return new Response(JSON.stringify({ error: "Phone number must be in international format starting with '+' (e.g. +91...)." }), {
             status: 400,
             headers: { "Content-Type": "application/json" }
           });
         }
 
+        // SQL Query for Cloudflare D1
         const query = `
           INSERT INTO callbacks (name, email, phone, preferred_time, note)
           VALUES (?, ?, ?, ?, ?)
         `;
 
+        // env.DB accesses your Cloudflare D1 database binding
         await env.DB.prepare(query)
           .bind(
             name.trim(),
@@ -39,7 +43,7 @@ export default {
           )
           .run();
 
-        return new Response(JSON.stringify({ success: true, message: "Callback registered successfully." }), {
+        return new Response(JSON.stringify({ success: true, message: "Callback request registered successfully." }), {
           status: 200,
           headers: { "Content-Type": "application/json" }
         });
@@ -51,7 +55,7 @@ export default {
       }
     }
 
-    // 2. Serve static assets (index.html, contact.html, images)
+    // 2. Fallback to serve all static assets (index.html, contact.html, images)
     return env.ASSETS.fetch(request);
   }
 };
