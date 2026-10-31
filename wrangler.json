@@ -1,9 +1,16 @@
 {
   "name": "dadarahi",
-  "compatibility_date": "2024-11-01",
+  "compatibility_date": "2026-10-31",
   "main": "_worker.js",
   "assets": {
     "directory": ".",
     "binding": "ASSETS"
-  }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "rahi_db",
+      "database_id": "5cf9a771-d586-45fe-b217-a154df158238"
+    }
+  ]
 }
