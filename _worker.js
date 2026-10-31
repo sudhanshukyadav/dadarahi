@@ -59,3 +59,56 @@ export default {
     return env.ASSETS.fetch(request);
   }
 };
+const videoModal = document.getElementById('videoModal');
+const modalIframe = document.getElementById('modalIframe');
+const videoModalContainer = document.getElementById('videoModalContainer');
+
+function openYouTubeVideo(id) {
+  if (!videoModal || !modalIframe) return;
+
+  // 1. Set video source with autoplay enabled
+  modalIframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&playsinline=1`;
+
+  // 2. Display the modal
+  videoModal.classList.remove('hidden');
+  videoModal.classList.add('flex');
+
+  // 3. Request native browser fullscreen (Supported on Desktop & Android Chrome)
+  if (videoModalContainer.requestFullscreen) {
+    videoModalContainer.requestFullscreen().catch(() => {});
+  } else if (videoModalContainer.webkitRequestFullscreen) {
+    videoModalContainer.webkitRequestFullscreen();
+  }
+}
+
+function closeVideoModal() {
+  if (!videoModal || !modalIframe) return;
+
+  // Exit native browser fullscreen if currently active
+  if (document.fullscreenElement || document.webkitFullscreenElement) {
+    if (document.exitFullscreen) {
+      document.exitFullscreen().catch(() => {});
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+
+  // Stop video playback and hide modal
+  modalIframe.src = '';
+  videoModal.classList.add('hidden');
+  videoModal.classList.remove('flex');
+}
+
+// Close when clicking outside the video container
+videoModal.addEventListener('click', (e) => {
+  if (e.target === videoModal) {
+    closeVideoModal();
+  }
+});
+
+// Close when pressing the Escape key
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeVideoModal();
+  }
+});
