@@ -220,23 +220,40 @@ body.bg-lightened {
 
     <!-- 4 Series Playlist Buttons -->
     <div class="max-w-3xl mx-auto mb-3.5">
+      <!-- 4 Series Playlist Buttons (Now Triggers Fullscreen Auto-play) -->
+    <div class="max-w-3xl mx-auto mb-3.5">
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-        <a href="https://youtube.com/playlist?list=PLDTxOwYwOkIo&si=LM8lEeQSRjZDP3hl" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105">
-          <div class="text-sm font-bold text-brand-amberGold text-stroke-black">Literary Dialogue</div>
+        <button type="button" onclick="openFullscreenPlaylist('PLDTxOwYwOkIo')" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
+          <div class="text-sm font-bold text-brand-amberGold text-stroke-black flex items-center justify-center gap-1">
+            <span>Literary Dialogue</span>
+            <i data-lucide="play-circle" class="w-3.5 h-3.5 text-brand-gold shrink-0"></i>
+          </div>
           <div class="text-xs text-amber-100 text-stroke-black font-semibold">साहित्य संवाद</div>
-        </a>
-        <a href="https://youtube.com/playlist?list=PLDK2s7rjexk8&si=TKS4ZCvGlLSfrlY2" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105">
-          <div class="text-sm font-bold text-brand-amberGold text-stroke-black">Children's Songs</div>
+        </button>
+
+        <button type="button" onclick="openFullscreenPlaylist('PLDK2s7rjexk8')" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
+          <div class="text-sm font-bold text-brand-amberGold text-stroke-black flex items-center justify-center gap-1">
+            <span>Children's Songs</span>
+            <i data-lucide="play-circle" class="w-3.5 h-3.5 text-brand-gold shrink-0"></i>
+          </div>
           <div class="text-xs text-amber-100 text-stroke-black font-semibold">बालगीत · तुन-तुन-तुन्ना</div>
-        </a>
-        <a href="https://youtube.com/playlist?list=PLF0V20ta12Ws&si=mjoPs7SgHPjLHYKZ" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105">
-          <div class="text-sm font-bold text-brand-amberGold text-stroke-black">International</div>
+        </button>
+
+        <button type="button" onclick="openFullscreenPlaylist('PLF0V20ta12Ws')" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
+          <div class="text-sm font-bold text-brand-amberGold text-stroke-black flex items-center justify-center gap-1">
+            <span>International</span>
+            <i data-lucide="play-circle" class="w-3.5 h-3.5 text-brand-gold shrink-0"></i>
+          </div>
           <div class="text-xs text-amber-100 text-stroke-black font-semibold">अंतर्राष्ट्रीय · ISC Abu Dhabi</div>
-        </a>
-        <a href="https://youtube.com/playlist?list=PLLdbL-ovl_Yk&si=LR5ti1boijhKhjLE" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105">
-          <div class="text-sm font-bold text-brand-amberGold text-stroke-black">Secret of long Life</div>
+        </button>
+
+        <button type="button" onclick="openFullscreenPlaylist('PLLdbL-ovl_Yk')" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
+          <div class="text-sm font-bold text-brand-amberGold text-stroke-black flex items-center justify-center gap-1">
+            <span>Secret of long Life</span>
+            <i data-lucide="play-circle" class="w-3.5 h-3.5 text-brand-gold shrink-0"></i>
+          </div>
           <div class="text-xs text-amber-100 text-stroke-black font-semibold">लंबे जीवन का रहस्य</div>
-        </a>
+        </button>
       </div>
     </div>
 
@@ -495,6 +512,25 @@ const shortsVideos = [
 const videoModal = document.getElementById('videoModal');
 const modalIframe = document.getElementById('modalIframe');
 const videoModalContainer = document.getElementById('videoModalContainer');
+function openFullscreenPlaylist(playlistId) {
+  if (!videoModal || !modalIframe || !videoModalContainer) return;
+
+  // YouTube playlist embed URL format with autoplay enabled
+  modalIframe.src = `https://www.youtube.com/embed/videoseries?list=${encodeURIComponent(playlistId)}&autoplay=1&rel=0&playsinline=1`;
+
+  // Display the theater modal
+  videoModal.classList.remove('hidden');
+  videoModal.classList.add('flex');
+
+  // Trigger browser fullscreen
+  if (videoModalContainer.requestFullscreen) {
+    videoModalContainer.requestFullscreen().catch(() => {});
+  } else if (videoModalContainer.webkitRequestFullscreen) {
+    try {
+      videoModalContainer.webkitRequestFullscreen();
+    } catch (_) {}
+  }
+}
 
 function openFullscreenVideo(id) {
   if (!videoModal || !modalIframe || !videoModalContainer) return;
