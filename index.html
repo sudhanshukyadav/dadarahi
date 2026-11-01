@@ -49,7 +49,6 @@ body.bg-lightened {
      0px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
-/* Prevents upper vowel matras from clipping */
 .gold-gradient-text {
   background: linear-gradient(135deg, #ffe082 0%, #ffca28 50%, #ffa000 100%);
   -webkit-background-clip: text;
@@ -114,7 +113,6 @@ body.bg-lightened {
 <header class="sticky top-0 z-40 bg-black/85 backdrop-blur-md border-b border-white/20">
   <div class="max-w-7xl mx-auto px-4 sm:px-8 h-24 sm:h-28 flex items-center justify-between gap-6">
     
-    <!-- Profile Info -->
     <a href="https://www.youtube.com/@DadaRahi-NAVGEET" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 group shrink-0">
       <img src="https://i.imgur.com/W6t2NCzh.jpeg" alt="Yatindra Nath Rahi" class="w-14 h-14 sm:w-20 sm:h-20 rounded-full border-2 border-brand-gold object-cover object-top shadow-xl group-hover:scale-105 transition-transform">
       <div>
@@ -174,7 +172,7 @@ body.bg-lightened {
           <span class="text-stroke-black">Call Back</span>
         </a>
         <a href="https://www.youtube.com/@DadaRahi-NAVGEET" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-full shadow">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
           <span class="text-stroke-black">Subscribe</span>
         </a>
       </div>
@@ -191,7 +189,7 @@ body.bg-lightened {
         <span>LinkedIn · लिंक्डइन</span>
       </a>
       <a href="https://www.youtube.com/@DadaRahi-NAVGEET" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-black">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span>YouTube · यूट्यूब</span>
       </a>
       <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-black">
@@ -201,6 +199,7 @@ body.bg-lightened {
     </nav>
   </div>
 </header>
+
 <!-- Latest Videos Row (Dynamic from latest-videos.txt) -->
 <section id="latestVideosSection" class="w-full bg-black/80 border-b border-brand-gold/40 py-3.5 px-4 backdrop-blur-md hidden transition-all">
   <div class="max-w-7xl mx-auto">
@@ -222,6 +221,7 @@ body.bg-lightened {
     </div>
   </div>
 </section>
+
 <!-- Hero Section -->
 <section class="relative pt-10 pb-12 px-4 sm:px-6 overflow-hidden">
   <div class="max-w-4xl mx-auto text-center relative z-10">
@@ -239,8 +239,6 @@ body.bg-lightened {
     </p>
 
     <!-- 4 Series Playlist Buttons -->
-    <div class="max-w-3xl mx-auto mb-3.5">
-      <!-- 4 Series Playlist Buttons (Now Triggers Fullscreen Auto-play) -->
     <div class="max-w-3xl mx-auto mb-3.5">
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
         <button type="button" onclick="openFullscreenPlaylist('PLDTxOwYwOkIo')" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
@@ -532,17 +530,14 @@ const shortsVideos = [
 const videoModal = document.getElementById('videoModal');
 const modalIframe = document.getElementById('modalIframe');
 const videoModalContainer = document.getElementById('videoModalContainer');
+
 function openFullscreenPlaylist(playlistId) {
   if (!videoModal || !modalIframe || !videoModalContainer) return;
 
-  // YouTube playlist embed URL format with autoplay enabled
   modalIframe.src = `https://www.youtube.com/embed/videoseries?list=${encodeURIComponent(playlistId)}&autoplay=1&rel=0&playsinline=1`;
-
-  // Display the theater modal
   videoModal.classList.remove('hidden');
   videoModal.classList.add('flex');
 
-  // Trigger browser fullscreen
   if (videoModalContainer.requestFullscreen) {
     videoModalContainer.requestFullscreen().catch(() => {});
   } else if (videoModalContainer.webkitRequestFullscreen) {
@@ -555,13 +550,10 @@ function openFullscreenPlaylist(playlistId) {
 function openFullscreenVideo(id) {
   if (!videoModal || !modalIframe || !videoModalContainer) return;
 
-  // Set safe URL with autoplay
   modalIframe.src = `https://www.youtube.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0&playsinline=1`;
-
   videoModal.classList.remove('hidden');
   videoModal.classList.add('flex');
 
-  // Request browser fullscreen where supported
   if (videoModalContainer.requestFullscreen) {
     videoModalContainer.requestFullscreen().catch(() => {});
   } else if (videoModalContainer.webkitRequestFullscreen) {
@@ -584,23 +576,19 @@ function closeVideoModal() {
     }
   }
 
-  // Clear source to instantly halt audio/video playback
   modalIframe.src = '';
   videoModal.classList.add('hidden');
   videoModal.classList.remove('flex');
 }
 
-// Close when clicking background outside iframe
 videoModal?.addEventListener('click', (e) => {
   if (e.target === videoModal) closeVideoModal();
 });
 
-// Close when pressing Escape
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeVideoModal();
 });
 
-// Synchronize modal state if user exits fullscreen via browser controls
 ['fullscreenchange', 'webkitfullscreenchange'].forEach((eventName) => {
   document.addEventListener(eventName, () => {
     if (!document.fullscreenElement && !document.webkitFullscreenElement && videoModal && !videoModal.classList.contains('hidden')) {
@@ -765,6 +753,86 @@ if (menuToggle && mobileMenu) {
     mobileMenu.classList.toggle('open');
   });
 }
+
+// --- 12. DYNAMIC LATEST VIDEOS LOADER FROM latest-videos.txt ---
+function extractYouTubeId(url) {
+  if (!url) return null;
+  const match = url.match(/(?:studio\.youtube\.com\/video\/|youtube\.com\/(?:watch\?.*v=|embed\/|v\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+  if (match && match[1]) return match[1];
+  const fallback = url.match(/(?:[\/=])([a-zA-Z0-9_-]{11})(?:[?&/#]|$)/);
+  return fallback ? fallback[1] : null;
+}
+
+async function loadLatestVideos() {
+  const section = document.getElementById('latestVideosSection');
+  const container = document.getElementById('latestVideosRow');
+  if (!section || !container) return;
+
+  try {
+    const res = await fetch(`latest-videos.txt?t=${Date.now()}`);
+    if (!res.ok) return;
+
+    const rawText = await res.text();
+    const lines = rawText.split('\n');
+    const videos = [];
+
+    for (const rawLine of lines) {
+      const line = rawLine.trim();
+      if (!line) continue;
+
+      const match = line.match(/\[([^\]]+)\]\(([^)]+)\)/);
+      if (match) {
+        const title = match[1].replace(/\\([!*_[\]()#+-.])/g, '$1').trim();
+        const url = match[2].trim();
+        const id = extractYouTubeId(url);
+        if (id) {
+          videos.push({ title, id });
+        }
+      }
+    }
+
+    if (videos.length === 0) return;
+
+    container.innerHTML = '';
+    videos.forEach((video) => {
+      const card = document.createElement('div');
+      card.className = 'glass-card w-44 sm:w-52 shrink-0 rounded-xl overflow-hidden hover:border-brand-gold transition-all duration-300 group shadow-md cursor-pointer transform hover:-translate-y-1 flex flex-col justify-between';
+      card.onclick = () => openFullscreenVideo(video.id);
+
+      const thumbUrl = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
+
+      card.innerHTML = `
+        <div>
+          <div class="relative aspect-video bg-black/80 overflow-hidden">
+            <img src="${thumbUrl}" alt="${video.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition-colors flex items-center justify-center">
+              <div class="w-7 h-7 rounded-full bg-red-600 group-hover:bg-red-500 flex items-center justify-center text-white shadow-sm transform group-hover:scale-110 transition-transform">
+                <i data-lucide="play" class="w-3.5 h-3.5 ml-0.5 fill-current"></i>
+              </div>
+            </div>
+            <span class="absolute top-1 left-1 bg-red-600/90 text-[8px] font-bold text-white px-1.5 py-0.5 rounded tracking-wider uppercase font-sans shadow">NEW</span>
+          </div>
+          <div class="p-2">
+            <h4 class="text-xs font-bold text-white line-clamp-2 text-stroke-black leading-tight">${video.title}</h4>
+          </div>
+        </div>
+        <div class="px-2 pb-1.5 pt-0.5 border-t border-brand-gold/20 flex items-center justify-between text-[9px] text-brand-gold font-semibold">
+          <span>Play Fullscreen</span>
+          <i data-lucide="maximize" class="w-2.5 h-2.5"></i>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+
+    section.classList.remove('hidden');
+    if (window.lucide) lucide.createIcons();
+  } catch (err) {
+    console.error('Error loading latest-videos.txt:', err);
+  }
+}
+
+// Call dynamic loader
+loadLatestVideos();
 
 // Initialize Lucide icons
 lucide.createIcons();
