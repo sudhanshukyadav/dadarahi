@@ -36,32 +36,34 @@ tailwind.config={
 </script>
 <style>
 body.bg-lightened {
-  background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)), url('familycollage.jpg') center/cover no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('familycollage.jpg') center/cover no-repeat fixed;
   background-size: cover;
 }
 
-.text-stroke-black {
+/* Enhanced high-contrast shadow for readability against busy photo collage */
+.text-stroke-strong {
   text-shadow: 
     -1.5px -1.5px 0 #000,  
      1.5px -1.5px 0 #000,
     -1.5px  1.5px 0 #000,
      1.5px  1.5px 0 #000,
-     0px 2px 4px rgba(0, 0, 0, 0.9);
+     0px 2px 6px rgba(0, 0, 0, 0.95),
+     0px 0px 10px rgba(0, 0, 0, 0.9);
 }
 
 .gold-gradient-text {
   background: linear-gradient(135deg, #ffe082 0%, #ffca28 50%, #ffa000 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 2px 3px #000000);
+  filter: drop-shadow(0 2px 4px #000000);
   display: inline-block;
-  padding-top: 0.18em;
-  padding-bottom: 0.1em;
-  line-height: 1.35;
+  padding-top: 0.08em;
+  padding-bottom: 0.08em;
+  line-height: 1.15;
 }
 
 .glass-card {
-  background: rgba(18, 4, 6, 0.85);
+  background: rgba(18, 4, 6, 0.88);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(212, 175, 55, 0.45);
 }
@@ -105,60 +107,74 @@ body.bg-lightened {
 #toastAlert {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+/* Vertical Scroller Continuous Animation */
+@keyframes verticalMarquee {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.animate-vertical-scroll {
+  animation: verticalMarquee 20s linear infinite;
+}
+
+.scroller-window:hover .animate-vertical-scroll {
+  animation-play-state: paused;
+}
 </style>
 </head>
 <body class="bg-lightened text-white font-devanagari selection:bg-brand-gold selection:text-brand-charcoal min-h-screen">
 
 <!-- Spaced Evenly Header -->
-<header class="sticky top-0 z-40 bg-black/85 backdrop-blur-md border-b border-white/20">
+<header class="sticky top-0 z-40 bg-black/90 backdrop-blur-md border-b border-white/20">
   <div class="max-w-7xl mx-auto px-4 sm:px-8 h-24 sm:h-28 flex items-center justify-between gap-6">
     
     <a href="https://www.youtube.com/@DadaRahi-NAVGEET" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 group shrink-0">
       <img src="https://i.imgur.com/W6t2NCzh.jpeg" alt="Yatindra Nath Rahi" class="w-14 h-14 sm:w-20 sm:h-20 rounded-full border-2 border-brand-gold object-cover object-top shadow-xl group-hover:scale-105 transition-transform">
       <div>
-        <h1 class="font-bold text-lg sm:text-2xl leading-snug tracking-wide text-brand-amberGold text-stroke-black group-hover:text-white transition-colors">Yatindra Nath Yadav 'Rahi'</h1>
-        <p class="text-xs sm:text-sm text-amber-100 text-stroke-black font-semibold">यतीन्द्र नाथ यादव 'राही' · @DadaRahi-NAVGEET</p>
+        <h1 class="font-bold text-lg sm:text-2xl leading-snug tracking-wide text-brand-amberGold text-stroke-strong group-hover:text-white transition-colors">Yatindra Nath Yadav 'Rahi'</h1>
+        <p class="text-xs sm:text-sm text-amber-100 text-stroke-strong font-semibold">यतीन्द्र नाथ यादव 'राही' · @DadaRahi-NAVGEET</p>
       </div>
     </a>
 
     <!-- Desktop Navigation -->
     <nav class="hidden lg:flex items-center justify-center flex-1 max-w-xl gap-8 px-4 font-sans">
-      <a href="#all-videos" class="nav-link flex items-center gap-1.5 text-sm font-semibold text-white text-stroke-black hover:text-brand-amberGold transition-colors">
+      <a href="#all-videos" class="nav-link flex items-center gap-1.5 text-sm font-semibold text-white text-stroke-strong hover:text-brand-amberGold transition-colors">
         <i data-lucide="film" class="w-4 h-4 text-white"></i>
         <span>Videos</span>
       </a>
-      <a href="#published-books" class="nav-link flex items-center gap-1.5 text-sm font-semibold text-white text-stroke-black hover:text-brand-amberGold transition-colors">
+      <a href="#published-books" class="nav-link flex items-center gap-1.5 text-sm font-semibold text-white text-stroke-strong hover:text-brand-amberGold transition-colors">
         <i data-lucide="book-open" class="w-4 h-4 text-white"></i>
         <span>Published Books</span>
       </a>
-      <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="nav-link flex items-center gap-1.5 text-sm font-medium text-amber-100 text-stroke-black hover:text-brand-amberGold transition-colors">
+      <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="nav-link flex items-center gap-1.5 text-sm font-medium text-amber-100 text-stroke-strong hover:text-brand-amberGold transition-colors">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
         <span>LinkedIn</span>
       </a>
-      <a href="https://www.youtube.com/@DadaRahi-NAVGEET" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="nav-link flex items-center gap-1.5 text-sm font-medium text-amber-100 text-stroke-black hover:text-brand-amberGold transition-colors">
+      <a href="https://www.youtube.com/@DadaRahi-NAVGEET" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="nav-link flex items-center gap-1.5 text-sm font-medium text-amber-100 text-stroke-strong hover:text-brand-amberGold transition-colors">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span>YouTube</span>
       </a>
-      <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="nav-link flex items-center gap-1.5 text-sm font-medium text-amber-100 text-stroke-black hover:text-brand-amberGold transition-colors">
+      <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="nav-link flex items-center gap-1.5 text-sm font-medium text-amber-100 text-stroke-strong hover:text-brand-amberGold transition-colors">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
         <span>Facebook</span>
       </a>
     </nav>
 
-    <!-- Header Actions (Direct Subscription) -->
+    <!-- Header Actions (Direct Subscribe Prompt) -->
     <div class="hidden sm:flex items-center gap-3 shrink-0 font-sans">
       <a href="contact.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm rounded-full shadow-lg transition-all hover:scale-105 border border-emerald-400">
         <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
-        <span class="text-stroke-black">Call Back</span>
+        <span class="text-stroke-strong">Call Back</span>
       </a>
       <a href="https://www.youtube.com/@DadaRahi-NAVGEET?sub_confirmation=1" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="inline-flex items-center gap-1.5 px-4 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs sm:text-sm rounded-full shadow-lg transition-all hover:scale-105 border border-black/50 cursor-pointer">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
-        <span class="text-stroke-black">Subscribe</span>
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+        <span class="text-stroke-strong">Subscribe</span>
       </a>
     </div>
 
     <!-- Mobile Toggle -->
-    <button id="menuToggle" class="lg:hidden flex items-center p-2 text-amber-100 hover:text-brand-amberGold transition-colors text-stroke-black" aria-label="Toggle menu">
+    <button id="menuToggle" class="lg:hidden flex items-center p-2 text-amber-100 hover:text-brand-amberGold transition-colors text-stroke-strong" aria-label="Toggle menu">
       <i data-lucide="menu" class="w-7 h-7"></i>
     </button>
   </div>
@@ -169,30 +185,30 @@ body.bg-lightened {
       <div class="flex items-center gap-3 py-2">
         <a href="contact.html" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs rounded-full shadow">
           <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
-          <span class="text-stroke-black">Call Back</span>
+          <span class="text-stroke-strong">Call Back</span>
         </a>
         <a href="https://www.youtube.com/@DadaRahi-NAVGEET?sub_confirmation=1" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-full shadow cursor-pointer">
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
-          <span class="text-stroke-black">Subscribe</span>
+          <span class="text-stroke-strong">Subscribe</span>
         </a>
       </div>
-      <a href="#all-videos" onclick="document.getElementById('mobileMenu').classList.remove('open')" class="flex items-center gap-3 py-2 text-sm font-semibold text-white text-stroke-black">
+      <a href="#all-videos" onclick="document.getElementById('mobileMenu').classList.remove('open')" class="flex items-center gap-3 py-2 text-sm font-semibold text-white text-stroke-strong">
         <i data-lucide="film" class="w-4 h-4 text-white"></i>
         <span>Videos · सभी वीडियो संग्रह</span>
       </a>
-      <a href="#published-books" onclick="document.getElementById('mobileMenu').classList.remove('open')" class="flex items-center gap-3 py-2 text-sm font-semibold text-white text-stroke-black">
+      <a href="#published-books" onclick="document.getElementById('mobileMenu').classList.remove('open')" class="flex items-center gap-3 py-2 text-sm font-semibold text-white text-stroke-strong">
         <i data-lucide="book-open" class="w-4 h-4 text-white"></i>
         <span>Published Books · प्रकाशित पुस्तकें</span>
       </a>
-      <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-black">
+      <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-strong">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
         <span>LinkedIn · लिंक्डइन</span>
       </a>
-      <a href="https://www.youtube.com/@DadaRahi-NAVGEET" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-black">
+      <a href="https://www.youtube.com/@DadaRahi-NAVGEET" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-strong">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span>YouTube · यूट्यूब</span>
       </a>
-      <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-black">
+      <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-strong">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
         <span>Facebook · फेसबुक</span>
       </a>
@@ -206,97 +222,140 @@ body.bg-lightened {
     <div class="flex items-center justify-between mb-2 px-1">
       <div class="flex items-center gap-1.5">
         <span class="inline-block w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
-        <h3 class="text-[11px] sm:text-xs font-bold tracking-wider uppercase text-brand-amberGold text-stroke-black">
+        <h3 class="text-[11px] sm:text-xs font-bold tracking-wider uppercase text-brand-amberGold text-stroke-strong">
           Latest Releases · नवीनतम प्रस्तुतियाँ
         </h3>
       </div>
-      <span class="text-[10px] text-amber-200/90 hidden sm:inline text-stroke-black font-semibold">
+      <span class="text-[10px] text-amber-200/90 hidden sm:inline text-stroke-strong font-semibold">
         Click to play fullscreen · पूर्ण स्क्रीन
       </span>
     </div>
 
-    <!-- 6-Column Compact Mini Grid (Reduces thumbnail size to 25%) -->
+    <!-- 6-Column Compact Mini Grid -->
     <div id="latestVideosRow" class="grid grid-cols-3 sm:grid-cols-6 gap-2">
       <!-- Injected dynamically from latest-videos.txt -->
     </div>
   </div>
 </section>
 
-<!-- Hero Section -->
-<section class="relative pt-4 pb-12 px-4 sm:px-6 overflow-hidden">
-  <div class="max-w-4xl mx-auto text-center relative z-10">
-    <h2 class="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-normal mb-3 text-white">
-      <span class="gold-gradient-text block">शब्दों में जीवन की लय</span>
-      <span class="gold-gradient-text block">भावनाओं का अमर काव्य संसार</span>
-    </h2>
-
-    <p class="text-base sm:text-lg text-white max-w-2xl mx-auto mb-2 leading-relaxed font-semibold text-stroke-black">
-      Connect with the official platform of renowned poet and author <strong>Yatindra Nath 'Rahi'</strong> — भारतीय एवं अंतर्राष्ट्रीय कवि सम्मेलनों, बालगीतों और भावपूर्ण रचनाओं का मंच।
-    </p>
-
-    <p class="text-base sm:text-lg text-white max-w-2xl mx-auto mb-6 leading-relaxed font-semibold text-stroke-black">
-      प्रसिद्ध कवि एवं साहित्यकार <strong>यतीन्द्र नाथ यादव 'राही'</strong> के आधिकारिक मंच से जुड़ें।
-    </p>
-
-    <!-- 4 Series Playlist Buttons -->
-    <div class="max-w-3xl mx-auto mb-3.5">
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-        <button type="button" onclick="openFullscreenPlaylist('PLDTxOwYwOkIo')" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
-          <div class="text-sm font-bold text-brand-amberGold text-stroke-black flex items-center justify-center gap-1">
-            <span>Literary Dialogue</span>
-            <i data-lucide="play-circle" class="w-3.5 h-3.5 text-brand-gold shrink-0"></i>
+<!-- Hero Section with Left-Side Hindi Sahitya News Scroller -->
+<section class="relative pt-3 pb-8 px-4 sm:px-6 overflow-hidden">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-stretch gap-5">
+    
+    <!-- LEFT SIDE: Vertical Scrolling Information Window (Reads information.txt) -->
+    <aside class="w-full lg:w-72 xl:w-80 shrink-0 flex flex-col">
+      <div class="bg-black/85 backdrop-blur-md border border-brand-gold/60 rounded-xl p-3 h-full flex flex-col shadow-2xl">
+        <div class="flex items-center justify-between pb-2 mb-2 border-b border-brand-gold/30">
+          <div class="flex items-center gap-2">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-gold"></span>
+            </span>
+            <h3 class="text-xs sm:text-sm font-bold text-brand-amberGold tracking-wide text-stroke-strong">
+              साहित्य संवाद एवं सूचनाएँ
+            </h3>
           </div>
-          <div class="text-xs text-amber-100 text-stroke-black font-semibold">साहित्य संवाद</div>
-        </button>
+          <span class="text-[9px] text-amber-200 font-mono">Hindi Sahitya</span>
+        </div>
 
-        <button type="button" onclick="openFullscreenPlaylist('PLDK2s7rjexk8')" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
-          <div class="text-sm font-bold text-brand-amberGold text-stroke-black flex items-center justify-center gap-1">
-            <span>Children's Songs</span>
-            <i data-lucide="play-circle" class="w-3.5 h-3.5 text-brand-gold shrink-0"></i>
-          </div>
-          <div class="text-xs text-amber-100 text-stroke-black font-semibold">बालगीत · तुन-तुन-तुन्ना</div>
-        </button>
+        <!-- Scrolling Ticker Container with Top & Bottom Fade -->
+        <div class="scroller-window relative flex-1 h-56 sm:h-64 lg:h-72 overflow-hidden rounded-lg bg-black/50 border border-white/10 p-1.5 cursor-pointer">
+          <!-- Top and Bottom Fade Gradients -->
+          <div class="absolute inset-x-0 top-0 h-6 bg-gradient-to-b from-black/90 to-transparent z-10 pointer-events-none"></div>
+          <div class="absolute inset-x-0 bottom-0 h-6 bg-gradient-to-t from-black/90 to-transparent z-10 pointer-events-none"></div>
 
-        <button type="button" onclick="openFullscreenPlaylist('PLF0V20ta12Ws')" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
-          <div class="text-sm font-bold text-brand-amberGold text-stroke-black flex items-center justify-center gap-1">
-            <span>International</span>
-            <i data-lucide="play-circle" class="w-3.5 h-3.5 text-brand-gold shrink-0"></i>
+          <!-- Vertical Scrolling Container -->
+          <div id="infoScrollerContent" class="animate-vertical-scroll flex flex-col gap-2.5">
+            <p class="text-xs text-amber-100/70 p-2 text-center">नवीन सूचनाएँ लोड हो रही हैं...</p>
           </div>
-          <div class="text-xs text-amber-100 text-stroke-black font-semibold">अंतर्राष्ट्रीय · ISC Abu Dhabi</div>
-        </button>
+        </div>
 
-        <button type="button" onclick="openFullscreenPlaylist('PLLdbL-ovl_Yk')" class="p-3 rounded-lg bg-black/85 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
-          <div class="text-sm font-bold text-brand-amberGold text-stroke-black flex items-center justify-center gap-1">
-            <span>Secret of long Life</span>
-            <i data-lucide="play-circle" class="w-3.5 h-3.5 text-brand-gold shrink-0"></i>
-          </div>
-          <div class="text-xs text-amber-100 text-stroke-black font-semibold">लंबे जीवन का रहस्य</div>
-        </button>
+        <p class="text-[10px] text-amber-200/80 text-center mt-2 font-medium text-stroke-strong">
+          रोके रखने के लिए कर्सर ऊपर लाएं (Hover to pause)
+        </p>
       </div>
-    </div>
+    </aside>
 
-    <!-- 4 Featured Video Thumbnails -->
-    <div id="featured-videos" class="max-w-3xl mx-auto scroll-mt-28">
-      <div id="featuredVideoThumbnails" class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <!-- Injected dynamically -->
+    <!-- RIGHT/CENTER: Main Hero Content (Tightly Spaced) -->
+    <div class="flex-1 text-center flex flex-col justify-center">
+
+      <!-- Tightly Spaced 2-Line Hero Heading -->
+      <h2 class="font-extrabold mb-2 text-white">
+        <span class="gold-gradient-text block text-2xl sm:text-4xl md:text-5xl leading-tight">शब्दों में जीवन की लय</span>
+        <span class="gold-gradient-text block text-2xl sm:text-4xl md:text-5xl leading-tight -mt-1 sm:-mt-2">भावनाओं का अमर काव्य संसार</span>
+      </h2>
+
+      <!-- High Contrast Backdrop for Paragraph Text -->
+      <div class="bg-black/75 backdrop-blur-md rounded-xl p-3.5 max-w-2xl mx-auto mb-3.5 border border-brand-gold/30 shadow-xl">
+        <p class="text-sm sm:text-base text-amber-100 leading-snug font-semibold text-stroke-strong mb-1.5">
+          Connect with the official platform of renowned poet and author <strong>Yatindra Nath 'Rahi'</strong> — भारतीय एवं अंतर्राष्ट्रीय कवि सम्मेलनों, बालगीतों और भावपूर्ण रचनाओं का मंच।
+        </p>
+        <p class="text-sm sm:text-base text-white leading-snug font-semibold text-stroke-strong">
+          प्रसिद्ध कवि एवं साहित्यकार <strong>यतीन्द्र नाथ यादव 'राही'</strong> के आधिकारिक मंच से जुड़ें।
+        </p>
       </div>
+
+      <!-- 4 Series Playlist Buttons -->
+      <div class="max-w-2xl mx-auto w-full mb-3">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center">
+          <button type="button" onclick="openFullscreenPlaylist('PLDTxOwYwOkIo')" class="p-2.5 rounded-lg bg-black/90 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
+            <div class="text-xs sm:text-sm font-bold text-brand-amberGold text-stroke-strong flex items-center justify-center gap-1">
+              <span>Literary Dialogue</span>
+              <i data-lucide="play-circle" class="w-3.5 h-3.5 text-brand-gold shrink-0"></i>
+            </div>
+            <div class="text-[11px] text-amber-100 text-stroke-strong font-semibold">साहित्य संवाद</div>
+          </button>
+
+          <button type="button" onclick="openFullscreenPlaylist('PLDK2s7rjexk8')" class="p-2.5 rounded-lg bg-black/90 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
+            <div class="text-xs sm:text-sm font-bold text-brand-amberGold text-stroke-strong flex items-center justify-center gap-1">
+              <span>Children's Songs</span>
+              <i data-lucide="play-circle" class="w-3.5 h-3.5 text-brand-gold shrink-0"></i>
+            </div>
+            <div class="text-[11px] text-amber-100 text-stroke-strong font-semibold">बालगीत · तुन-तुन</div>
+          </button>
+
+          <button type="button" onclick="openFullscreenPlaylist('PLF0V20ta12Ws')" class="p-2.5 rounded-lg bg-black/90 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
+            <div class="text-xs sm:text-sm font-bold text-brand-amberGold text-stroke-strong flex items-center justify-center gap-1">
+              <span>International</span>
+              <i data-lucide="play-circle" class="w-3.5 h-3.5 text-brand-gold shrink-0"></i>
+            </div>
+            <div class="text-[11px] text-amber-100 text-stroke-strong font-semibold">अंतर्राष्ट्रीय · ISC</div>
+          </button>
+
+          <button type="button" onclick="openFullscreenPlaylist('PLLdbL-ovl_Yk')" class="p-2.5 rounded-lg bg-black/90 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
+            <div class="text-xs sm:text-sm font-bold text-brand-amberGold text-stroke-strong flex items-center justify-center gap-1">
+              <span>Secret of Life</span>
+              <i data-lucide="play-circle" class="w-3.5 h-3.5 text-brand-gold shrink-0"></i>
+            </div>
+            <div class="text-[11px] text-amber-100 text-stroke-strong font-semibold">जीवन का रहस्य</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- 4 Featured Video Thumbnails -->
+      <div id="featured-videos" class="max-w-2xl mx-auto w-full scroll-mt-28">
+        <div id="featuredVideoThumbnails" class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- 1. Published Books Section -->
 <section id="published-books" class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-16 scroll-mt-28 border-t border-brand-gold/30">
-  <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 bg-black/75 p-5 rounded-2xl border border-brand-gold/40 backdrop-blur-md">
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 bg-black/85 p-5 rounded-2xl border border-brand-gold/40 backdrop-blur-md">
     <div>
-      <span class="text-xs font-mono uppercase tracking-wider text-brand-gold text-stroke-black">Literary Works · साहित्यिक रचनाएँ</span>
-      <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 text-stroke-black">
+      <span class="text-xs font-mono uppercase tracking-wider text-brand-gold text-stroke-strong">Literary Works · साहित्यिक रचनाएँ</span>
+      <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 text-stroke-strong">
         Published Books · प्रकाशित पुस्तकें
       </h3>
-      <p class="text-base text-amber-100 font-semibold mt-1 text-stroke-black">
+      <p class="text-base text-amber-100 font-semibold mt-1 text-stroke-strong">
         प्रकाशित पुस्तकों एवं काव्य संकलनों के मुख्य पृष्ठ
       </p>
     </div>
-    <div class="text-xs sm:text-sm text-amber-200/90 max-w-sm text-stroke-black font-semibold">
+    <div class="text-xs sm:text-sm text-amber-200/90 max-w-sm text-stroke-strong font-semibold">
       Click any cover to preview or download PDF · मुख्य पृष्ठ पर क्लिक करके पीडीएफ देखें।
     </div>
   </div>
@@ -306,24 +365,24 @@ body.bg-lightened {
 
 <!-- 2. Videos Section -->
 <section id="all-videos" class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-16 scroll-mt-28 border-t border-brand-gold/30">
-  <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 bg-black/75 p-5 rounded-2xl border border-brand-gold/40 backdrop-blur-md">
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 bg-black/85 p-5 rounded-2xl border border-brand-gold/40 backdrop-blur-md">
     <div>
-      <span class="text-xs font-mono uppercase tracking-wider text-brand-gold text-stroke-black">DadaRahi-NAVGEET Official Archive</span>
-      <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 text-stroke-black">
+      <span class="text-xs font-mono uppercase tracking-wider text-brand-gold text-stroke-strong">DadaRahi-NAVGEET Official Archive</span>
+      <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 text-stroke-strong">
         Videos and Video transformation of works (वीडियो और कार्यों का वीडियो रूपांतरण)
       </h3>
-      <p class="text-base text-amber-100 font-semibold mt-1 text-stroke-black">
+      <p class="text-base text-amber-100 font-semibold mt-1 text-stroke-strong">
         यूट्यूब चैनल @DadaRahi-NAVGEET के सभी प्रकाशित वीडियो एवं काव्य रूपांतरण
       </p>
     </div>
-    <div class="text-xs sm:text-sm text-amber-200/90 max-w-sm text-stroke-black font-semibold">
+    <div class="text-xs sm:text-sm text-amber-200/90 max-w-sm text-stroke-strong font-semibold">
       Click any video thumbnail to watch in full-screen · पूर्ण स्क्रीन में देखने के लिए किसी भी वीडियो पर क्लिक करें।
     </div>
   </div>
 
   <!-- Long-Form Videos Grid -->
   <div class="mb-10">
-    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/80 border border-brand-gold/50 text-brand-amberGold text-xs font-semibold mb-4">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/90 border border-brand-gold/50 text-brand-amberGold text-xs font-semibold mb-4">
       <i data-lucide="video" class="w-3.5 h-3.5 text-brand-gold"></i>
       <span>Long-Form Recitations & Discourses · प्रमुख वीडियो</span>
     </div>
@@ -334,7 +393,7 @@ body.bg-lightened {
 
   <!-- YouTube Shorts Grid -->
   <div>
-    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/80 border border-brand-gold/50 text-brand-amberGold text-xs font-semibold mb-4">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/90 border border-brand-gold/50 text-brand-amberGold text-xs font-semibold mb-4">
       <i data-lucide="zap" class="w-3.5 h-3.5 text-red-500"></i>
       <span>YouTube Shorts & Highlights · काव्य झलकियाँ</span>
     </div>
@@ -346,13 +405,13 @@ body.bg-lightened {
 
 <!-- 3. Featured on Social Media Section -->
 <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 border-t border-brand-gold/30 font-sans">
-  <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4 bg-black/75 p-5 rounded-2xl border border-brand-gold/40 backdrop-blur-md">
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4 bg-black/85 p-5 rounded-2xl border border-brand-gold/40 backdrop-blur-md">
     <div>
-      <span class="text-xs font-mono uppercase tracking-wider text-brand-gold text-stroke-black">Literary Collection · साहित्यिक संकलन</span>
-      <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 text-stroke-black">Featured on Social Media</h3>
-      <p class="text-sm text-amber-100 font-devanagari mt-1 text-stroke-black font-semibold">सोशल मीडिया पर उपलब्ध मुख्य शृंखलाएं</p>
+      <span class="text-xs font-mono uppercase tracking-wider text-brand-gold text-stroke-strong">Literary Collection · साहित्यिक संकलन</span>
+      <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 text-stroke-strong">Featured on Social Media</h3>
+      <p class="text-sm text-amber-100 font-devanagari mt-1 text-stroke-strong font-semibold">सोशल मीडिया पर उपलब्ध मुख्य शृंखलाएं</p>
     </div>
-    <div class="text-xs text-amber-100 max-w-sm text-stroke-black font-devanagari font-semibold">
+    <div class="text-xs text-amber-100 max-w-sm text-stroke-strong font-devanagari font-semibold">
       Click any card to visit the platform directly. · किसी भी कार्ड पर क्लिक करके सीधा संबंधित प्लेटफ़ॉर्म पर जाएं।
     </div>
   </div>
@@ -363,12 +422,12 @@ body.bg-lightened {
         <div class="w-10 h-10 rounded-lg bg-black/90 text-brand-gold flex items-center justify-center mb-4 border border-brand-gold/40 group-hover:scale-110 transition-transform">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
         </div>
-        <h4 class="text-lg font-bold text-brand-gold mb-1 text-stroke-black group-hover:text-white transition-colors">LinkedIn Profile</h4>
-        <p class="text-xs text-brand-amberGold font-devanagari mb-3 text-stroke-black font-semibold">लिंक्डइन प्रोफ़ाइल</p>
-        <p class="text-xs text-white leading-relaxed mb-2 text-stroke-black">Literary achievements, poetry recital experiences and literary journey on the professional network.</p>
-        <p class="text-xs text-white font-devanagari leading-relaxed mb-4 text-stroke-black font-semibold">प्रोफ़ेशनल नेटवर्क पर यतीन्द्र नाथ यादव 'राही' की साहित्यिक उपलब्धियाँ एवं यात्रा का विवरण।</p>
+        <h4 class="text-lg font-bold text-brand-gold mb-1 text-stroke-strong group-hover:text-white transition-colors">LinkedIn Profile</h4>
+        <p class="text-xs text-brand-amberGold font-devanagari mb-3 text-stroke-strong font-semibold">लिंक्डइन प्रोफ़ाइल</p>
+        <p class="text-xs text-white leading-relaxed mb-2 text-stroke-strong">Literary achievements, poetry recital experiences and literary journey on the professional network.</p>
+        <p class="text-xs text-white font-devanagari leading-relaxed mb-4 text-stroke-strong font-semibold">प्रोफ़ेशनल नेटवर्क पर यतीन्द्र नाथ यादव 'राही' की साहित्यिक उपलब्धियाँ एवं यात्रा का विवरण।</p>
       </div>
-      <div class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold group-hover:text-white transition-colors text-stroke-black">
+      <div class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold group-hover:text-white transition-colors text-stroke-strong">
         <span>View on LinkedIn</span><i data-lucide="arrow-up-right" class="w-4 h-4"></i>
       </div>
     </a>
@@ -378,12 +437,12 @@ body.bg-lightened {
         <div class="w-10 h-10 rounded-lg bg-black/90 text-brand-gold flex items-center justify-center mb-4 border border-brand-gold/40 group-hover:scale-110 transition-transform">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         </div>
-        <h4 class="text-lg font-bold text-brand-gold mb-1 text-stroke-black group-hover:text-white transition-colors">YouTube Channel</h4>
-        <p class="text-xs text-brand-amberGold font-devanagari mb-3 text-stroke-black font-semibold">यूट्यूब चैनल @DadaRahi-NAVGEET</p>
-        <p class="text-xs text-white leading-relaxed mb-2 text-stroke-black">Grand poetry symposiums, children's song series and international poetry recitations — all videos in one place.</p>
-        <p class="text-xs text-white font-devanagari leading-relaxed mb-4 text-stroke-black font-semibold">भव्य कवि सम्मेलन, तुन-तुन-तुन्ना बालगीत श्रृंखला एवं अंतर्राष्ट्रीय काव्य पाठ — सभी वीडियो एक स्थान पर।</p>
+        <h4 class="text-lg font-bold text-brand-gold mb-1 text-stroke-strong group-hover:text-white transition-colors">YouTube Channel</h4>
+        <p class="text-xs text-brand-amberGold font-devanagari mb-3 text-stroke-strong font-semibold">यूट्यूब चैनल @DadaRahi-NAVGEET</p>
+        <p class="text-xs text-white leading-relaxed mb-2 text-stroke-strong">Grand poetry symposiums, children's song series and international poetry recitations — all videos in one place.</p>
+        <p class="text-xs text-white font-devanagari leading-relaxed mb-4 text-stroke-strong font-semibold">भव्य कवि सम्मेलन, तुन-तुन-तुन्ना बालगीत श्रृंखला एवं अंतर्राष्ट्रीय काव्य पाठ — सभी वीडियो एक स्थान पर।</p>
       </div>
-      <div class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold group-hover:text-white transition-colors text-stroke-black">
+      <div class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold group-hover:text-white transition-colors text-stroke-strong">
         <span>Subscribe on YouTube</span><i data-lucide="arrow-up-right" class="w-4 h-4"></i>
       </div>
     </a>
@@ -393,12 +452,12 @@ body.bg-lightened {
         <div class="w-10 h-10 rounded-lg bg-black/90 text-brand-gold flex items-center justify-center mb-4 border border-brand-gold/40 group-hover:scale-110 transition-transform">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
         </div>
-        <h4 class="text-lg font-bold text-brand-gold mb-1 text-stroke-black group-hover:text-white transition-colors">Facebook Profile</h4>
-        <p class="text-xs text-brand-amberGold font-devanagari mb-3 text-stroke-black font-semibold">फेसबुक प्रोफ़ाइल</p>
-        <p class="text-xs text-white leading-relaxed mb-2 text-stroke-black">Special literary dialogues, poetry readings and glimpses of literary gatherings with senior writers.</p>
-        <p class="text-xs text-white font-devanagari leading-relaxed mb-4 text-stroke-black font-semibold">वरिष्ठ साहित्यकारों के साथ विशेष साहित्यिक संवाद, काव्य पाठ एवं गोष्ठी की झलकियाँ।</p>
+        <h4 class="text-lg font-bold text-brand-gold mb-1 text-stroke-strong group-hover:text-white transition-colors">Facebook Profile</h4>
+        <p class="text-xs text-brand-amberGold font-devanagari mb-3 text-stroke-strong font-semibold">फेसबुक प्रोफ़ाइल</p>
+        <p class="text-xs text-white leading-relaxed mb-2 text-stroke-strong">Special literary dialogues, poetry readings and glimpses of literary gatherings with senior writers.</p>
+        <p class="text-xs text-white font-devanagari leading-relaxed mb-4 text-stroke-strong font-semibold">वरिष्ठ साहित्यकारों के साथ विशेष साहित्यिक संवाद, काव्य पाठ एवं गोष्ठी की झलकियाँ।</p>
       </div>
-      <div class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold group-hover:text-white transition-colors text-stroke-black">
+      <div class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold group-hover:text-white transition-colors text-stroke-strong">
         <span>View on Facebook</span><i data-lucide="arrow-up-right" class="w-4 h-4"></i>
       </div>
     </a>
@@ -406,12 +465,12 @@ body.bg-lightened {
 </section>
 
 <!-- Footer -->
-<footer class="py-8 px-4 text-center text-xs text-amber-100 bg-black/85 border-t border-brand-gold/30">
-  <p class="mb-2 text-stroke-black">© 2026 Yatindra Nath 'Rahi' — All rights reserved. · यतीन्द्र नाथ यादव 'राही' — सर्वाधिकार सुरक्षित।</p>
+<footer class="py-8 px-4 text-center text-xs text-amber-100 bg-black/90 border-t border-brand-gold/30">
+  <p class="mb-2 text-stroke-strong">© 2026 Yatindra Nath 'Rahi' — All rights reserved. · यतीन्द्र नाथ यादव 'राही' — सर्वाधिकार सुरक्षित।</p>
   <div class="flex flex-wrap items-center justify-center gap-4 font-mono text-[11px]">
-    <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-black">LinkedIn</a>
-    <a href="https://www.youtube.com/@DadaRahi-NAVGEET?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-black">YouTube Subscribe</a>
-    <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-black">Facebook</a>
+    <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-strong">LinkedIn</a>
+    <a href="https://www.youtube.com/@DadaRahi-NAVGEET?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-strong">YouTube Subscribe</a>
+    <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-strong">Facebook</a>
   </div>
 </footer>
 
@@ -436,7 +495,7 @@ body.bg-lightened {
 
 <!-- Toast Alert -->
 <div id="toastAlert" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 translate-y-4 duration-300">
-  <div class="bg-black/90 text-brand-gold border-2 border-brand-gold px-6 py-3.5 rounded-full shadow-2xl flex items-center gap-3 backdrop-blur-md">
+  <div class="bg-black/95 text-brand-gold border-2 border-brand-gold px-6 py-3.5 rounded-full shadow-2xl flex items-center gap-3 backdrop-blur-md">
     <i data-lucide="info" class="w-5 h-5 text-brand-amberGold shrink-0"></i>
     <div class="text-center font-semibold text-xs sm:text-sm">
       <span id="toastMainText">PDF copy coming soon</span>
@@ -644,8 +703,8 @@ featuredVideosData.forEach((video) => {
         </span>
       </div>
       <div class="p-1.5 text-center">
-        <h4 class="text-[11px] font-bold text-white line-clamp-1 text-stroke-black leading-tight">${video.title}</h4>
-        <p class="text-[9px] text-amber-200/80 font-medium mt-0.5 line-clamp-1 text-stroke-black">${video.subtitle}</p>
+        <h4 class="text-[11px] font-bold text-white line-clamp-1 text-stroke-strong leading-tight">${video.title}</h4>
+        <p class="text-[9px] text-amber-200/80 font-medium mt-0.5 line-clamp-1 text-stroke-strong">${video.subtitle}</p>
       </div>
     </div>
     <div class="px-1.5 pb-1 pt-0.5 border-t border-brand-gold/20 flex items-center justify-between text-[9px] text-brand-gold font-semibold">
@@ -677,8 +736,8 @@ longFormVideos.forEach((video) => {
         </div>
       </div>
       <div class="p-2.5">
-        <h4 class="text-xs font-bold text-white line-clamp-1 text-stroke-black leading-tight">${video.title}</h4>
-        <p class="text-[10px] text-amber-200/80 font-medium mt-1 line-clamp-1 text-stroke-black">${video.subtitle}</p>
+        <h4 class="text-xs font-bold text-white line-clamp-1 text-stroke-strong leading-tight">${video.title}</h4>
+        <p class="text-[10px] text-amber-200/80 font-medium mt-1 line-clamp-1 text-stroke-strong">${video.subtitle}</p>
       </div>
     </div>
     <div class="px-2.5 pb-2 pt-0.5 border-t border-brand-gold/20 flex items-center justify-between text-[10px] text-brand-gold font-semibold">
@@ -711,7 +770,7 @@ shortsVideos.forEach((short) => {
         <span class="absolute bottom-1 right-1 text-[7px] font-mono bg-red-600/90 text-white px-1 rounded">SHORTS</span>
       </div>
       <div class="p-1.5">
-        <h4 class="text-[10px] font-bold text-white line-clamp-1 text-stroke-black leading-tight">${short.title}</h4>
+        <h4 class="text-[10px] font-bold text-white line-clamp-1 text-stroke-strong leading-tight">${short.title}</h4>
       </div>
     </div>
   `;
@@ -740,7 +799,7 @@ if (menuToggle && mobileMenu) {
   });
 }
 
-// --- 12. DYNAMIC LATEST VIDEOS (25% THUMBNAIL SIZE, 6-COL GRID, TRANSPARENT) ---
+// --- 12. DYNAMIC LATEST VIDEOS (MINI 25% THUMBNAILS) ---
 function extractYouTubeId(url) {
   if (!url) return null;
   const match = url.match(/(?:studio\.youtube\.com\/video\/|youtube\.com\/(?:watch\?.*v=|embed\/|v\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
@@ -782,7 +841,6 @@ async function loadLatestVideos() {
     container.innerHTML = '';
     videos.forEach((video) => {
       const card = document.createElement('div');
-      // Compact mini-card (25% thumbnail dimensions)
       card.className = 'bg-transparent border border-brand-gold/30 hover:border-brand-gold rounded-md overflow-hidden transition-all duration-300 group shadow-sm flex flex-col justify-between hover:-translate-y-0.5 cursor-pointer';
       
       const thumbUrl = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
@@ -800,7 +858,7 @@ async function loadLatestVideos() {
             <span class="absolute top-0.5 left-0.5 bg-red-600/90 text-[6px] font-bold text-white px-1 py-0.2 rounded font-sans tracking-wider uppercase">NEW</span>
           </div>
           <div class="p-1">
-            <h4 class="text-[9px] font-semibold text-white line-clamp-1 text-stroke-black leading-tight">${video.title}</h4>
+            <h4 class="text-[9px] font-semibold text-white line-clamp-1 text-stroke-strong leading-tight">${video.title}</h4>
           </div>
         </div>
         <div class="px-1 pb-0.5 pt-0.5 border-t border-brand-gold/20 flex items-center justify-between text-[8px]">
@@ -824,8 +882,44 @@ async function loadLatestVideos() {
   }
 }
 
-// Call dynamic loader
+// --- 13. DYNAMIC SCROLLER FOR information.txt (HINDI SAHITYA EVENTS) ---
+async function loadInformationEvents() {
+  const container = document.getElementById('infoScrollerContent');
+  if (!container) return;
+
+  try {
+    const res = await fetch(`information.txt?t=${Date.now()}`);
+    if (!res.ok) return;
+
+    const rawText = await res.text();
+    const items = rawText
+      .split('\n')
+      .map(line => line.trim().replace(/^[\*\-•]\s*/, ''))
+      .filter(Boolean);
+
+    if (items.length === 0) return;
+
+    const renderCard = (text) => `
+      <div class="p-2.5 rounded-lg bg-black/80 border border-brand-gold/40 hover:border-brand-gold transition-colors shadow flex items-start gap-2">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-amberGold shrink-0 mt-0.5"></i>
+        <p class="text-xs text-amber-100 font-medium leading-relaxed text-stroke-strong">${text}</p>
+      </div>
+    `;
+
+    // Render items duplicated twice to create a seamless infinite loop
+    const firstSet = items.map(renderCard).join('');
+    const secondSet = items.map(renderCard).join('');
+
+    container.innerHTML = firstSet + secondSet;
+    if (window.lucide) lucide.createIcons();
+  } catch (err) {
+    console.error('Error loading information.txt:', err);
+  }
+}
+
+// Initialize dynamic loaders
 loadLatestVideos();
+loadInformationEvents();
 
 // Initialize Lucide icons
 lucide.createIcons();
