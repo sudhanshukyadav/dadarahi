@@ -120,7 +120,7 @@ body.bg-lightened {
 </head>
 <body class="bg-lightened text-white font-devanagari selection:bg-brand-gold selection:text-brand-charcoal min-h-screen">
 
-<!-- Header (1800px wide) -->
+<!-- Header (1800px wide)[cite: 1] -->
 <header class="sticky top-0 z-40 bg-black/90 backdrop-blur-md border-b border-white/20">
   <div class="max-w-[1800px] mx-auto px-4 sm:px-8 h-24 sm:h-28 flex items-center justify-between gap-6">
     
@@ -132,7 +132,7 @@ body.bg-lightened {
       </div>
     </a>
 
-    <!-- Desktop Navigation -->
+    <!-- Desktop Navigation[cite: 1] -->
     <nav class="hidden lg:flex items-center justify-center flex-1 gap-8 px-4 font-sans">
       <a href="#all-videos" class="nav-link flex items-center gap-1.5 text-sm font-semibold text-white text-stroke-strong hover:text-brand-amberGold transition-colors">
         <i data-lucide="film" class="w-4 h-4 text-white"></i>
@@ -146,7 +146,7 @@ body.bg-lightened {
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
         <span>LinkedIn</span>
       </a>
-      <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="nav-link flex items-center gap-1.5 text-sm font-medium text-amber-100 text-stroke-strong hover:text-brand-amberGold transition-colors">
+      <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" class="nav-link flex items-center gap-1.5 text-sm font-medium text-amber-100 text-stroke-strong hover:text-brand-amberGold transition-colors">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span>YouTube</span>
       </a>
@@ -156,25 +156,25 @@ body.bg-lightened {
       </a>
     </nav>
 
-    <!-- Header Actions (Straightforward Subscribe in New Tab) -->
+    <!-- Header Actions (Floating Window Subscription Flow)[cite: 1] -->
     <div class="hidden sm:flex items-center gap-3 shrink-0 font-sans">
       <a href="contact.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm rounded-full shadow-lg transition-all hover:scale-105 border border-emerald-400">
         <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
         <span class="text-stroke-strong">Call Back</span>
       </a>
-      <button type="button" onclick="handleSubscribe(event)" class="inline-flex items-center gap-1.5 px-4 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs sm:text-sm rounded-full shadow-lg transition-all hover:scale-105 border border-black/50 cursor-pointer">
+      <button type="button" onclick="handleSubscribeFlow(event)" class="inline-flex items-center gap-1.5 px-4 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs sm:text-sm rounded-full shadow-lg transition-all hover:scale-105 border border-black/50 cursor-pointer">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span class="text-stroke-strong">Subscribe</span>
       </button>
     </div>
 
-    <!-- Mobile Toggle -->
+    <!-- Mobile Toggle[cite: 1] -->
     <button id="menuToggle" class="lg:hidden flex items-center p-2 text-amber-100 hover:text-brand-amberGold transition-colors text-stroke-strong" aria-label="Toggle menu">
       <i data-lucide="menu" class="w-7 h-7"></i>
     </button>
   </div>
 
-  <!-- Mobile Dropdown -->
+  <!-- Mobile Dropdown[cite: 1] -->
   <div id="mobileMenu" class="mobile-menu lg:hidden bg-[#120406]/95 border-t border-white/20 font-sans">
     <nav class="flex flex-col px-5 py-4 gap-2">
       <div class="flex items-center gap-3 py-2">
@@ -182,7 +182,7 @@ body.bg-lightened {
           <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
           <span class="text-stroke-strong">Call Back</span>
         </a>
-        <button type="button" onclick="handleSubscribe(event)" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-full shadow cursor-pointer">
+        <button type="button" onclick="handleSubscribeFlow(event)" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-full shadow cursor-pointer">
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
           <span class="text-stroke-strong">Subscribe</span>
         </button>
@@ -199,7 +199,7 @@ body.bg-lightened {
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
         <span>LinkedIn · लिंक्डइन</span>
       </a>
-      <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-strong">
+      <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-strong">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span>YouTube · यूट्यूब</span>
       </a>
@@ -211,10 +211,10 @@ body.bg-lightened {
   </div>
 </header>
 
-<!-- Latest Videos Row (Shifted 250px to the Left) -->
+<!-- Latest Videos Row (Shifted 250px to the Left)[cite: 1] -->
 <section id="latestVideosSection" class="w-full bg-transparent pt-3 pb-1 px-4 hidden transition-all">
   <div class="max-w-[1800px] mx-auto flex justify-center">
-    <div class="w-full max-w-3xl transform lg:-translate-x-[250px]">
+    <div class="w-full max-w-3xl transform lg:-translate-x-[125px]">
       <div class="flex items-center justify-between mb-2 px-1">
         <div class="flex items-center gap-1.5">
           <span class="inline-block w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
@@ -228,13 +228,13 @@ body.bg-lightened {
       </div>
 
       <div id="latestVideosRow" class="grid grid-cols-3 sm:grid-cols-6 gap-3">
-        <!-- Injected dynamically from latest-videos.txt -->
+        <!-- Injected dynamically from latest-videos.txt[cite: 1] -->
       </div>
     </div>
   </div>
 </section>
 
-<!-- Hero Section with Dual Left & Right Scrollers -->
+<!-- Hero Section with Dual Left & Right Scrollers[cite: 1] -->
 <section class="relative pt-3 pb-8 px-4 sm:px-6 overflow-hidden">
   
   <div class="max-w-[1800px] mx-auto text-center mb-5">
@@ -255,7 +255,7 @@ body.bg-lightened {
 
   <div class="max-w-[1800px] mx-auto flex flex-col lg:flex-row items-stretch justify-center gap-5 px-2">
 
-    <!-- LEFT SCROLLER (information.txt) -->
+    <!-- LEFT SCROLLER (information.txt)[cite: 1] -->
     <aside class="w-full lg:w-[380px] xl:w-[440px] shrink-0 flex flex-col">
       <div class="bg-black/85 backdrop-blur-md border border-brand-gold/60 rounded-xl p-3.5 h-full flex flex-col justify-between shadow-2xl">
         <div class="flex items-center justify-between pb-2 mb-2 border-b border-brand-gold/30">
@@ -284,7 +284,7 @@ body.bg-lightened {
       </div>
     </aside>
 
-    <!-- CENTER COLUMN -->
+    <!-- CENTER COLUMN[cite: 1] -->
     <div class="w-full max-w-2xl shrink-0 flex flex-col justify-between">
       <div class="mb-3">
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
@@ -324,7 +324,7 @@ body.bg-lightened {
       </div>
     </div>
 
-    <!-- RIGHT SCROLLER (additionalinfo.txt) -->
+    <!-- RIGHT SCROLLER (additionalinfo.txt)[cite: 1] -->
     <aside class="w-full lg:w-[380px] xl:w-[440px] shrink-0 flex flex-col">
       <div class="bg-black/85 backdrop-blur-md border border-brand-gold/60 rounded-xl p-3.5 h-full flex flex-col justify-between shadow-2xl">
         <div class="flex items-center justify-between pb-2 mb-2 border-b border-brand-gold/30">
@@ -356,7 +356,7 @@ body.bg-lightened {
   </div>
 </section>
 
-<!-- Published Books Section (Loads dynamically from books.txt) -->
+<!-- Published Books Section (Loads dynamically from books.txt)[cite: 1, 2] -->
 <section id="published-books" class="max-w-[1800px] mx-auto px-4 sm:px-6 pt-10 pb-16 scroll-mt-28 border-t border-brand-gold/30">
   <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 bg-black/85 p-5 rounded-2xl border border-brand-gold/40 backdrop-blur-md">
     <div>
@@ -371,7 +371,7 @@ body.bg-lightened {
   <div id="gallery" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4"></div>
 </section>
 
-<!-- Videos Section (Loads dynamically from videos.txt) -->
+<!-- Videos Section (Loads dynamically from videos.txt)[cite: 1, 3] -->
 <section id="all-videos" class="max-w-[1800px] mx-auto px-4 sm:px-6 pt-10 pb-16 scroll-mt-28 border-t border-brand-gold/30">
   <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 bg-black/85 p-5 rounded-2xl border border-brand-gold/40 backdrop-blur-md">
     <div>
@@ -399,7 +399,7 @@ body.bg-lightened {
   </div>
 </section>
 
-<!-- Featured on Social Media Section -->
+<!-- Featured on Social Media Section[cite: 1] -->
 <section class="max-w-[1800px] mx-auto px-4 sm:px-6 py-12 border-t border-brand-gold/30 font-sans">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 group shadow-xl">
@@ -411,14 +411,14 @@ body.bg-lightened {
       </div>
     </a>
 
-    <a href="https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1" target="_blank" rel="noopener noreferrer" onclick="handleSubscribe(event)" class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 group shadow-xl cursor-pointer">
+    <button type="button" onclick="handleSubscribeFlow(event)" class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 group shadow-xl cursor-pointer text-left w-full">
       <div>
         <div class="w-10 h-10 rounded-lg bg-black/90 text-brand-gold flex items-center justify-center mb-4 border border-brand-gold/40 group-hover:scale-110 transition-transform">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         </div>
         <h4 class="text-lg font-bold text-brand-gold mb-1 text-stroke-strong group-hover:text-white transition-colors">YouTube Channel</h4>
       </div>
-    </a>
+    </button>
 
     <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 group shadow-xl">
       <div>
@@ -436,7 +436,7 @@ body.bg-lightened {
   <p class="mb-2 text-stroke-strong">© 2026 Yatindra Nath 'Rahi' — All rights reserved.</p>
 </footer>
 
-<!-- 1-Click Fullscreen Theater Video Modal -->
+<!-- 1-Click Fullscreen Theater Video Modal[cite: 1] -->
 <div id="videoModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden items-center justify-center p-2 sm:p-6 transition-all duration-300">
   <button id="closeModalBtn" onclick="closeVideoModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/80 hover:text-white bg-black/60 hover:bg-red-600/80 p-2.5 rounded-full border border-white/20 transition-all z-10 flex items-center justify-center shadow-lg" aria-label="Close modal">
     <i data-lucide="x" class="w-6 h-6"></i>
@@ -446,10 +446,31 @@ body.bg-lightened {
   </div>
 </div>
 
-<!-- Toast Alert -->
+<!-- Subscription Confirmation Verification Modal (Appears upon closing floating YouTube window) -->
+<div id="subFeedbackModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+  <div class="glass-card max-w-md w-full rounded-2xl p-6 sm:p-8 text-center shadow-2xl border border-brand-gold relative">
+    <div class="w-14 h-14 mx-auto rounded-full bg-red-600/20 border border-red-500/50 flex items-center justify-center text-red-500 mb-4">
+      <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+    </div>
+    <h3 class="text-xl font-bold text-brand-amberGold text-stroke-strong mb-1.5">यूट्यूब परिवार से जुड़ाव</h3>
+    <p class="text-sm text-amber-100 font-devanagari mb-6 leading-relaxed">क्या आपने यतीन्द्र नाथ 'राही' जी के चैनल को सब्सक्राइब कर लिया है?</p>
+    
+    <div class="flex flex-col sm:flex-row gap-3 justify-center font-devanagari">
+      <button onclick="handleFeedbackAnswer(true)" class="flex-1 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-sm shadow-lg transition-transform hover:scale-105 flex items-center justify-center gap-1.5 cursor-pointer">
+        <i data-lucide="check-circle" class="w-4 h-4"></i>
+        <span>हाँ / पहले से सदस्य हूँ</span>
+      </button>
+      <button onclick="handleFeedbackAnswer(false)" class="px-4 py-2.5 rounded-xl bg-black/60 hover:bg-neutral-800 text-gray-300 hover:text-white font-semibold text-sm border border-white/20 transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+        <span>नहीं, अभी नहीं</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Dynamic Toast Notification (Celebration / Remorse / Notice) -->
 <div id="toastAlert" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 translate-y-4 duration-300">
-  <div class="bg-black/95 text-brand-gold border-2 border-brand-gold px-6 py-3.5 rounded-full shadow-2xl flex items-center gap-3 backdrop-blur-md">
-    <i data-lucide="info" class="w-5 h-5 text-brand-amberGold shrink-0"></i>
+  <div id="toastAlertBox" class="bg-black/95 text-brand-gold border-2 border-brand-gold px-6 py-3.5 rounded-full shadow-2xl flex items-center gap-3 backdrop-blur-md">
+    <i id="toastIcon" data-lucide="info" class="w-5 h-5 text-brand-amberGold shrink-0"></i>
     <div class="text-center font-semibold text-xs sm:text-sm">
       <span id="toastMainText">PDF copy coming soon</span>
       <span id="toastSubText" class="block text-xs text-white/90 mt-0.5"></span>
@@ -458,7 +479,7 @@ body.bg-lightened {
 </div>
 
 <script>
-// --- 1. 4 FEATURED HERO VIDEOS ---
+// --- 1. 4 FEATURED HERO VIDEOS[cite: 1] ---
 const featuredVideosData = [
   { id: "YDPRdS7dP6o", title: "Farewell Jolly", subtitle: "बिदाई (एक श्वान बाला की)", tag: "काव्य पाठ" },
   { id: "5luDNgXOdm0", title: "Kahani Dadee Kee", subtitle: "दादी की कहानी", tag: "बालगीत" },
@@ -466,7 +487,7 @@ const featuredVideosData = [
   { id: "16wDKAUM0LY", title: "Shree Krishna Prayer", subtitle: "भगवान श्रीकृष्ण प्रार्थना", tag: "प्रार्थना" }
 ];
 
-// --- 2. 1-CLICK FULLSCREEN THEATER MODAL LOGIC ---
+// --- 2. 1-CLICK FULLSCREEN THEATER MODAL LOGIC[cite: 1] ---
 const videoModal = document.getElementById('videoModal');
 const modalIframe = document.getElementById('modalIframe');
 const videoModalContainer = document.getElementById('videoModalContainer');
@@ -508,31 +529,137 @@ window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideoMo
   });
 });
 
-// --- 3. STREAMLINED SUBSCRIBE HANDLER (NO VIDEO COMPLICATION) ---
-function handleSubscribe(event) {
+// --- 3. FLOATING POPUP SUBSCRIPTION FLOW & CONFIRMATION ---
+let subPopup = null;
+let popupPollInterval = null;
+
+function handleSubscribeFlow(event) {
   if (event) event.preventDefault();
-  burstConfetti();
-  window.open('https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1', '_blank');
+
+  // Floating window geometry: 600px width, 650px height centered on screen
+  const width = 600;
+  const height = 650;
+  const left = Math.max(0, (window.innerWidth - width) / 2 + (window.screenX || window.screenLeft || 0));
+  const top = Math.max(0, (window.innerHeight - height) / 2 + (window.screenY || window.screenTop || 0));
+
+  try {
+    subPopup = window.open(
+      'https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1',
+      'ytSubscribeFloatingWindow',
+      `width=${width},height=${height},top=${top},left=${left},scrollbars=yes,resizable=yes`
+    );
+
+    // Poll for window closure
+    if (popupPollInterval) clearInterval(popupPollInterval);
+    popupPollInterval = setInterval(() => {
+      if (subPopup && subPopup.closed) {
+        clearInterval(popupPollInterval);
+        showFeedbackModal();
+      }
+    }, 400);
+
+  } catch (err) {
+    // If popup blocker intervened, open standard window
+    window.open('https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1', '_blank');
+  }
 }
 
-// --- 4. TOAST ALERT LOGIC ---
+function showFeedbackModal() {
+  const modal = document.getElementById('subFeedbackModal');
+  if (modal) {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    if (window.lucide) lucide.createIcons();
+  }
+}
+
+function closeFeedbackModal() {
+  const modal = document.getElementById('subFeedbackModal');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+}
+
+function handleFeedbackAnswer(didSubscribe) {
+  closeFeedbackModal();
+
+  if (didSubscribe) {
+    // Joyful Celebration
+    burstConfetti();
+    showToastNotification(
+      "स्वागतम! साहित्य परिवार से जुड़ने पर आपका सहर्ष अभिनन्दन।",
+      "Thank you for subscribing! Welcome to our literary family.",
+      "celebrate"
+    );
+  } else {
+    // Poetic Remorse
+    showToastNotification(
+      "कदाचित अगली बार... हम आपके साथ से वंचित रह गए!",
+      "We missed having you with us. Hope you consider subscribing next time!",
+      "remorse"
+    );
+  }
+}
+
+// --- 4. VERSATILE TOAST NOTIFICATION ---
 const toastAlert = document.getElementById('toastAlert');
+const toastAlertBox = document.getElementById('toastAlertBox');
 const toastMainText = document.getElementById('toastMainText');
 const toastSubText = document.getElementById('toastSubText');
+const toastIcon = document.getElementById('toastIcon');
 let toastTimer = null;
-function showPdfNotice(main = "PDF copy coming soon", sub = "पीडीएफ प्रति शीघ्र उपलब्ध होगी") {
+
+function showToastNotification(main, sub = "", type = "notice") {
   if (toastTimer) clearTimeout(toastTimer);
   toastMainText.innerText = main;
   if (toastSubText) toastSubText.innerText = sub;
+
+  // Reset theme classes
+  toastAlertBox.className = "px-6 py-3.5 rounded-full shadow-2xl flex items-center gap-3 backdrop-blur-md border-2";
+
+  if (type === "celebrate") {
+    toastAlertBox.classList.add("bg-emerald-950/95", "text-amber-300", "border-brand-gold");
+    toastIcon.setAttribute("data-lucide", "sparkles");
+    toastIcon.className = "w-5 h-5 text-amber-300 shrink-0";
+  } else if (type === "remorse") {
+    toastAlertBox.classList.add("bg-neutral-950/95", "text-rose-300", "border-rose-600/70");
+    toastIcon.setAttribute("data-lucide", "heart-crack");
+    toastIcon.className = "w-5 h-5 text-rose-400 shrink-0";
+  } else {
+    toastAlertBox.classList.add("bg-black/95", "text-brand-gold", "border-brand-gold");
+    toastIcon.setAttribute("data-lucide", "info");
+    toastIcon.className = "w-5 h-5 text-brand-amberGold shrink-0";
+  }
+
+  if (window.lucide) lucide.createIcons();
+
   toastAlert.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
   toastAlert.classList.add('opacity-100', 'translate-y-0');
+
   toastTimer = setTimeout(() => {
     toastAlert.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
     toastAlert.classList.remove('opacity-100', 'translate-y-0');
-  }, 3500);
+  }, 4500);
 }
 
-// --- 5. RENDER 4 FEATURED VIDEOS ---
+function showPdfNotice() {
+  showToastNotification("PDF copy coming soon", "पीडीएफ प्रति शीघ्र उपलब्ध होगी", "notice");
+}
+
+function burstConfetti() {
+  try {
+    if (typeof confetti === 'function') {
+      confetti({
+        particleCount: 110,
+        spread: 80,
+        origin: { y: 0.7 }
+      });
+    }
+  } catch (err) {}
+}
+
+// --- 5. RENDER 4 FEATURED VIDEOS[cite: 1] ---
 const featuredContainer = document.getElementById('featuredVideoThumbnails');
 if (featuredContainer) {
   featuredContainer.innerHTML = '';
@@ -560,13 +687,11 @@ if (featuredContainer) {
   });
 }
 
-function burstConfetti() { try { if (typeof confetti === 'function') confetti({ particleCount: 80, spread: 60, origin: { y: 0.8 } }); } catch (err) {} }
-
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 if (menuToggle && mobileMenu) menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
 
-// --- 6. UTILITY: EXTRACT YOUTUBE ID ---
+// --- 6. UTILITY: EXTRACT YOUTUBE ID[cite: 1] ---
 function extractYouTubeId(url) {
   if (!url) return null;
   const match = url.match(/(?:studio\.youtube\.com\/video\/|youtube\.com\/(?:watch\?.*v=|embed\/|v\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
@@ -575,7 +700,7 @@ function extractYouTubeId(url) {
   return fallback ? fallback[1] : null;
 }
 
-// --- 7. DYNAMIC LATEST VIDEOS (FROM latest-videos.txt) ---
+// --- 7. DYNAMIC LATEST VIDEOS (FROM latest-videos.txt)[cite: 1] ---
 async function loadLatestVideos() {
   const section = document.getElementById('latestVideosSection');
   const container = document.getElementById('latestVideosRow');
@@ -631,7 +756,7 @@ async function loadLatestVideos() {
   }
 }
 
-// --- 8. DYNAMIC PUBLISHED BOOKS LOADER (FROM books.txt or book.txt) ---
+// --- 8. DYNAMIC PUBLISHED BOOKS LOADER (FROM books.txt or book.txt)[cite: 2] ---
 async function loadBooks() {
   const gallery = document.getElementById('gallery');
   if (!gallery) return;
@@ -666,7 +791,7 @@ async function loadBooks() {
   }
 }
 
-// --- 9. DYNAMIC VIDEOS LOADER (FROM videos.txt: LONG-FORM & SHORTS) ---
+// --- 9. DYNAMIC VIDEOS LOADER (FROM videos.txt: LONG-FORM & SHORTS)[cite: 3] ---
 async function loadVideos() {
   const longGrid = document.getElementById('longVideosGrid');
   const shortsGrid = document.getElementById('shortsVideosGrid');
@@ -768,7 +893,7 @@ async function loadVideos() {
   }
 }
 
-// --- 10. DYNAMIC SCROLLERS (information.txt & additionalinfo.txt) ---
+// --- 10. DYNAMIC SCROLLERS (information.txt & additionalinfo.txt)[cite: 1] ---
 async function loadTextScroller(file, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
