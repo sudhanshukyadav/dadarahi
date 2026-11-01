@@ -469,6 +469,7 @@ const featuredVideosData = [
 // --- 2. DIRECT YOUTUBE OPENING (Native Likes, Comments & Subscriptions) ---
 
 // Opens video directly on YouTube with a 720p quality hint
+// AFTER (Appends 720p HD parameter for all videos across the site)
 function openFullscreenVideo(id) {
   if (!id) return;
   window.open(`https://www.youtube.com/watch?v=${encodeURIComponent(id)}&vq=hd720`, '_blank');
@@ -643,6 +644,7 @@ function extractYouTubeId(url) {
   return fallback ? fallback[1] : null;
 }
 
+// --- 8. DYNAMIC LATEST VIDEOS (FROM latest-videos.txt) ---
 // --- 8. DYNAMIC LATEST VIDEOS (FROM latest-videos.txt) ---
 async function loadLatestVideos() {
   const section = document.getElementById('latestVideosSection');
