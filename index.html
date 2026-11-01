@@ -120,7 +120,7 @@ body.bg-lightened {
 </head>
 <body class="bg-lightened text-white font-devanagari selection:bg-brand-gold selection:text-brand-charcoal min-h-screen">
 
-<!-- Header (1800px wide)[cite: 1] -->
+<!-- Header (1800px wide) -->
 <header class="sticky top-0 z-40 bg-black/90 backdrop-blur-md border-b border-white/20">
   <div class="max-w-[1800px] mx-auto px-4 sm:px-8 h-24 sm:h-28 flex items-center justify-between gap-6">
     
@@ -132,7 +132,7 @@ body.bg-lightened {
       </div>
     </a>
 
-    <!-- Desktop Navigation[cite: 1] -->
+    <!-- Desktop Navigation -->
     <nav class="hidden lg:flex items-center justify-center flex-1 gap-8 px-4 font-sans">
       <a href="#all-videos" class="nav-link flex items-center gap-1.5 text-sm font-semibold text-white text-stroke-strong hover:text-brand-amberGold transition-colors">
         <i data-lucide="film" class="w-4 h-4 text-white"></i>
@@ -156,7 +156,7 @@ body.bg-lightened {
       </a>
     </nav>
 
-    <!-- Header Actions (Floating Window Subscription Flow)[cite: 1] -->
+    <!-- Header Actions -->
     <div class="hidden sm:flex items-center gap-3 shrink-0 font-sans">
       <a href="contact.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm rounded-full shadow-lg transition-all hover:scale-105 border border-emerald-400">
         <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
@@ -168,13 +168,13 @@ body.bg-lightened {
       </button>
     </div>
 
-    <!-- Mobile Toggle[cite: 1] -->
+    <!-- Mobile Toggle -->
     <button id="menuToggle" class="lg:hidden flex items-center p-2 text-amber-100 hover:text-brand-amberGold transition-colors text-stroke-strong" aria-label="Toggle menu">
       <i data-lucide="menu" class="w-7 h-7"></i>
     </button>
   </div>
 
-  <!-- Mobile Dropdown[cite: 1] -->
+  <!-- Mobile Dropdown -->
   <div id="mobileMenu" class="mobile-menu lg:hidden bg-[#120406]/95 border-t border-white/20 font-sans">
     <nav class="flex flex-col px-5 py-4 gap-2">
       <div class="flex items-center gap-3 py-2">
@@ -200,7 +200,7 @@ body.bg-lightened {
         <span>LinkedIn · लिंक्डइन</span>
       </a>
       <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-strong">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span>YouTube · यूट्यूब</span>
       </a>
       <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-strong">
@@ -211,10 +211,10 @@ body.bg-lightened {
   </div>
 </header>
 
-<!-- Latest Videos Row (Shifted 250px to the Left)[cite: 1] -->
+<!-- Latest Videos Row (Shifted 250px to the Left) -->
 <section id="latestVideosSection" class="w-full bg-transparent pt-3 pb-1 px-4 hidden transition-all">
   <div class="max-w-[1800px] mx-auto flex justify-center">
-    <div class="w-full max-w-3xl transform lg:-translate-x-[125px]">
+    <div class="w-full max-w-3xl transform lg:-translate-x-[250px]">
       <div class="flex items-center justify-between mb-2 px-1">
         <div class="flex items-center gap-1.5">
           <span class="inline-block w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
@@ -228,34 +228,44 @@ body.bg-lightened {
       </div>
 
       <div id="latestVideosRow" class="grid grid-cols-3 sm:grid-cols-6 gap-3">
-        <!-- Injected dynamically from latest-videos.txt[cite: 1] -->
+        <!-- Injected dynamically from latest-videos.txt -->
       </div>
     </div>
   </div>
 </section>
 
-<!-- Hero Section with Dual Left & Right Scrollers[cite: 1] -->
+<!-- Hero Section with Dual Left & Right Scrollers -->
 <section class="relative pt-3 pb-8 px-4 sm:px-6 overflow-hidden">
   
   <div class="max-w-[1800px] mx-auto text-center mb-5">
-    <h2 class="font-extrabold mb-2 text-white">
+    <h2 class="font-extrabold mb-3 text-white">
       <span class="gold-gradient-text block text-2xl sm:text-4xl md:text-5xl leading-tight">शब्दों में जीवन की लय</span>
       <span class="gold-gradient-text block text-2xl sm:text-4xl md:text-5xl leading-tight -mt-1 sm:-mt-2">भावनाओं का अमर काव्य संसार</span>
     </h2>
 
-    <div class="bg-black/75 backdrop-blur-md rounded-xl p-3 max-w-2xl mx-auto border border-brand-gold/30 shadow-xl">
-      <p class="text-xs sm:text-sm text-amber-100 leading-snug font-semibold text-stroke-strong mb-1">
+    <!-- Interactive Intro Platform Button (Opens YouTube subscription & navigates to contact.html) -->
+    <button type="button" onclick="handlePlatformAction(event)" class="group w-full max-w-3xl mx-auto block text-center bg-black/80 hover:bg-black/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 border-2 border-brand-gold/40 hover:border-brand-gold shadow-2xl transition-all duration-300 transform hover:scale-[1.02] cursor-pointer">
+      <p class="text-xs sm:text-sm text-amber-100 leading-snug font-semibold text-stroke-strong mb-1.5 group-hover:text-amber-200 transition-colors">
         Connect with the official platform of renowned poet and author <strong>Yatindra Nath 'Rahi'</strong> — भारतीय एवं अंतर्राष्ट्रीय कवि सम्मेलनों, बालगीतों और भावपूर्ण रचनाओं का मंच।
       </p>
-      <p class="text-xs sm:text-sm text-white leading-snug font-semibold text-stroke-strong">
-        प्रसिद्ध कवि एवं साहित्यकार <strong>यतीन्द्र नाथ यादव 'राही'</strong> के आधिकारिक मंच से जुड़ें।
-      </p>
-    </div>
+      <div class="flex items-center justify-center gap-2 pt-0.5">
+        <p class="text-xs sm:text-sm text-white leading-snug font-semibold text-stroke-strong group-hover:text-brand-amberGold transition-colors">
+          प्रसिद्ध कवि एवं साहित्यकार <strong>यतीन्द्र नाथ यादव 'राही'</strong> के आधिकारिक मंच से जुड़ें।
+        </p>
+        <i data-lucide="arrow-right-circle" class="w-4 h-4 text-brand-amberGold group-hover:translate-x-1 transition-transform shrink-0"></i>
+      </div>
+      <div class="mt-2.5 flex items-center justify-center gap-2">
+        <span class="inline-flex items-center gap-1.5 text-[11px] font-bold text-amber-200 uppercase tracking-wider bg-red-600/90 group-hover:bg-red-600 px-3.5 py-1 rounded-full shadow border border-red-400/50">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+          <span>Subscribe & Request Callback · सदस्यता एवं संवाद</span>
+        </span>
+      </div>
+    </button>
   </div>
 
   <div class="max-w-[1800px] mx-auto flex flex-col lg:flex-row items-stretch justify-center gap-5 px-2">
 
-    <!-- LEFT SCROLLER (information.txt)[cite: 1] -->
+    <!-- LEFT SCROLLER (information.txt) -->
     <aside class="w-full lg:w-[380px] xl:w-[440px] shrink-0 flex flex-col">
       <div class="bg-black/85 backdrop-blur-md border border-brand-gold/60 rounded-xl p-3.5 h-full flex flex-col justify-between shadow-2xl">
         <div class="flex items-center justify-between pb-2 mb-2 border-b border-brand-gold/30">
@@ -284,7 +294,7 @@ body.bg-lightened {
       </div>
     </aside>
 
-    <!-- CENTER COLUMN[cite: 1] -->
+    <!-- CENTER COLUMN -->
     <div class="w-full max-w-2xl shrink-0 flex flex-col justify-between">
       <div class="mb-3">
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
@@ -324,7 +334,7 @@ body.bg-lightened {
       </div>
     </div>
 
-    <!-- RIGHT SCROLLER (additionalinfo.txt)[cite: 1] -->
+    <!-- RIGHT SCROLLER (additionalinfo.txt) -->
     <aside class="w-full lg:w-[380px] xl:w-[440px] shrink-0 flex flex-col">
       <div class="bg-black/85 backdrop-blur-md border border-brand-gold/60 rounded-xl p-3.5 h-full flex flex-col justify-between shadow-2xl">
         <div class="flex items-center justify-between pb-2 mb-2 border-b border-brand-gold/30">
@@ -356,7 +366,7 @@ body.bg-lightened {
   </div>
 </section>
 
-<!-- Published Books Section (Loads dynamically from books.txt)[cite: 1, 2] -->
+<!-- Published Books Section (Loads dynamically from books.txt) -->
 <section id="published-books" class="max-w-[1800px] mx-auto px-4 sm:px-6 pt-10 pb-16 scroll-mt-28 border-t border-brand-gold/30">
   <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 bg-black/85 p-5 rounded-2xl border border-brand-gold/40 backdrop-blur-md">
     <div>
@@ -371,7 +381,7 @@ body.bg-lightened {
   <div id="gallery" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4"></div>
 </section>
 
-<!-- Videos Section (Loads dynamically from videos.txt)[cite: 1, 3] -->
+<!-- Videos Section (Loads dynamically from videos.txt) -->
 <section id="all-videos" class="max-w-[1800px] mx-auto px-4 sm:px-6 pt-10 pb-16 scroll-mt-28 border-t border-brand-gold/30">
   <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 bg-black/85 p-5 rounded-2xl border border-brand-gold/40 backdrop-blur-md">
     <div>
@@ -399,7 +409,7 @@ body.bg-lightened {
   </div>
 </section>
 
-<!-- Featured on Social Media Section[cite: 1] -->
+<!-- Featured on Social Media Section -->
 <section class="max-w-[1800px] mx-auto px-4 sm:px-6 py-12 border-t border-brand-gold/30 font-sans">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 group shadow-xl">
@@ -436,7 +446,7 @@ body.bg-lightened {
   <p class="mb-2 text-stroke-strong">© 2026 Yatindra Nath 'Rahi' — All rights reserved.</p>
 </footer>
 
-<!-- 1-Click Fullscreen Theater Video Modal[cite: 1] -->
+<!-- 1-Click Fullscreen Theater Video Modal -->
 <div id="videoModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden items-center justify-center p-2 sm:p-6 transition-all duration-300">
   <button id="closeModalBtn" onclick="closeVideoModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/80 hover:text-white bg-black/60 hover:bg-red-600/80 p-2.5 rounded-full border border-white/20 transition-all z-10 flex items-center justify-center shadow-lg" aria-label="Close modal">
     <i data-lucide="x" class="w-6 h-6"></i>
@@ -446,7 +456,7 @@ body.bg-lightened {
   </div>
 </div>
 
-<!-- Subscription Confirmation Verification Modal (Appears upon closing floating YouTube window) -->
+<!-- Subscription Confirmation Verification Modal -->
 <div id="subFeedbackModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
   <div class="glass-card max-w-md w-full rounded-2xl p-6 sm:p-8 text-center shadow-2xl border border-brand-gold relative">
     <div class="w-14 h-14 mx-auto rounded-full bg-red-600/20 border border-red-500/50 flex items-center justify-center text-red-500 mb-4">
@@ -467,19 +477,19 @@ body.bg-lightened {
   </div>
 </div>
 
-<!-- Dynamic Toast Notification (Celebration / Remorse / Notice) -->
-<div id="toastAlert" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 translate-y-4 duration-300">
-  <div id="toastAlertBox" class="bg-black/95 text-brand-gold border-2 border-brand-gold px-6 py-3.5 rounded-full shadow-2xl flex items-center gap-3 backdrop-blur-md">
-    <i id="toastIcon" data-lucide="info" class="w-5 h-5 text-brand-amberGold shrink-0"></i>
-    <div class="text-center font-semibold text-xs sm:text-sm">
-      <span id="toastMainText">PDF copy coming soon</span>
-      <span id="toastSubText" class="block text-xs text-white/90 mt-0.5"></span>
+<!-- Centered, Double-Sized Action Message Capsule -->
+<div id="toastAlert" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none opacity-0 scale-90 duration-300 transition-all flex items-center justify-center">
+  <div id="toastAlertBox" class="bg-black/95 text-brand-gold border-4 border-brand-gold px-10 py-6 sm:px-14 sm:py-8 rounded-[40px] shadow-[0_0_60px_rgba(0,0,0,0.95)] flex items-center gap-5 sm:gap-6 backdrop-blur-2xl max-w-2xl text-center">
+    <i id="toastIcon" data-lucide="info" class="w-10 h-10 sm:w-12 sm:h-12 text-brand-amberGold shrink-0"></i>
+    <div class="text-center font-bold">
+      <span id="toastMainText" class="block text-xl sm:text-2xl font-extrabold leading-snug">PDF copy coming soon</span>
+      <span id="toastSubText" class="block text-sm sm:text-base text-white/95 mt-1 font-semibold font-devanagari"></span>
     </div>
   </div>
 </div>
 
 <script>
-// --- 1. 4 FEATURED HERO VIDEOS[cite: 1] ---
+// --- 1. 4 FEATURED HERO VIDEOS ---
 const featuredVideosData = [
   { id: "YDPRdS7dP6o", title: "Farewell Jolly", subtitle: "बिदाई (एक श्वान बाला की)", tag: "काव्य पाठ" },
   { id: "5luDNgXOdm0", title: "Kahani Dadee Kee", subtitle: "दादी की कहानी", tag: "बालगीत" },
@@ -487,7 +497,7 @@ const featuredVideosData = [
   { id: "16wDKAUM0LY", title: "Shree Krishna Prayer", subtitle: "भगवान श्रीकृष्ण प्रार्थना", tag: "प्रार्थना" }
 ];
 
-// --- 2. 1-CLICK FULLSCREEN THEATER MODAL LOGIC[cite: 1] ---
+// --- 2. 1-CLICK FULLSCREEN THEATER MODAL LOGIC ---
 const videoModal = document.getElementById('videoModal');
 const modalIframe = document.getElementById('modalIframe');
 const videoModalContainer = document.getElementById('videoModalContainer');
@@ -529,14 +539,47 @@ window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideoMo
   });
 });
 
-// --- 3. FLOATING POPUP SUBSCRIPTION FLOW & CONFIRMATION ---
+// --- 3. PLATFORM BUTTON ACTION (SUBSCRIBE POPUP + CONTACT.HTML NAVIGATION) ---
+function handlePlatformAction(event) {
+  if (event) event.preventDefault();
+  burstConfetti();
+
+  // Open YouTube subscription prompt in centered floating window
+  const width = 600;
+  const height = 650;
+  const left = Math.max(0, (window.innerWidth - width) / 2 + (window.screenX || window.screenLeft || 0));
+  const top = Math.max(0, (window.innerHeight - height) / 2 + (window.screenY || window.screenTop || 0));
+
+  try {
+    window.open(
+      'https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1',
+      'ytSubscribePopup',
+      `width=${width},height=${height},top=${top},left=${left},scrollbars=yes,resizable=yes`
+    );
+  } catch (_) {
+    window.open('https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1', '_blank');
+  }
+
+  // Display double-sized centered action capsule
+  showToastNotification(
+    "यूट्यूब चैनल से जुड़ने हेतु आभार!",
+    "संपर्क पृष्ठ (Contact Page) पर ले जाया जा रहा है...",
+    "celebrate"
+  );
+
+  // Navigate to contact.html
+  setTimeout(() => {
+    window.location.href = 'contact.html';
+  }, 1600);
+}
+
+// --- 4. FLOATING POPUP SUBSCRIPTION FLOW & CONFIRMATION ---
 let subPopup = null;
 let popupPollInterval = null;
 
 function handleSubscribeFlow(event) {
   if (event) event.preventDefault();
 
-  // Floating window geometry: 600px width, 650px height centered on screen
   const width = 600;
   const height = 650;
   const left = Math.max(0, (window.innerWidth - width) / 2 + (window.screenX || window.screenLeft || 0));
@@ -549,7 +592,6 @@ function handleSubscribeFlow(event) {
       `width=${width},height=${height},top=${top},left=${left},scrollbars=yes,resizable=yes`
     );
 
-    // Poll for window closure
     if (popupPollInterval) clearInterval(popupPollInterval);
     popupPollInterval = setInterval(() => {
       if (subPopup && subPopup.closed) {
@@ -559,7 +601,6 @@ function handleSubscribeFlow(event) {
     }, 400);
 
   } catch (err) {
-    // If popup blocker intervened, open standard window
     window.open('https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1', '_blank');
   }
 }
@@ -585,7 +626,6 @@ function handleFeedbackAnswer(didSubscribe) {
   closeFeedbackModal();
 
   if (didSubscribe) {
-    // Joyful Celebration
     burstConfetti();
     showToastNotification(
       "स्वागतम! साहित्य परिवार से जुड़ने पर आपका सहर्ष अभिनन्दन।",
@@ -593,7 +633,6 @@ function handleFeedbackAnswer(didSubscribe) {
       "celebrate"
     );
   } else {
-    // Poetic Remorse
     showToastNotification(
       "कदाचित अगली बार... हम आपके साथ से वंचित रह गए!",
       "We missed having you with us. Hope you consider subscribing next time!",
@@ -602,7 +641,7 @@ function handleFeedbackAnswer(didSubscribe) {
   }
 }
 
-// --- 4. VERSATILE TOAST NOTIFICATION ---
+// --- 5. DOUBLE-SIZED CENTERED TOAST NOTIFICATION ---
 const toastAlert = document.getElementById('toastAlert');
 const toastAlertBox = document.getElementById('toastAlertBox');
 const toastMainText = document.getElementById('toastMainText');
@@ -615,31 +654,31 @@ function showToastNotification(main, sub = "", type = "notice") {
   toastMainText.innerText = main;
   if (toastSubText) toastSubText.innerText = sub;
 
-  // Reset theme classes
-  toastAlertBox.className = "px-6 py-3.5 rounded-full shadow-2xl flex items-center gap-3 backdrop-blur-md border-2";
+  // Base styling for centered double-size capsule
+  toastAlertBox.className = "px-10 py-6 sm:px-14 sm:py-8 rounded-[40px] shadow-[0_0_60px_rgba(0,0,0,0.95)] flex items-center gap-5 sm:gap-6 backdrop-blur-2xl max-w-2xl text-center border-4";
 
   if (type === "celebrate") {
     toastAlertBox.classList.add("bg-emerald-950/95", "text-amber-300", "border-brand-gold");
     toastIcon.setAttribute("data-lucide", "sparkles");
-    toastIcon.className = "w-5 h-5 text-amber-300 shrink-0";
+    toastIcon.className = "w-10 h-10 sm:w-12 sm:h-12 text-amber-300 shrink-0";
   } else if (type === "remorse") {
-    toastAlertBox.classList.add("bg-neutral-950/95", "text-rose-300", "border-rose-600/70");
+    toastAlertBox.classList.add("bg-neutral-950/95", "text-rose-300", "border-rose-600/80");
     toastIcon.setAttribute("data-lucide", "heart-crack");
-    toastIcon.className = "w-5 h-5 text-rose-400 shrink-0";
+    toastIcon.className = "w-10 h-10 sm:w-12 sm:h-12 text-rose-400 shrink-0";
   } else {
     toastAlertBox.classList.add("bg-black/95", "text-brand-gold", "border-brand-gold");
     toastIcon.setAttribute("data-lucide", "info");
-    toastIcon.className = "w-5 h-5 text-brand-amberGold shrink-0";
+    toastIcon.className = "w-10 h-10 sm:w-12 sm:h-12 text-brand-amberGold shrink-0";
   }
 
   if (window.lucide) lucide.createIcons();
 
-  toastAlert.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
-  toastAlert.classList.add('opacity-100', 'translate-y-0');
+  toastAlert.classList.remove('opacity-0', 'scale-90', 'pointer-events-none');
+  toastAlert.classList.add('opacity-100', 'scale-100');
 
   toastTimer = setTimeout(() => {
-    toastAlert.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
-    toastAlert.classList.remove('opacity-100', 'translate-y-0');
+    toastAlert.classList.add('opacity-0', 'scale-90', 'pointer-events-none');
+    toastAlert.classList.remove('opacity-100', 'scale-100');
   }, 4500);
 }
 
@@ -651,15 +690,15 @@ function burstConfetti() {
   try {
     if (typeof confetti === 'function') {
       confetti({
-        particleCount: 110,
-        spread: 80,
-        origin: { y: 0.7 }
+        particleCount: 120,
+        spread: 90,
+        origin: { y: 0.6 }
       });
     }
   } catch (err) {}
 }
 
-// --- 5. RENDER 4 FEATURED VIDEOS[cite: 1] ---
+// --- 6. RENDER 4 FEATURED VIDEOS ---
 const featuredContainer = document.getElementById('featuredVideoThumbnails');
 if (featuredContainer) {
   featuredContainer.innerHTML = '';
@@ -691,7 +730,7 @@ const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 if (menuToggle && mobileMenu) menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
 
-// --- 6. UTILITY: EXTRACT YOUTUBE ID[cite: 1] ---
+// --- 7. UTILITY: EXTRACT YOUTUBE ID ---
 function extractYouTubeId(url) {
   if (!url) return null;
   const match = url.match(/(?:studio\.youtube\.com\/video\/|youtube\.com\/(?:watch\?.*v=|embed\/|v\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
@@ -700,7 +739,7 @@ function extractYouTubeId(url) {
   return fallback ? fallback[1] : null;
 }
 
-// --- 7. DYNAMIC LATEST VIDEOS (FROM latest-videos.txt)[cite: 1] ---
+// --- 8. DYNAMIC LATEST VIDEOS (FROM latest-videos.txt) ---
 async function loadLatestVideos() {
   const section = document.getElementById('latestVideosSection');
   const container = document.getElementById('latestVideosRow');
@@ -756,7 +795,7 @@ async function loadLatestVideos() {
   }
 }
 
-// --- 8. DYNAMIC PUBLISHED BOOKS LOADER (FROM books.txt or book.txt)[cite: 2] ---
+// --- 9. DYNAMIC PUBLISHED BOOKS LOADER (FROM books.txt or book.txt) ---
 async function loadBooks() {
   const gallery = document.getElementById('gallery');
   if (!gallery) return;
@@ -791,7 +830,7 @@ async function loadBooks() {
   }
 }
 
-// --- 9. DYNAMIC VIDEOS LOADER (FROM videos.txt: LONG-FORM & SHORTS)[cite: 3] ---
+// --- 10. DYNAMIC VIDEOS LOADER (FROM videos.txt: LONG-FORM & SHORTS) ---
 async function loadVideos() {
   const longGrid = document.getElementById('longVideosGrid');
   const shortsGrid = document.getElementById('shortsVideosGrid');
@@ -893,7 +932,7 @@ async function loadVideos() {
   }
 }
 
-// --- 10. DYNAMIC SCROLLERS (information.txt & additionalinfo.txt)[cite: 1] ---
+// --- 11. DYNAMIC SCROLLERS (information.txt & additionalinfo.txt) ---
 async function loadTextScroller(file, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
