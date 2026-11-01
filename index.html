@@ -645,7 +645,6 @@ function extractYouTubeId(url) {
 
 // --- 8. DYNAMIC LATEST VIDEOS (FROM latest-videos.txt) ---
 async function loadLatestVideos() {
-  const publicWatchUrl = `https://www.youtube.com/watch?v=${video.id}&vq=hd720`;
   const section = document.getElementById('latestVideosSection');
   const container = document.getElementById('latestVideosRow');
   if (!section || !container) return;
