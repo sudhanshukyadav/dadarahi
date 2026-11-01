@@ -201,7 +201,27 @@ body.bg-lightened {
     </nav>
   </div>
 </header>
+<!-- Latest Videos Row (Dynamic from latest-videos.txt) -->
+<section id="latestVideosSection" class="w-full bg-black/80 border-b border-brand-gold/40 py-3.5 px-4 backdrop-blur-md hidden transition-all">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex items-center justify-between mb-2.5 px-1">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+        <h3 class="text-xs sm:text-sm font-bold tracking-wide uppercase text-brand-amberGold text-stroke-black">
+          Latest Releases · नवीनतम प्रस्तुतियाँ
+        </h3>
+      </div>
+      <span class="text-[11px] text-amber-200/80 hidden sm:inline text-stroke-black font-semibold">
+        Click to watch fullscreen · पूर्ण स्क्रीन में देखें
+      </span>
+    </div>
 
+    <!-- Horizontally Scrollable Cards Row -->
+    <div id="latestVideosRow" class="flex gap-3 overflow-x-auto pb-2 pt-1 scroll-smooth">
+      <!-- Injected dynamically from latest-videos.txt -->
+    </div>
+  </div>
+</section>
 <!-- Hero Section -->
 <section class="relative pt-10 pb-12 px-4 sm:px-6 overflow-hidden">
   <div class="max-w-4xl mx-auto text-center relative z-10">
