@@ -183,7 +183,7 @@ body.bg-lightened {
           <span class="text-stroke-strong">Call Back</span>
         </a>
         <button type="button" onclick="handleSubscribeAndPlay(event)" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-full shadow cursor-pointer">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
           <span class="text-stroke-strong">Subscribe</span>
         </button>
       </div>
@@ -200,7 +200,7 @@ body.bg-lightened {
         <span>LinkedIn · लिंक्डइन</span>
       </a>
       <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-strong">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span>YouTube · यूट्यूब</span>
       </a>
       <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-strong">
@@ -211,10 +211,10 @@ body.bg-lightened {
   </div>
 </header>
 
-<!-- Latest Videos Row (Centered Between the Two Faces) -->
+<!-- Latest Videos Row (Shifted 150px to the Left from Center) -->
 <section id="latestVideosSection" class="w-full bg-transparent pt-3 pb-1 px-4 hidden transition-all">
   <div class="max-w-[1800px] mx-auto flex justify-center">
-    <div class="w-full max-w-3xl">
+    <div class="w-full max-w-3xl transform lg:-translate-x-[150px]">
       <div class="flex items-center justify-between mb-2 px-1">
         <div class="flex items-center gap-1.5">
           <span class="inline-block w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
@@ -533,35 +533,40 @@ window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideoMo
   });
 });
 
-// --- 5. SUBSCRIBE & PLAY FULLSCREEN VIDEO HANDLER WITH AUTO-CLOSE ---
+// --- 5. SUBSCRIBE & PLAY FULLSCREEN VIDEO HANDLER (RELIABLE POPUP + AUTOPLAY) ---
 let subPopup = null;
 function handleSubscribeAndPlay(event) {
   if (event) event.preventDefault();
   burstConfetti();
 
-  // Open the subscription dialogue in a popup window
-  subPopup = window.open(
-    'https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1',
-    'ytSubWindow',
-    'width=650,height=680,menubar=no,toolbar=no,status=no'
-  );
-
-  // Present notification
-  showPdfNotice("Subscribed! Starting recitation...", "सदस्यता के लिए धन्यवाद! काव्य पाठ आरंभ हो रहा है...");
-
-  // Launch the recitation in fullscreen modal
+  // 1. Immediately launch video in theater modal so user gesture initiates playback
   openFullscreenVideo('pwnUTasOQoo');
 
-  // Automatically attempt closing the popup window after 6 seconds
-  if (subPopup) {
-    setTimeout(() => {
-      try {
-        if (!subPopup.closed) {
-          subPopup.close();
-        }
-      } catch (_) {}
-    }, 6000);
-  }
+  // 2. Show celebratory confirmation message
+  showPdfNotice("Subscribed! Starting recitation...", "सदस्यता के लिए धन्यवाद! काव्य पाठ आरंभ हो रहा है...");
+
+  // 3. Open YouTube subscription dialog in an auxiliary window
+  try {
+    subPopup = window.open(
+      'https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1',
+      'ytSubPopup',
+      'width=550,height=600,menubar=no,toolbar=no,status=no,left=100,top=100'
+    );
+
+    // 4. Return focus immediately to our page so video doesn't pause
+    window.focus();
+
+    // 5. Automatically close the popup after 5 seconds
+    if (subPopup) {
+      setTimeout(() => {
+        try {
+          if (!subPopup.closed) {
+            subPopup.close();
+          }
+        } catch (_) {}
+      }, 5000);
+    }
+  } catch (_) {}
 }
 
 // --- 6. TOAST ALERT LOGIC ---
