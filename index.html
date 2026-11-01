@@ -200,7 +200,7 @@ body.bg-lightened {
         <span>LinkedIn · लिंक्डइन</span>
       </a>
       <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-strong">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span>YouTube · यूट्यूब</span>
       </a>
       <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-strong">
@@ -211,7 +211,7 @@ body.bg-lightened {
   </div>
 </header>
 
-<!-- Latest Videos Row (Shifted 250px to the Left) -->
+<!-- Latest Videos Row (Shifted 125px to the Left) -->
 <section id="latestVideosSection" class="w-full bg-transparent pt-3 pb-1 px-4 hidden transition-all">
   <div class="max-w-[1800px] mx-auto flex justify-center">
     <div class="w-full max-w-3xl transform lg:-translate-x-[125px]">
@@ -223,7 +223,7 @@ body.bg-lightened {
           </h3>
         </div>
         <span class="text-[10px] text-amber-200/90 hidden sm:inline text-stroke-strong font-semibold">
-          Click to play fullscreen
+          Click to watch on YouTube · यूट्यूब पर देखें
         </span>
       </div>
 
@@ -390,7 +390,7 @@ body.bg-lightened {
       <p class="text-base text-amber-100 font-semibold mt-1 text-stroke-strong">यूट्यूब चैनल @Rahi100-YatindraNath के सभी प्रकाशित वीडियो</p>
     </div>
     <div class="text-xs sm:text-sm text-amber-200/90 max-w-sm text-stroke-strong font-semibold">
-      Click any video thumbnail to watch in full-screen · पूर्ण स्क्रीन में देखें।
+      Click any video to open on YouTube to like & comment · लाइक और टिप्पणी करने के लिए यूट्यूब पर देखें।
     </div>
   </div>
 
@@ -446,37 +446,6 @@ body.bg-lightened {
   <p class="mb-2 text-stroke-strong">© 2026 Yatindra Nath 'Rahi' — All rights reserved.</p>
 </footer>
 
-<!-- 1-Click Fullscreen Theater Video Modal -->
-<div id="videoModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden items-center justify-center p-2 sm:p-6 transition-all duration-300">
-  <button id="closeModalBtn" onclick="closeVideoModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/80 hover:text-white bg-black/60 hover:bg-red-600/80 p-2.5 rounded-full border border-white/20 transition-all z-10 flex items-center justify-center shadow-lg" aria-label="Close modal">
-    <i data-lucide="x" class="w-6 h-6"></i>
-  </button>
-  <div id="videoModalContainer" class="w-full max-w-5xl aspect-video rounded-2xl overflow-hidden shadow-2xl border border-brand-gold/40 bg-black relative">
-    <iframe id="modalIframe" class="w-full h-full" src="" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
-  </div>
-</div>
-
-<!-- Subscription Confirmation Verification Modal -->
-<div id="subFeedbackModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
-  <div class="glass-card max-w-md w-full rounded-2xl p-6 sm:p-8 text-center shadow-2xl border border-brand-gold relative">
-    <div class="w-14 h-14 mx-auto rounded-full bg-red-600/20 border border-red-500/50 flex items-center justify-center text-red-500 mb-4">
-      <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
-    </div>
-    <h3 class="text-xl font-bold text-brand-amberGold text-stroke-strong mb-1.5">यूट्यूब परिवार से जुड़ाव</h3>
-    <p class="text-sm text-amber-100 font-devanagari mb-6 leading-relaxed">क्या आपने यतीन्द्र नाथ 'राही' जी के चैनल को सब्सक्राइब कर लिया है?</p>
-    
-    <div class="flex flex-col sm:flex-row gap-3 justify-center font-devanagari">
-      <button onclick="handleFeedbackAnswer(true)" class="flex-1 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-sm shadow-lg transition-transform hover:scale-105 flex items-center justify-center gap-1.5 cursor-pointer">
-        <i data-lucide="check-circle" class="w-4 h-4"></i>
-        <span>हाँ </span>
-      </button>
-      <button onclick="handleFeedbackAnswer(false)" class="px-4 py-2.5 rounded-xl bg-black/60 hover:bg-neutral-800 text-gray-300 hover:text-white font-semibold text-sm border border-white/20 transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
-        <span>नहीं</span>
-      </button>
-    </div>
-  </div>
-</div>
-
 <!-- Centered, Double-Sized Action Message Capsule -->
 <div id="toastAlert" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none opacity-0 scale-90 duration-300 transition-all flex items-center justify-center">
   <div id="toastAlertBox" class="bg-black/95 text-brand-gold border-4 border-brand-gold px-10 py-6 sm:px-14 sm:py-8 rounded-[40px] shadow-[0_0_60px_rgba(0,0,0,0.95)] flex items-center gap-5 sm:gap-6 backdrop-blur-2xl max-w-2xl text-center">
@@ -497,54 +466,22 @@ const featuredVideosData = [
   { id: "16wDKAUM0LY", title: "Shree Krishna Prayer", subtitle: "भगवान श्रीकृष्ण प्रार्थना", tag: "प्रार्थना" }
 ];
 
-// --- 2. 1-CLICK FULLSCREEN THEATER MODAL LOGIC ---
-const videoModal = document.getElementById('videoModal');
-const modalIframe = document.getElementById('modalIframe');
-const videoModalContainer = document.getElementById('videoModalContainer');
+// --- 2. DIRECT YOUTUBE OPENING (Native Likes, Comments & Subscriptions) ---
+function openFullscreenVideo(id) {
+  if (!id) return;
+  window.open(`https://www.youtube.com/watch?v=${encodeURIComponent(id)}`, '_blank');
+}
 
 function openFullscreenPlaylist(playlistId) {
-  if (!videoModal || !modalIframe || !videoModalContainer) return;
-  modalIframe.src = `https://www.youtube.com/embed/videoseries?list=${encodeURIComponent(playlistId)}&autoplay=1&rel=0&playsinline=1`;
-  videoModal.classList.remove('hidden');
-  videoModal.classList.add('flex');
-  if (videoModalContainer.requestFullscreen) { videoModalContainer.requestFullscreen().catch(() => {});
-  } else if (videoModalContainer.webkitRequestFullscreen) { try { videoModalContainer.webkitRequestFullscreen(); } catch (_) {} }
+  if (!playlistId) return;
+  window.open(`https://www.youtube.com/playlist?list=${encodeURIComponent(playlistId)}`, '_blank');
 }
-
-function openFullscreenVideo(id) {
-  if (!videoModal || !modalIframe || !videoModalContainer) return;
-  modalIframe.src = `https://www.youtube.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0&playsinline=1`;
-  videoModal.classList.remove('hidden');
-  videoModal.classList.add('flex');
-  if (videoModalContainer.requestFullscreen) { videoModalContainer.requestFullscreen().catch(() => {});
-  } else if (videoModalContainer.webkitRequestFullscreen) { try { videoModalContainer.webkitRequestFullscreen(); } catch (_) {} }
-}
-
-function closeVideoModal() {
-  if (!videoModal || !modalIframe) return;
-  if (document.fullscreenElement || document.webkitFullscreenElement) {
-    if (document.exitFullscreen) { document.exitFullscreen().catch(() => {});
-    } else if (document.webkitExitFullscreen) { try { document.webkitExitFullscreen(); } catch (_) {} }
-  }
-  modalIframe.src = '';
-  videoModal.classList.add('hidden');
-  videoModal.classList.remove('flex');
-}
-
-videoModal?.addEventListener('click', (e) => { if (e.target === videoModal) closeVideoModal(); });
-window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideoModal(); });
-['fullscreenchange', 'webkitfullscreenchange'].forEach((eventName) => {
-  document.addEventListener(eventName, () => {
-    if (!document.fullscreenElement && !document.webkitFullscreenElement && videoModal && !videoModal.classList.contains('hidden')) { closeVideoModal(); }
-  });
-});
 
 // --- 3. PLATFORM BUTTON ACTION (SUBSCRIBE POPUP + CONTACT.HTML NAVIGATION) ---
 function handlePlatformAction(event) {
   if (event) event.preventDefault();
   burstConfetti();
 
-  // Open YouTube subscription prompt in centered floating window
   const width = 600;
   const height = 650;
   const left = Math.max(0, (window.innerWidth - width) / 2 + (window.screenX || window.screenLeft || 0));
@@ -560,14 +497,12 @@ function handlePlatformAction(event) {
     window.open('https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1', '_blank');
   }
 
-  // Display double-sized centered action capsule
   showToastNotification(
     "यूट्यूब चैनल से जुड़ने हेतु आभार!",
     "संपर्क पृष्ठ (Contact Page) पर ले जाया जा रहा है...",
     "celebrate"
   );
 
-  // Navigate to contact.html
   setTimeout(() => {
     window.location.href = 'contact.html';
   }, 1600);
@@ -596,48 +531,17 @@ function handleSubscribeFlow(event) {
     popupPollInterval = setInterval(() => {
       if (subPopup && subPopup.closed) {
         clearInterval(popupPollInterval);
-        showFeedbackModal();
+        burstConfetti();
+        showToastNotification(
+          "साहित्य मंच से जुड़ने एवं अवलोकन हेतु सहृदय धन्यवाद!",
+          "Thank you for connecting with our literary channel!",
+          "celebrate"
+        );
       }
     }, 400);
 
   } catch (err) {
     window.open('https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1', '_blank');
-  }
-}
-
-function showFeedbackModal() {
-  const modal = document.getElementById('subFeedbackModal');
-  if (modal) {
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-    if (window.lucide) lucide.createIcons();
-  }
-}
-
-function closeFeedbackModal() {
-  const modal = document.getElementById('subFeedbackModal');
-  if (modal) {
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-  }
-}
-
-function handleFeedbackAnswer(didSubscribe) {
-  closeFeedbackModal();
-
-  if (didSubscribe) {
-    burstConfetti();
-    showToastNotification(
-      "स्वागतम! साहित्य परिवार से जुड़ने पर आपका सहर्ष अभिनन्दन।",
-      "Thank you for subscribing! Welcome to our literary family.",
-      "celebrate"
-    );
-  } else {
-    showToastNotification(
-      "कदाचित अगली बार... हम आपके साथ से वंचित रह गए!",
-      "We missed having you with us. Hope you consider subscribing next time!",
-      "remorse"
-    );
   }
 }
 
@@ -654,7 +558,6 @@ function showToastNotification(main, sub = "", type = "notice") {
   toastMainText.innerText = main;
   if (toastSubText) toastSubText.innerText = sub;
 
-  // Base styling for centered double-size capsule
   toastAlertBox.className = "px-10 py-6 sm:px-14 sm:py-8 rounded-[40px] shadow-[0_0_60px_rgba(0,0,0,0.95)] flex items-center gap-5 sm:gap-6 backdrop-blur-2xl max-w-2xl text-center border-4";
 
   if (type === "celebrate") {
