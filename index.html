@@ -6,7 +6,6 @@
 <title>Yatindra Nath Yadav 'Rahi' | यतीन्द्र नाथ यादव 'राही'</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Mukta for Devanagari clarity & Plus Jakarta Sans for UI -->
 <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
@@ -40,7 +39,6 @@ body.bg-lightened {
   background-size: cover;
 }
 
-/* High-contrast shadow for readability against photo collage background */
 .text-stroke-strong {
   text-shadow: 
     -1.5px -1.5px 0 #000,  
@@ -108,16 +106,13 @@ body.bg-lightened {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Vertical Scroller Slow Continuous Animation */
 @keyframes verticalMarquee {
   0% { transform: translateY(0); }
   100% { transform: translateY(-50%); }
 }
-
 .animate-vertical-scroll-slow {
   animation: verticalMarquee 55s linear infinite;
 }
-
 .scroller-window:hover .animate-vertical-scroll-slow {
   animation-play-state: paused;
 }
@@ -125,9 +120,9 @@ body.bg-lightened {
 </head>
 <body class="bg-lightened text-white font-devanagari selection:bg-brand-gold selection:text-brand-charcoal min-h-screen">
 
-<!-- Header -->
+<!-- Header (1800px wide) -->
 <header class="sticky top-0 z-40 bg-black/90 backdrop-blur-md border-b border-white/20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-8 h-24 sm:h-28 flex items-center justify-between gap-6">
+  <div class="max-w-[1800px] mx-auto px-4 sm:px-8 h-24 sm:h-28 flex items-center justify-between gap-6">
     
     <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 group shrink-0">
       <img src="https://i.imgur.com/W6t2NCzh.jpeg" alt="Yatindra Nath Rahi" class="w-14 h-14 sm:w-20 sm:h-20 rounded-full border-2 border-brand-gold object-cover object-top shadow-xl group-hover:scale-105 transition-transform">
@@ -138,7 +133,7 @@ body.bg-lightened {
     </a>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden lg:flex items-center justify-center flex-1 max-w-xl gap-8 px-4 font-sans">
+    <nav class="hidden lg:flex items-center justify-center flex-1 gap-8 px-4 font-sans">
       <a href="#all-videos" class="nav-link flex items-center gap-1.5 text-sm font-semibold text-white text-stroke-strong hover:text-brand-amberGold transition-colors">
         <i data-lucide="film" class="w-4 h-4 text-white"></i>
         <span>Videos</span>
@@ -151,7 +146,6 @@ body.bg-lightened {
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
         <span>LinkedIn</span>
       </a>
-      <!-- Direct Working YouTube Header Link -->
       <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="nav-link flex items-center gap-1.5 text-sm font-medium text-amber-100 text-stroke-strong hover:text-brand-amberGold transition-colors">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span>YouTube</span>
@@ -162,7 +156,7 @@ body.bg-lightened {
       </a>
     </nav>
 
-    <!-- Header Actions (Subscribes & Plays Video Fullscreen) -->
+    <!-- Header Actions -->
     <div class="hidden sm:flex items-center gap-3 shrink-0 font-sans">
       <a href="contact.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm rounded-full shadow-lg transition-all hover:scale-105 border border-emerald-400">
         <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
@@ -189,7 +183,7 @@ body.bg-lightened {
           <span class="text-stroke-strong">Call Back</span>
         </a>
         <button type="button" onclick="handleSubscribeAndPlay(event)" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-full shadow cursor-pointer">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12-2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
           <span class="text-stroke-strong">Subscribe</span>
         </button>
       </div>
@@ -217,23 +211,25 @@ body.bg-lightened {
   </div>
 </header>
 
-<!-- Latest Videos Row (Mini-Thumbnails) -->
+<!-- Latest Videos Row (Aligned Left, Borderless, No Play Icon) -->
 <section id="latestVideosSection" class="w-full bg-transparent pt-3 pb-1 px-4 hidden transition-all">
-  <div class="max-w-3xl mx-auto">
-    <div class="flex items-center justify-between mb-2 px-1">
-      <div class="flex items-center gap-1.5">
-        <span class="inline-block w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
-        <h3 class="text-[11px] sm:text-xs font-bold tracking-wider uppercase text-brand-amberGold text-stroke-strong">
-          Latest Releases · नवीनतम प्रस्तुतियाँ
-        </h3>
+  <div class="max-w-[1800px] mx-auto flex justify-start">
+    <div class="w-full max-w-3xl">
+      <div class="flex items-center justify-between mb-2 px-1">
+        <div class="flex items-center gap-1.5">
+          <span class="inline-block w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
+          <h3 class="text-[11px] sm:text-xs font-bold tracking-wider uppercase text-brand-amberGold text-stroke-strong">
+            Latest Releases · नवीनतम प्रस्तुतियाँ
+          </h3>
+        </div>
+        <span class="text-[10px] text-amber-200/90 hidden sm:inline text-stroke-strong font-semibold">
+          Click to play fullscreen
+        </span>
       </div>
-      <span class="text-[10px] text-amber-200/90 hidden sm:inline text-stroke-strong font-semibold">
-        Click to play fullscreen · पूर्ण स्क्रीन
-      </span>
-    </div>
 
-    <div id="latestVideosRow" class="grid grid-cols-3 sm:grid-cols-6 gap-2">
-      <!-- Injected dynamically from latest-videos.txt -->
+      <div id="latestVideosRow" class="grid grid-cols-3 sm:grid-cols-6 gap-3">
+        <!-- Injected dynamically from latest-videos.txt -->
+      </div>
     </div>
   </div>
 </section>
@@ -241,8 +237,7 @@ body.bg-lightened {
 <!-- Hero Section with Dual Left & Right Scrollers -->
 <section class="relative pt-3 pb-8 px-4 sm:px-6 overflow-hidden">
   
-  <!-- Centered Headings and Subtext -->
-  <div class="max-w-4xl mx-auto text-center mb-5">
+  <div class="max-w-[1800px] mx-auto text-center mb-5">
     <h2 class="font-extrabold mb-2 text-white">
       <span class="gold-gradient-text block text-2xl sm:text-4xl md:text-5xl leading-tight">शब्दों में जीवन की लय</span>
       <span class="gold-gradient-text block text-2xl sm:text-4xl md:text-5xl leading-tight -mt-1 sm:-mt-2">भावनाओं का अमर काव्य संसार</span>
@@ -258,44 +253,35 @@ body.bg-lightened {
     </div>
   </div>
 
-  <!-- Symmetrical 3-Column Level (Buttons & Thumbnails in center, flanked by scrollers) -->
-  <div class="max-w-[1550px] mx-auto flex flex-col lg:flex-row items-start justify-center gap-4">
+  <div class="max-w-[1800px] mx-auto flex flex-col lg:flex-row items-stretch justify-center gap-5 px-2">
 
-    <!-- LEFT SCROLLER (information.txt) -->
-    <aside class="w-full lg:w-80 xl:w-96 shrink-0 flex flex-col">
-      <div class="bg-black/85 backdrop-blur-md border border-brand-gold/60 rounded-xl p-3 h-full flex flex-col justify-between shadow-2xl">
+    <!-- LEFT SCROLLER -->
+    <aside class="w-full lg:w-[380px] xl:w-[440px] shrink-0 flex flex-col">
+      <div class="bg-black/85 backdrop-blur-md border border-brand-gold/60 rounded-xl p-3.5 h-full flex flex-col justify-between shadow-2xl">
         <div class="flex items-center justify-between pb-2 mb-2 border-b border-brand-gold/30">
           <div class="flex items-center gap-1.5">
             <span class="relative flex h-2 w-2">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-gold"></span>
             </span>
-            <h3 class="text-xs font-bold text-brand-amberGold tracking-wide text-stroke-strong">
+            <h3 class="text-xs sm:text-sm font-bold text-brand-amberGold tracking-wide text-stroke-strong">
               साहित्य संवाद एवं सूचनाएँ
             </h3>
           </div>
           <span class="text-[9px] text-amber-200/80 font-mono">information.txt</span>
         </div>
 
-        <div class="scroller-window relative h-[150px] overflow-hidden rounded-lg bg-black/50 border border-white/10 p-1.5 cursor-pointer">
+        <div class="scroller-window relative h-[150px] overflow-hidden rounded-lg bg-black/50 border border-white/10 p-2 cursor-pointer">
           <div class="absolute inset-x-0 top-0 h-6 bg-gradient-to-b from-black/90 to-transparent z-10 pointer-events-none"></div>
           <div class="absolute inset-x-0 bottom-0 h-6 bg-gradient-to-t from-black/90 to-transparent z-10 pointer-events-none"></div>
 
-          <div id="infoScrollerContent" class="animate-vertical-scroll-slow flex flex-col gap-2.5">
-            <p class="text-xs text-amber-100/70 p-2 text-center">नवीन सूचनाएँ लोड हो रही हैं...</p>
-          </div>
+          <div id="infoScrollerContent" class="animate-vertical-scroll-slow flex flex-col gap-2.5"></div>
         </div>
-
-        <p class="text-[9px] text-amber-200/80 text-center mt-2 font-medium text-stroke-strong">
-          रोके रखने के लिए कर्सर ऊपर लाएं (Hover to pause)
-        </p>
       </div>
     </aside>
 
-    <!-- CENTER COLUMN: 4 Playlist Buttons on top + 4 Thumbnails on bottom -->
+    <!-- CENTER COLUMN -->
     <div class="w-full max-w-2xl shrink-0 flex flex-col justify-between">
-      
-      <!-- 4 Series Playlist Buttons -->
       <div class="mb-3">
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
           <button type="button" onclick="openFullscreenPlaylist('PLDTxOwYwOkIo')" class="p-2.5 rounded-lg bg-black/90 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
@@ -305,7 +291,6 @@ body.bg-lightened {
             </div>
             <div class="text-[11px] text-amber-100 text-stroke-strong font-semibold">साहित्य संवाद</div>
           </button>
-
           <button type="button" onclick="openFullscreenPlaylist('PLDK2s7rjexk8')" class="p-2.5 rounded-lg bg-black/90 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
             <div class="text-xs sm:text-sm font-bold text-brand-amberGold text-stroke-strong flex items-center justify-center gap-1">
               <span>Children's Songs</span>
@@ -313,7 +298,6 @@ body.bg-lightened {
             </div>
             <div class="text-[11px] text-amber-100 text-stroke-strong font-semibold">बालगीत · तुन-तुन</div>
           </button>
-
           <button type="button" onclick="openFullscreenPlaylist('PLF0V20ta12Ws')" class="p-2.5 rounded-lg bg-black/90 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
             <div class="text-xs sm:text-sm font-bold text-brand-amberGold text-stroke-strong flex items-center justify-center gap-1">
               <span>International</span>
@@ -321,7 +305,6 @@ body.bg-lightened {
             </div>
             <div class="text-[11px] text-amber-100 text-stroke-strong font-semibold">अंतर्राष्ट्रीय · ISC</div>
           </button>
-
           <button type="button" onclick="openFullscreenPlaylist('PLLdbL-ovl_Yk')" class="p-2.5 rounded-lg bg-black/90 border border-brand-gold/60 hover:bg-black hover:border-brand-gold transition-all shadow-lg hover:scale-105 cursor-pointer text-left sm:text-center w-full">
             <div class="text-xs sm:text-sm font-bold text-brand-amberGold text-stroke-strong flex items-center justify-center gap-1">
               <span>Secret of Life</span>
@@ -332,122 +315,76 @@ body.bg-lightened {
         </div>
       </div>
 
-      <!-- 4 Featured Video Thumbnails -->
       <div id="featured-videos" class="w-full scroll-mt-28">
-        <div id="featuredVideoThumbnails" class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-          <!-- Injected dynamically -->
-        </div>
+        <div id="featuredVideoThumbnails" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
       </div>
-
     </div>
 
-    <!-- RIGHT SCROLLER (additionalinfo.txt) -->
-    <aside class="w-full lg:w-80 xl:w-96 shrink-0 flex flex-col">
-      <div class="bg-black/85 backdrop-blur-md border border-brand-gold/60 rounded-xl p-3 h-full flex flex-col justify-between shadow-2xl">
+    <!-- RIGHT SCROLLER -->
+    <aside class="w-full lg:w-[380px] xl:w-[440px] shrink-0 flex flex-col">
+      <div class="bg-black/85 backdrop-blur-md border border-brand-gold/60 rounded-xl p-3.5 h-full flex flex-col justify-between shadow-2xl">
         <div class="flex items-center justify-between pb-2 mb-2 border-b border-brand-gold/30">
           <div class="flex items-center gap-1.5">
             <span class="relative flex h-2 w-2">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            <h3 class="text-xs font-bold text-brand-amberGold tracking-wide text-stroke-strong">
+            <h3 class="text-xs sm:text-sm font-bold text-brand-amberGold tracking-wide text-stroke-strong">
               विशेष घोषणाएँ एवं गतिविधियाँ
             </h3>
           </div>
           <span class="text-[9px] text-amber-200/80 font-mono">additionalinfo.txt</span>
         </div>
 
-        <div class="scroller-window relative h-[150px] overflow-hidden rounded-lg bg-black/50 border border-white/10 p-1.5 cursor-pointer">
+        <div class="scroller-window relative h-[150px] overflow-hidden rounded-lg bg-black/50 border border-white/10 p-2 cursor-pointer">
           <div class="absolute inset-x-0 top-0 h-6 bg-gradient-to-b from-black/90 to-transparent z-10 pointer-events-none"></div>
           <div class="absolute inset-x-0 bottom-0 h-6 bg-gradient-to-t from-black/90 to-transparent z-10 pointer-events-none"></div>
 
-          <div id="additionalInfoScrollerContent" class="animate-vertical-scroll-slow flex flex-col gap-2.5">
-            <p class="text-xs text-amber-100/70 p-2 text-center">विवरण लोड हो रहा है...</p>
-          </div>
+          <div id="additionalInfoScrollerContent" class="animate-vertical-scroll-slow flex flex-col gap-2.5"></div>
         </div>
-
-        <p class="text-[9px] text-amber-200/80 text-center mt-2 font-medium text-stroke-strong">
-          रोके रखने के लिए कर्सर ऊपर लाएं (Hover to pause)
-        </p>
       </div>
     </aside>
 
   </div>
 </section>
 
-<!-- 1. Published Books Section -->
-<section id="published-books" class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-16 scroll-mt-28 border-t border-brand-gold/30">
+<!-- Published Books Section -->
+<section id="published-books" class="max-w-[1800px] mx-auto px-4 sm:px-6 pt-10 pb-16 scroll-mt-28 border-t border-brand-gold/30">
   <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 bg-black/85 p-5 rounded-2xl border border-brand-gold/40 backdrop-blur-md">
     <div>
       <span class="text-xs font-mono uppercase tracking-wider text-brand-gold text-stroke-strong">Literary Works · साहित्यिक रचनाएँ</span>
-      <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 text-stroke-strong">
-        Published Books · प्रकाशित पुस्तकें
-      </h3>
-      <p class="text-base text-amber-100 font-semibold mt-1 text-stroke-strong">
-        प्रकाशित पुस्तकों एवं काव्य संकलनों के मुख्य पृष्ठ
-      </p>
-    </div>
-    <div class="text-xs sm:text-sm text-amber-200/90 max-w-sm text-stroke-strong font-semibold">
-      Click any cover to preview or download PDF · मुख्य पृष्ठ पर क्लिक करके पीडीएफ देखें।
+      <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 text-stroke-strong">Published Books · प्रकाशित पुस्तकें</h3>
     </div>
   </div>
-  
-  <div id="gallery" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"></div>
+  <div id="gallery" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4"></div>
 </section>
 
-<!-- 2. Videos Section -->
-<section id="all-videos" class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-16 scroll-mt-28 border-t border-brand-gold/30">
+<!-- Videos Section -->
+<section id="all-videos" class="max-w-[1800px] mx-auto px-4 sm:px-6 pt-10 pb-16 scroll-mt-28 border-t border-brand-gold/30">
   <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 bg-black/85 p-5 rounded-2xl border border-brand-gold/40 backdrop-blur-md">
     <div>
       <span class="text-xs font-mono uppercase tracking-wider text-brand-gold text-stroke-strong">DadaRahi-NAVGEET Official Archive</span>
-      <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 text-stroke-strong">
-        Videos and Video transformation of works (वीडियो और कार्यों का वीडियो रूपांतरण)
-      </h3>
-      <p class="text-base text-amber-100 font-semibold mt-1 text-stroke-strong">
-        यूट्यूब चैनल @Rahi100-YatindraNath के सभी प्रकाशित वीडियो एवं काव्य रूपांतरण
-      </p>
-    </div>
-    <div class="text-xs sm:text-sm text-amber-200/90 max-w-sm text-stroke-strong font-semibold">
-      Click any video thumbnail to watch in full-screen · पूर्ण स्क्रीन में देखने के लिए किसी भी वीडियो पर क्लिक करें।
+      <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 text-stroke-strong">Videos and Video transformation of works</h3>
     </div>
   </div>
 
-  <!-- Long-Form Videos Grid -->
   <div class="mb-10">
     <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/90 border border-brand-gold/50 text-brand-amberGold text-xs font-semibold mb-4">
-      <i data-lucide="video" class="w-3.5 h-3.5 text-brand-gold"></i>
-      <span>Long-Form Recitations & Discourses · प्रमुख वीडियो</span>
+      <i data-lucide="video" class="w-3.5 h-3.5 text-brand-gold"></i><span>Long-Form Recitations & Discourses · प्रमुख वीडियो</span>
     </div>
-    <div id="longVideosGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3.5">
-      <!-- Injected dynamically -->
-    </div>
+    <div id="longVideosGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-3.5"></div>
   </div>
 
-  <!-- YouTube Shorts Grid -->
   <div>
     <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/90 border border-brand-gold/50 text-brand-amberGold text-xs font-semibold mb-4">
-      <i data-lucide="zap" class="w-3.5 h-3.5 text-red-500"></i>
-      <span>YouTube Shorts & Highlights · काव्य झलकियाँ</span>
+      <i data-lucide="zap" class="w-3.5 h-3.5 text-red-500"></i><span>YouTube Shorts & Highlights · काव्य झलकियाँ</span>
     </div>
-    <div id="shortsVideosGrid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
-      <!-- Injected dynamically -->
-    </div>
+    <div id="shortsVideosGrid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-3"></div>
   </div>
 </section>
 
-<!-- 3. Featured on Social Media Section -->
-<section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 border-t border-brand-gold/30 font-sans">
-  <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4 bg-black/85 p-5 rounded-2xl border border-brand-gold/40 backdrop-blur-md">
-    <div>
-      <span class="text-xs font-mono uppercase tracking-wider text-brand-gold text-stroke-strong">Literary Collection · साहित्यिक संकलन</span>
-      <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 text-stroke-strong">Featured on Social Media</h3>
-      <p class="text-sm text-amber-100 font-devanagari mt-1 text-stroke-strong font-semibold">सोशल मीडिया पर उपलब्ध मुख्य शृंखलाएं</p>
-    </div>
-    <div class="text-xs text-amber-100 max-w-sm text-stroke-strong font-devanagari font-semibold">
-      Click any card to visit the platform directly. · किसी भी कार्ड पर क्लिक करके सीधा संबंधित प्लेटफ़ॉर्म पर जाएं।
-    </div>
-  </div>
-
+<!-- Featured on Social Media Section -->
+<section class="max-w-[1800px] mx-auto px-4 sm:px-6 py-12 border-t border-brand-gold/30 font-sans">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 group shadow-xl">
       <div>
@@ -455,12 +392,6 @@ body.bg-lightened {
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
         </div>
         <h4 class="text-lg font-bold text-brand-gold mb-1 text-stroke-strong group-hover:text-white transition-colors">LinkedIn Profile</h4>
-        <p class="text-xs text-brand-amberGold font-devanagari mb-3 text-stroke-strong font-semibold">लिंक्डइन प्रोफ़ाइल</p>
-        <p class="text-xs text-white leading-relaxed mb-2 text-stroke-strong">Literary achievements, poetry recital experiences and literary journey on the professional network.</p>
-        <p class="text-xs text-white font-devanagari leading-relaxed mb-4 text-stroke-strong font-semibold">प्रोफ़ेशनल नेटवर्क पर यतीन्द्र नाथ यादव 'राही' की साहित्यिक उपलब्धियाँ एवं यात्रा का विवरण।</p>
-      </div>
-      <div class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold group-hover:text-white transition-colors text-stroke-strong">
-        <span>View on LinkedIn</span><i data-lucide="arrow-up-right" class="w-4 h-4"></i>
       </div>
     </a>
 
@@ -470,12 +401,6 @@ body.bg-lightened {
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         </div>
         <h4 class="text-lg font-bold text-brand-gold mb-1 text-stroke-strong group-hover:text-white transition-colors">YouTube Channel</h4>
-        <p class="text-xs text-brand-amberGold font-devanagari mb-3 text-stroke-strong font-semibold">यूट्यूब चैनल @Rahi100-YatindraNath</p>
-        <p class="text-xs text-white leading-relaxed mb-2 text-stroke-strong">Grand poetry symposiums, children's song series and international poetry recitations — all videos in one place.</p>
-        <p class="text-xs text-white font-devanagari leading-relaxed mb-4 text-stroke-strong font-semibold">भव्य कवि सम्मेलन, तुन-तुन-तुन्ना बालगीत श्रृंखला एवं अंतर्राष्ट्रीय काव्य पाठ — सभी वीडियो एक स्थान पर।</p>
-      </div>
-      <div class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold group-hover:text-white transition-colors text-stroke-strong">
-        <span>Subscribe on YouTube</span><i data-lucide="arrow-up-right" class="w-4 h-4"></i>
       </div>
     </a>
 
@@ -485,12 +410,6 @@ body.bg-lightened {
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
         </div>
         <h4 class="text-lg font-bold text-brand-gold mb-1 text-stroke-strong group-hover:text-white transition-colors">Facebook Profile</h4>
-        <p class="text-xs text-brand-amberGold font-devanagari mb-3 text-stroke-strong font-semibold">फेसबुक प्रोफ़ाइल</p>
-        <p class="text-xs text-white leading-relaxed mb-2 text-stroke-strong">Special literary dialogues, poetry readings and glimpses of literary gatherings with senior writers.</p>
-        <p class="text-xs text-white font-devanagari leading-relaxed mb-4 text-stroke-strong font-semibold">वरिष्ठ साहित्यकारों के साथ विशेष साहित्यिक संवाद, काव्य पाठ एवं गोष्ठी की झलकियाँ।</p>
-      </div>
-      <div class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold group-hover:text-white transition-colors text-stroke-strong">
-        <span>View on Facebook</span><i data-lucide="arrow-up-right" class="w-4 h-4"></i>
       </div>
     </a>
   </div>
@@ -498,12 +417,7 @@ body.bg-lightened {
 
 <!-- Footer -->
 <footer class="py-8 px-4 text-center text-xs text-amber-100 bg-black/90 border-t border-brand-gold/30">
-  <p class="mb-2 text-stroke-strong">© 2026 Yatindra Nath 'Rahi' — All rights reserved. · यतीन्द्र नाथ यादव 'राही' — सर्वाधिकार सुरक्षित।</p>
-  <div class="flex flex-wrap items-center justify-center gap-4 font-mono text-[11px]">
-    <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-strong">LinkedIn</a>
-    <a href="https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-strong">YouTube Subscribe</a>
-    <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-strong">Facebook</a>
-  </div>
+  <p class="mb-2 text-stroke-strong">© 2026 Yatindra Nath 'Rahi' — All rights reserved.</p>
 </footer>
 
 <!-- 1-Click Fullscreen Theater Video Modal -->
@@ -511,17 +425,8 @@ body.bg-lightened {
   <button id="closeModalBtn" onclick="closeVideoModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/80 hover:text-white bg-black/60 hover:bg-red-600/80 p-2.5 rounded-full border border-white/20 transition-all z-10 flex items-center justify-center shadow-lg" aria-label="Close modal">
     <i data-lucide="x" class="w-6 h-6"></i>
   </button>
-
   <div id="videoModalContainer" class="w-full max-w-5xl aspect-video rounded-2xl overflow-hidden shadow-2xl border border-brand-gold/40 bg-black relative">
-    <iframe 
-      id="modalIframe" 
-      class="w-full h-full" 
-      src="" 
-      title="YouTube Video Player" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" 
-      allowfullscreen>
-    </iframe>
+    <iframe id="modalIframe" class="w-full h-full" src="" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
   </div>
 </div>
 
@@ -531,8 +436,6 @@ body.bg-lightened {
     <i data-lucide="info" class="w-5 h-5 text-brand-amberGold shrink-0"></i>
     <div class="text-center font-semibold text-xs sm:text-sm">
       <span id="toastMainText">PDF copy coming soon</span>
-      <span class="mx-1 text-white">·</span>
-      <span id="toastSubText" class="text-white">पीडीएफ प्रति शीघ्र उपलब्ध होगी</span>
     </div>
   </div>
 </div>
@@ -562,43 +465,21 @@ const longFormVideos = [
   { id: "45zXxqT2htg", title: "Tun-Tun-Tunna-Nursery rhyme", subtitle: "तुन-तुन-तुन्ना-बालगीत" },
   { id: "16wDKAUM0LY", title: "Shree Krishna Prayer", subtitle: "भगवान श्रीकृष्ण प्रार्थना" },
   { id: "HJ9B1QpScrM", title: "Chidiya Rani- Nursery rhyme", subtitle: "चिड़िया रानी-बालगीत" },
-  { id: "34Co0HZymWo", title: "Jindagee Ravani Hai", subtitle: "जिंदगी रवानी है (Manoj Shrivastava IAS)" },
+  { id: "34Co0HZymWo", title: "Jindagee Ravani Hai", subtitle: "जिंदगी रवानी है" },
   { id: "STxi83sJAE0", title: "अस्तमित सुर्ख़ियाँ – डॉ. संध्या बालवटे", subtitle: "Fading Headlines" },
   { id: "fKqIocLzIVY", title: "Astmit Surkhiyan vimochan", subtitle: "अस्तमित सुर्खियाँ विमोचन" },
   { id: "PWeR_uh-V3o", title: "Soja Raj Dulare Soja", subtitle: "सो जा राज दुलारे सो जा" },
   { id: "_xyMsxco4mU", title: "Rahi Shatabdi Varsh 2025-26", subtitle: "Jindagee, Rahatgarh, Abu Dhabi" },
   { id: "9wXLmGN03Zo", title: "जिंदगी को जिंदगी सा जी नहीं पाते", subtitle: "Hindi Diwas 2026" },
   { id: "Agz3OtOAirE", title: "Rakhee Ka Tyohar", subtitle: "राखी का त्यौहार" },
-  { id: "KRsMqbrSq7k", title: "Himalay- A Grand Vision", subtitle: "हिमालय - एक विराट दर्शन" },
-  { id: "5luDNgXOdm0", title: "Kahani Dadee Kee", subtitle: "दादी की कहानी" },
-  { id: "a2X7iDlAWjM", title: "Papajee Banduk Manga Do", subtitle: "पापाजी बंदूक मंगा दो" },
-  { id: "r3MlR1cDjnI", title: "Papajee Bandook Manga Do", subtitle: "बालगीत प्रस्तुति" },
-  { id: "zrXRmrJ539A", title: "दुष्यंत कुमार स्मारक पांडुलिपि संग्रहालय", subtitle: "भोपाल साहित्य संवाद" },
-  { id: "48tX1oWf0Hg", title: "85th Birthday Celebration", subtitle: "Rajat Vihar Society, Bhopal" },
-  { id: "Epi3Sgy9Bak", title: "Vimochan on Rahi's 97th birthday", subtitle: "Manoj Shrivastava (Retired IAS)" },
-  { id: "e2HOGEKYKvg", title: "'मध्यप्रदेश संदेश'", subtitle: "Yatindra Nath Yadav RAHI" },
-  { id: "YDPRdS7dP6o", title: "बिदाई (एक श्वान बाला की)", subtitle: "Farewell Jolly" },
-  { id: "CaN0737C0ms", title: "DD News: Onkar and Jindagee", subtitle: "साहित्यिक दूरदर्शन वार्ता" },
-  { id: "l24VVzgR2qs", title: "Memories of 2013", subtitle: "Unseen Video From 13 Years Ago" },
-  { id: "aJEv-Fnoj-Y", title: "Acharya Guruvandana Samaroh", subtitle: "01 August 2026: Bhopal" },
-  { id: "rr-a0K0nfhc", title: "Navgeet Ka Swar", subtitle: "साहित्यिक प्रस्तुति" },
-  { id: "F_Owj-aOwoE", title: "Geet KI Pathshala: Nirala", subtitle: "01 May 2026" },
-  { id: "hwuo5lwK7CI", title: "Remarkable contribution to Hindi", subtitle: "Acharya Guruvandana Samaroh" },
-  { id: "fi36xqcjP1c", title: "Oont Ramjee kee Shadi", subtitle: "Wedding of Camel (Hindi Rhyme)" },
-  { id: "4nZFfiirMU0", title: "Chuhiya Chachee", subtitle: "चुहिया चाची बालगीत" },
-  { id: "pwnUTasOQoo", title: "Chuhiya Jee: Mera Faishon", subtitle: "मेरा फैशन मेरी मर्जी" },
-  { id: "2vtFP3X3YVE", title: "Geet kee Pathshala: Navgeet", subtitle: "महाप्राण निराला स्मृति" }
+  { id: "KRsMqbrSq7k", title: "Himalay- A Grand Vision", subtitle: "हिमालय - एक विराट दर्शन" }
 ];
 
 const shortsVideos = [
   { id: "lH0NARYQmbc", title: "श्री अवधेश राणा", subtitle: "Hindi Diwas 2026, ISC Abu Dhabi" },
   { id: "ifI41l_-Qts", title: "कविश्री बिपिन श्रीवास्तव", subtitle: "ISC Abu Dhabi" },
   { id: "ofQN7Sjb4Vg", title: "श्री सत्येन्द्रनाथ गुप्ता", subtitle: "ISC Abu Dhabi 2026" },
-  { id: "4YOA0WmEvwE", title: "श्रीमती विनीता स्वरूप", subtitle: "सुप्रसिद्ध कवयित्री" },
-  { id: "QGog_NGYvqU", title: "श्रीमती अजीता वडोरीले", subtitle: "सुप्रसिद्ध कवयित्री" },
-  { id: "vzspxDlpf08", title: "श्रीमती कमला जॉली", subtitle: "सुप्रसिद्ध कवयित्री" },
-  { id: "FSR4RM7nDvs", title: "श्रीमती अचला शर्मा", subtitle: "सुप्रसिद्ध कवयित्री" },
-  { id: "lI9g1D99kU0", title: "श्रीमती वंदना राणा", subtitle: "हिंदी दिवस 2026" }
+  { id: "4YOA0WmEvwE", title: "श्रीमती विनीता स्वरूप", subtitle: "सुप्रसिद्ध कवयित्री" }
 ];
 
 // --- 4. 1-CLICK FULLSCREEN THEATER MODAL LOGIC ---
@@ -608,67 +489,38 @@ const videoModalContainer = document.getElementById('videoModalContainer');
 
 function openFullscreenPlaylist(playlistId) {
   if (!videoModal || !modalIframe || !videoModalContainer) return;
-
   modalIframe.src = `https://www.youtube.com/embed/videoseries?list=${encodeURIComponent(playlistId)}&autoplay=1&rel=0&playsinline=1`;
   videoModal.classList.remove('hidden');
   videoModal.classList.add('flex');
-
-  if (videoModalContainer.requestFullscreen) {
-    videoModalContainer.requestFullscreen().catch(() => {});
-  } else if (videoModalContainer.webkitRequestFullscreen) {
-    try {
-      videoModalContainer.webkitRequestFullscreen();
-    } catch (_) {}
-  }
+  if (videoModalContainer.requestFullscreen) { videoModalContainer.requestFullscreen().catch(() => {});
+  } else if (videoModalContainer.webkitRequestFullscreen) { try { videoModalContainer.webkitRequestFullscreen(); } catch (_) {} }
 }
 
 function openFullscreenVideo(id) {
   if (!videoModal || !modalIframe || !videoModalContainer) return;
-
   modalIframe.src = `https://www.youtube.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0&playsinline=1`;
   videoModal.classList.remove('hidden');
   videoModal.classList.add('flex');
-
-  if (videoModalContainer.requestFullscreen) {
-    videoModalContainer.requestFullscreen().catch(() => {});
-  } else if (videoModalContainer.webkitRequestFullscreen) {
-    try {
-      videoModalContainer.webkitRequestFullscreen();
-    } catch (_) {}
-  }
+  if (videoModalContainer.requestFullscreen) { videoModalContainer.requestFullscreen().catch(() => {});
+  } else if (videoModalContainer.webkitRequestFullscreen) { try { videoModalContainer.webkitRequestFullscreen(); } catch (_) {} }
 }
 
 function closeVideoModal() {
   if (!videoModal || !modalIframe) return;
-
   if (document.fullscreenElement || document.webkitFullscreenElement) {
-    if (document.exitFullscreen) {
-      document.exitFullscreen().catch(() => {});
-    } else if (document.webkitExitFullscreen) {
-      try {
-        document.webkitExitFullscreen();
-      } catch (_) {}
-    }
+    if (document.exitFullscreen) { document.exitFullscreen().catch(() => {});
+    } else if (document.webkitExitFullscreen) { try { document.webkitExitFullscreen(); } catch (_) {} }
   }
-
   modalIframe.src = '';
   videoModal.classList.add('hidden');
   videoModal.classList.remove('flex');
 }
 
-videoModal?.addEventListener('click', (e) => {
-  if (e.target === videoModal) closeVideoModal();
-});
-
-window.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeVideoModal();
-});
-
+videoModal?.addEventListener('click', (e) => { if (e.target === videoModal) closeVideoModal(); });
+window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideoModal(); });
 ['fullscreenchange', 'webkitfullscreenchange'].forEach((eventName) => {
   document.addEventListener(eventName, () => {
-    if (!document.fullscreenElement && !document.webkitFullscreenElement && videoModal && !videoModal.classList.contains('hidden')) {
-      closeVideoModal();
-    }
+    if (!document.fullscreenElement && !document.webkitFullscreenElement && videoModal && !videoModal.classList.contains('hidden')) { closeVideoModal(); }
   });
 });
 
@@ -676,26 +528,18 @@ window.addEventListener('keydown', (e) => {
 function handleSubscribeAndPlay(event) {
   if (event) event.preventDefault();
   burstConfetti();
-  // Opens subscription prompt in new tab
   window.open('https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1', '_blank');
-  // Simultaneously plays video on fullscreen modal
   openFullscreenVideo('pwnUTasOQoo');
 }
 
 // --- 6. TOAST ALERT LOGIC ---
 const toastAlert = document.getElementById('toastAlert');
 const toastMainText = document.getElementById('toastMainText');
-const toastSubText = document.getElementById('toastSubText');
 let toastTimer = null;
-
-function showPdfNotice(main = "PDF copy coming soon", sub = "पीडीएफ प्रति शीघ्र उपलब्ध होगी") {
+function showPdfNotice() {
   if (toastTimer) clearTimeout(toastTimer);
-  toastMainText.innerText = main;
-  toastSubText.innerText = sub;
-  
   toastAlert.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
   toastAlert.classList.add('opacity-100', 'translate-y-0');
-  
   toastTimer = setTimeout(() => {
     toastAlert.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
     toastAlert.classList.remove('opacity-100', 'translate-y-0');
@@ -705,16 +549,15 @@ function showPdfNotice(main = "PDF copy coming soon", sub = "पीडीएफ 
 // --- 7. RENDER PUBLISHED BOOKS GALLERY ---
 const gallery = document.getElementById('gallery');
 gallery.innerHTML = '';
-cardImages.forEach((url, i) => {
+cardImages.forEach((url) => {
   const div = document.createElement('div');
   div.className = 'glass-card rounded-xl overflow-hidden hover:border-brand-gold transition-all duration-300 group shadow-lg cursor-pointer transform hover:-translate-y-1';
   div.onclick = () => showPdfNotice();
-
   div.innerHTML = `
     <div class="photo-card relative">
-      <img src="${url}" alt="Published Book ${i + 1}" class="group-hover:scale-105 transition-transform duration-300" loading="lazy">
+      <img src="${url}" class="group-hover:scale-105 transition-transform duration-300" loading="lazy">
       <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-        <span class="bg-black/80 text-[10px] text-brand-gold px-2.5 py-1 rounded-full border border-brand-gold/60 font-semibold shadow">PDF Coming Soon</span>
+        <span class="bg-black/80 text-[10px] text-brand-gold px-2.5 py-1 rounded-full border border-brand-gold/60 font-semibold">PDF Coming Soon</span>
       </div>
     </div>
   `;
@@ -728,30 +571,20 @@ featuredVideosData.forEach((video) => {
   const card = document.createElement('div');
   card.className = 'glass-card rounded-lg overflow-hidden hover:border-brand-gold transition-all duration-300 group shadow-md cursor-pointer transform hover:-translate-y-0.5 flex flex-col justify-between';
   card.onclick = () => openFullscreenVideo(video.id);
-
   const thumbUrl = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
-
   card.innerHTML = `
     <div>
       <div class="relative aspect-video bg-black/80 overflow-hidden">
-        <img src="${thumbUrl}" alt="${video.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
+        <img src="${thumbUrl}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition-colors flex items-center justify-center">
-          <div class="w-7 h-7 rounded-full bg-red-600/95 group-hover:bg-red-600 flex items-center justify-center text-white shadow-sm transform group-hover:scale-110 transition-transform">
+          <div class="w-7 h-7 rounded-full bg-red-600/95 group-hover:bg-red-600 flex items-center justify-center text-white transform group-hover:scale-110 transition-transform">
             <i data-lucide="play" class="w-3.5 h-3.5 ml-0.5 fill-current"></i>
           </div>
         </div>
-        <span class="absolute bottom-1 right-1 text-[8px] bg-black/85 text-amber-200 px-1 py-0.5 rounded border border-brand-gold/30 font-semibold leading-none">
-          ${video.tag}
-        </span>
       </div>
       <div class="p-1.5 text-center">
-        <h4 class="text-[11px] font-bold text-white line-clamp-1 text-stroke-strong leading-tight">${video.title}</h4>
-        <p class="text-[9px] text-amber-200/80 font-medium mt-0.5 line-clamp-1 text-stroke-strong">${video.subtitle}</p>
+        <h4 class="text-[11px] font-bold text-white line-clamp-1 leading-tight">${video.title}</h4>
       </div>
-    </div>
-    <div class="px-1.5 pb-1 pt-0.5 border-t border-brand-gold/20 flex items-center justify-between text-[9px] text-brand-gold font-semibold">
-      <span>Play Fullscreen</span>
-      <i data-lucide="maximize" class="w-2.5 h-2.5"></i>
     </div>
   `;
   featuredContainer.appendChild(card);
@@ -764,27 +597,18 @@ longFormVideos.forEach((video) => {
   const card = document.createElement('div');
   card.className = 'glass-card rounded-xl overflow-hidden hover:border-brand-gold transition-all duration-300 group shadow-md cursor-pointer transform hover:-translate-y-1 flex flex-col justify-between';
   card.onclick = () => openFullscreenVideo(video.id);
-
   const thumbUrl = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
-
   card.innerHTML = `
     <div>
       <div class="relative aspect-video bg-black/80 overflow-hidden">
-        <img src="${thumbUrl}" alt="${video.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
+        <img src="${thumbUrl}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
         <div class="absolute inset-0 bg-black/25 group-hover:bg-black/10 transition-colors flex items-center justify-center">
-          <div class="w-8 h-8 rounded-full bg-red-600/90 group-hover:bg-red-600 flex items-center justify-center text-white shadow transform group-hover:scale-110 transition-transform">
+          <div class="w-8 h-8 rounded-full bg-red-600/90 group-hover:bg-red-600 flex items-center justify-center text-white transform group-hover:scale-110 transition-transform">
             <i data-lucide="play" class="w-3.5 h-3.5 ml-0.5 fill-current"></i>
           </div>
         </div>
       </div>
-      <div class="p-2.5">
-        <h4 class="text-xs font-bold text-white line-clamp-1 text-stroke-strong leading-tight">${video.title}</h4>
-        <p class="text-[10px] text-amber-200/80 font-medium mt-1 line-clamp-1 text-stroke-strong">${video.subtitle}</p>
-      </div>
-    </div>
-    <div class="px-2.5 pb-2 pt-0.5 border-t border-brand-gold/20 flex items-center justify-between text-[10px] text-brand-gold font-semibold">
-      <span>Play</span>
-      <i data-lucide="maximize" class="w-3 h-3"></i>
+      <div class="p-2.5"><h4 class="text-xs font-bold text-white line-clamp-1 leading-tight">${video.title}</h4></div>
     </div>
   `;
   longVideosGrid.appendChild(card);
@@ -795,53 +619,31 @@ const shortsVideosGrid = document.getElementById('shortsVideosGrid');
 shortsVideosGrid.innerHTML = '';
 shortsVideos.forEach((short) => {
   const card = document.createElement('div');
-  card.className = 'glass-card rounded-lg overflow-hidden hover:border-brand-gold transition-all duration-300 group shadow cursor-pointer transform hover:-translate-y-0.5 flex flex-col justify-between';
+  card.className = 'glass-card rounded-lg overflow-hidden hover:border-brand-gold transition-all duration-300 group cursor-pointer transform hover:-translate-y-0.5 flex flex-col justify-between';
   card.onclick = () => openFullscreenVideo(short.id);
-
   const thumbUrl = `https://img.youtube.com/vi/${short.id}/hqdefault.jpg`;
-
   card.innerHTML = `
     <div>
       <div class="relative aspect-[9/16] bg-black/80 overflow-hidden">
-        <img src="${thumbUrl}" alt="${short.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-black/25 group-hover:bg-black/5 transition-colors flex items-center justify-center">
-          <div class="w-6 h-6 rounded-full bg-red-600 flex items-center justify-center text-white shadow-sm transform group-hover:scale-110 transition-transform">
+        <img src="${thumbUrl}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
+        <div class="absolute inset-0 bg-black/25 group-hover:bg-black/5 flex items-center justify-center">
+          <div class="w-6 h-6 rounded-full bg-red-600 flex items-center justify-center text-white transform group-hover:scale-110 transition-transform">
             <i data-lucide="play" class="w-2.5 h-2.5 ml-0.5 fill-current"></i>
           </div>
         </div>
-        <span class="absolute bottom-1 right-1 text-[7px] font-mono bg-red-600/90 text-white px-1 rounded">SHORTS</span>
-      </div>
-      <div class="p-1.5">
-        <h4 class="text-[10px] font-bold text-white line-clamp-1 text-stroke-strong leading-tight">${short.title}</h4>
       </div>
     </div>
   `;
   shortsVideosGrid.appendChild(card);
 });
 
-// --- 11. CONFETTI EFFECT ---
-function burstConfetti() {
-  try {
-    if (typeof confetti === 'function') {
-      confetti({
-        particleCount: 80,
-        spread: 60,
-        origin: { y: 0.8 }
-      });
-    }
-  } catch (err) {}
-}
+function burstConfetti() { try { if (typeof confetti === 'function') confetti({ particleCount: 80, spread: 60, origin: { y: 0.8 } }); } catch (err) {} }
 
-// --- 12. MOBILE MENU TOGGLE ---
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
-if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
-  });
-}
+if (menuToggle && mobileMenu) menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
 
-// --- 13. DYNAMIC LATEST VIDEOS LOADER ---
+// --- 11. DYNAMIC LATEST VIDEOS (NO BORDERS, NO PLAY BUTTON, LEFT ALIGNED) ---
 function extractYouTubeId(url) {
   if (!url) return null;
   const match = url.match(/(?:studio\.youtube\.com\/video\/|youtube\.com\/(?:watch\?.*v=|embed\/|v\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
@@ -872,9 +674,7 @@ async function loadLatestVideos() {
         const title = match[1].replace(/\\([!*_[\]()#+-.])/g, '$1').trim();
         const url = match[2].trim();
         const id = extractYouTubeId(url);
-        if (id) {
-          videos.push({ title, id });
-        }
+        if (id) videos.push({ title, id });
       }
     }
 
@@ -883,35 +683,20 @@ async function loadLatestVideos() {
     container.innerHTML = '';
     videos.forEach((video) => {
       const card = document.createElement('div');
-      card.className = 'bg-transparent border border-brand-gold/30 hover:border-brand-gold rounded-md overflow-hidden transition-all duration-300 group shadow-sm flex flex-col justify-between hover:-translate-y-0.5 cursor-pointer';
+      // Cleanest design: no border, no padding, just the image and title
+      card.className = 'bg-transparent rounded-md overflow-hidden transition-all duration-300 group shadow-sm flex flex-col hover:-translate-y-0.5 cursor-pointer';
       
       const thumbUrl = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
-      const publicWatchUrl = `https://www.youtube.com/watch?v=${video.id}`;
 
       card.innerHTML = `
         <div onclick="openFullscreenVideo('${video.id}')">
-          <div class="relative aspect-video bg-black/60 overflow-hidden">
+          <div class="relative aspect-video bg-black/60 overflow-hidden rounded-md">
             <img src="${thumbUrl}" alt="${video.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
-            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition-colors flex items-center justify-center">
-              <div class="w-5 h-5 rounded-full bg-red-600/95 group-hover:bg-red-600 flex items-center justify-center text-white shadow-xs transform group-hover:scale-110 transition-transform">
-                <i data-lucide="play" class="w-2.5 h-2.5 ml-0.5 fill-current"></i>
-              </div>
-            </div>
-            <span class="absolute top-0.5 left-0.5 bg-red-600/90 text-[6px] font-bold text-white px-1 py-0.2 rounded font-sans tracking-wider uppercase">NEW</span>
+            <span class="absolute top-0.5 left-0.5 bg-red-600/90 text-[6px] font-bold text-white px-1 py-0.2 rounded tracking-wider uppercase">NEW</span>
           </div>
-          <div class="p-1">
-            <h4 class="text-[9px] font-semibold text-white line-clamp-1 text-stroke-strong leading-tight">${video.title}</h4>
+          <div class="pt-1.5 px-0.5">
+            <h4 class="text-[10px] font-semibold text-white line-clamp-2 text-stroke-strong leading-tight hover:text-brand-gold transition-colors">${video.title}</h4>
           </div>
-        </div>
-        <div class="px-1 pb-0.5 pt-0.5 border-t border-brand-gold/20 flex items-center justify-between text-[8px]">
-          <span onclick="openFullscreenVideo('${video.id}')" class="text-brand-gold font-semibold hover:text-white flex items-center gap-0.5">
-            <i data-lucide="play" class="w-2 h-2"></i>
-            <span>Play</span>
-          </span>
-          <a href="${publicWatchUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="text-red-400 hover:text-red-300 font-semibold flex items-center gap-0.5">
-            <span>YT</span>
-            <i data-lucide="external-link" class="w-2 h-2"></i>
-          </a>
         </div>
       `;
       container.appendChild(card);
@@ -924,21 +709,15 @@ async function loadLatestVideos() {
   }
 }
 
-// --- 14. DYNAMIC SCROLLERS FOR information.txt & additionalinfo.txt ---
+// --- 12. DYNAMIC SCROLLERS ---
 async function loadTextScroller(file, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
-
   try {
     const res = await fetch(`${file}?t=${Date.now()}`);
     if (!res.ok) return;
-
     const rawText = await res.text();
-    const items = rawText
-      .split('\n')
-      .map(line => line.trim().replace(/^[\*\-•]\s*/, ''))
-      .filter(Boolean);
-
+    const items = rawText.split('\n').map(l => l.trim().replace(/^[\*\-•]\s*/, '')).filter(Boolean);
     if (items.length === 0) return;
 
     const renderCard = (text) => `
@@ -947,23 +726,14 @@ async function loadTextScroller(file, containerId) {
         <p class="text-xs text-amber-100 font-medium leading-relaxed text-stroke-strong">${text}</p>
       </div>
     `;
-
-    const firstSet = items.map(renderCard).join('');
-    const secondSet = items.map(renderCard).join('');
-
-    container.innerHTML = firstSet + secondSet;
+    container.innerHTML = items.map(renderCard).join('') + items.map(renderCard).join('');
     if (window.lucide) lucide.createIcons();
-  } catch (err) {
-    console.error(`Error loading ${file}:`, err);
-  }
+  } catch (err) {}
 }
 
-// Initialize dynamic loaders
 loadLatestVideos();
 loadTextScroller('information.txt', 'infoScrollerContent');
 loadTextScroller('additionalinfo.txt', 'additionalInfoScrollerContent');
-
-// Initialize Lucide icons
 lucide.createIcons();
 </script>
 </body>
