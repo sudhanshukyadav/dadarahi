@@ -472,7 +472,8 @@ const featuredVideosData = [
 // AFTER (Appends 720p HD parameter for all videos across the site)
 function openFullscreenVideo(id) {
   if (!id) return;
-  window.open(`https://www.youtube.com/watch?v=${encodeURIComponent(id)}&vq=hd720`, '_blank');
+  // Forces highest available resolution and prefers 720p/1080p stream initialization
+  window.open(`https://www.youtube.com/watch?v=${encodeURIComponent(id)}&vq=hd720&fmt=22`, '_blank');
 }
 function openFullscreenPlaylist(playlistId) {
   if (!playlistId) return;
