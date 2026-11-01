@@ -183,7 +183,7 @@ body.bg-lightened {
           <span class="text-stroke-strong">Call Back</span>
         </a>
         <button type="button" onclick="handleSubscribeAndPlay(event)" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-full shadow cursor-pointer">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12-2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
           <span class="text-stroke-strong">Subscribe</span>
         </button>
       </div>
@@ -211,9 +211,9 @@ body.bg-lightened {
   </div>
 </header>
 
-<!-- Latest Videos Row (Aligned Left, Borderless, No Play Icon) -->
+<!-- Latest Videos Row (Centered Between the Two Faces) -->
 <section id="latestVideosSection" class="w-full bg-transparent pt-3 pb-1 px-4 hidden transition-all">
-  <div class="max-w-[1800px] mx-auto flex justify-start">
+  <div class="max-w-[1800px] mx-auto flex justify-center">
     <div class="w-full max-w-3xl">
       <div class="flex items-center justify-between mb-2 px-1">
         <div class="flex items-center gap-1.5">
@@ -277,6 +277,10 @@ body.bg-lightened {
 
           <div id="infoScrollerContent" class="animate-vertical-scroll-slow flex flex-col gap-2.5"></div>
         </div>
+
+        <p class="text-[9px] text-amber-200/80 text-center mt-2 font-medium text-stroke-strong">
+          रोके रखने के लिए कर्सर ऊपर लाएं (Hover to pause)
+        </p>
       </div>
     </aside>
 
@@ -342,6 +346,10 @@ body.bg-lightened {
 
           <div id="additionalInfoScrollerContent" class="animate-vertical-scroll-slow flex flex-col gap-2.5"></div>
         </div>
+
+        <p class="text-[9px] text-amber-200/80 text-center mt-2 font-medium text-stroke-strong">
+          रोके रखने के लिए कर्सर ऊपर लाएं (Hover to pause)
+        </p>
       </div>
     </aside>
 
@@ -395,7 +403,7 @@ body.bg-lightened {
       </div>
     </a>
 
-    <a href="https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 group shadow-xl">
+    <a href="https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1" target="_blank" rel="noopener noreferrer" onclick="handleSubscribeAndPlay(event)" class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 group shadow-xl cursor-pointer">
       <div>
         <div class="w-10 h-10 rounded-lg bg-black/90 text-brand-gold flex items-center justify-center mb-4 border border-brand-gold/40 group-hover:scale-110 transition-transform">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
@@ -436,6 +444,7 @@ body.bg-lightened {
     <i data-lucide="info" class="w-5 h-5 text-brand-amberGold shrink-0"></i>
     <div class="text-center font-semibold text-xs sm:text-sm">
       <span id="toastMainText">PDF copy coming soon</span>
+      <span id="toastSubText" class="block text-xs text-white/90 mt-0.5"></span>
     </div>
   </div>
 </div>
@@ -524,26 +533,52 @@ window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideoMo
   });
 });
 
-// --- 5. SUBSCRIBE & PLAY FULLSCREEN VIDEO HANDLER ---
+// --- 5. SUBSCRIBE & PLAY FULLSCREEN VIDEO HANDLER WITH AUTO-CLOSE ---
+let subPopup = null;
 function handleSubscribeAndPlay(event) {
   if (event) event.preventDefault();
   burstConfetti();
-  window.open('https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1', '_blank');
+
+  // Open the subscription dialogue in a popup window
+  subPopup = window.open(
+    'https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1',
+    'ytSubWindow',
+    'width=650,height=680,menubar=no,toolbar=no,status=no'
+  );
+
+  // Present notification
+  showPdfNotice("Subscribed! Starting recitation...", "सदस्यता के लिए धन्यवाद! काव्य पाठ आरंभ हो रहा है...");
+
+  // Launch the recitation in fullscreen modal
   openFullscreenVideo('pwnUTasOQoo');
+
+  // Automatically attempt closing the popup window after 6 seconds
+  if (subPopup) {
+    setTimeout(() => {
+      try {
+        if (!subPopup.closed) {
+          subPopup.close();
+        }
+      } catch (_) {}
+    }, 6000);
+  }
 }
 
 // --- 6. TOAST ALERT LOGIC ---
 const toastAlert = document.getElementById('toastAlert');
 const toastMainText = document.getElementById('toastMainText');
+const toastSubText = document.getElementById('toastSubText');
 let toastTimer = null;
-function showPdfNotice() {
+function showPdfNotice(main = "PDF copy coming soon", sub = "पीडीएफ प्रति शीघ्र उपलब्ध होगी") {
   if (toastTimer) clearTimeout(toastTimer);
+  toastMainText.innerText = main;
+  if (toastSubText) toastSubText.innerText = sub;
   toastAlert.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
   toastAlert.classList.add('opacity-100', 'translate-y-0');
   toastTimer = setTimeout(() => {
     toastAlert.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
     toastAlert.classList.remove('opacity-100', 'translate-y-0');
-  }, 3000);
+  }, 4000);
 }
 
 // --- 7. RENDER PUBLISHED BOOKS GALLERY ---
@@ -601,7 +636,7 @@ longFormVideos.forEach((video) => {
   card.innerHTML = `
     <div>
       <div class="relative aspect-video bg-black/80 overflow-hidden">
-        <img src="${thumbUrl}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
+        <img src="${thumbUrl}" alt="${video.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
         <div class="absolute inset-0 bg-black/25 group-hover:bg-black/10 transition-colors flex items-center justify-center">
           <div class="w-8 h-8 rounded-full bg-red-600/90 group-hover:bg-red-600 flex items-center justify-center text-white transform group-hover:scale-110 transition-transform">
             <i data-lucide="play" class="w-3.5 h-3.5 ml-0.5 fill-current"></i>
@@ -643,7 +678,7 @@ const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 if (menuToggle && mobileMenu) menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
 
-// --- 11. DYNAMIC LATEST VIDEOS (NO BORDERS, NO PLAY BUTTON, LEFT ALIGNED) ---
+// --- 11. DYNAMIC LATEST VIDEOS (NO BORDERS, NO PLAY BUTTON, CLEAN) ---
 function extractYouTubeId(url) {
   if (!url) return null;
   const match = url.match(/(?:studio\.youtube\.com\/video\/|youtube\.com\/(?:watch\?.*v=|embed\/|v\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
@@ -683,7 +718,6 @@ async function loadLatestVideos() {
     container.innerHTML = '';
     videos.forEach((video) => {
       const card = document.createElement('div');
-      // Cleanest design: no border, no padding, just the image and title
       card.className = 'bg-transparent rounded-md overflow-hidden transition-all duration-300 group shadow-sm flex flex-col hover:-translate-y-0.5 cursor-pointer';
       
       const thumbUrl = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
