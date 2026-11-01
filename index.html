@@ -156,13 +156,13 @@ body.bg-lightened {
       </a>
     </nav>
 
-    <!-- Header Actions -->
+    <!-- Header Actions (Straightforward Subscribe in New Tab) -->
     <div class="hidden sm:flex items-center gap-3 shrink-0 font-sans">
       <a href="contact.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm rounded-full shadow-lg transition-all hover:scale-105 border border-emerald-400">
         <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
         <span class="text-stroke-strong">Call Back</span>
       </a>
-      <button type="button" onclick="handleSubscribeAndPlay(event)" class="inline-flex items-center gap-1.5 px-4 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs sm:text-sm rounded-full shadow-lg transition-all hover:scale-105 border border-black/50 cursor-pointer">
+      <button type="button" onclick="handleSubscribe(event)" class="inline-flex items-center gap-1.5 px-4 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs sm:text-sm rounded-full shadow-lg transition-all hover:scale-105 border border-black/50 cursor-pointer">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span class="text-stroke-strong">Subscribe</span>
       </button>
@@ -182,8 +182,8 @@ body.bg-lightened {
           <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
           <span class="text-stroke-strong">Call Back</span>
         </a>
-        <button type="button" onclick="handleSubscribeAndPlay(event)" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-full shadow cursor-pointer">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+        <button type="button" onclick="handleSubscribe(event)" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-full shadow cursor-pointer">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
           <span class="text-stroke-strong">Subscribe</span>
         </button>
       </div>
@@ -200,7 +200,7 @@ body.bg-lightened {
         <span>LinkedIn · लिंक्डइन</span>
       </a>
       <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-strong">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span>YouTube · यूट्यूब</span>
       </a>
       <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-strong">
@@ -211,11 +211,10 @@ body.bg-lightened {
   </div>
 </header>
 
-<!-- Latest Videos Row (Shifted 200px to the Left) -->
 <!-- Latest Videos Row (Shifted 250px to the Left) -->
 <section id="latestVideosSection" class="w-full bg-transparent pt-3 pb-1 px-4 hidden transition-all">
   <div class="max-w-[1800px] mx-auto flex justify-center">
-    <div class="w-full max-w-3xl transform lg:-translate-x-[125px]">
+    <div class="w-full max-w-3xl transform lg:-translate-x-[250px]">
       <div class="flex items-center justify-between mb-2 px-1">
         <div class="flex items-center gap-1.5">
           <span class="inline-block w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
@@ -256,7 +255,7 @@ body.bg-lightened {
 
   <div class="max-w-[1800px] mx-auto flex flex-col lg:flex-row items-stretch justify-center gap-5 px-2">
 
-    <!-- LEFT SCROLLER -->
+    <!-- LEFT SCROLLER (information.txt) -->
     <aside class="w-full lg:w-[380px] xl:w-[440px] shrink-0 flex flex-col">
       <div class="bg-black/85 backdrop-blur-md border border-brand-gold/60 rounded-xl p-3.5 h-full flex flex-col justify-between shadow-2xl">
         <div class="flex items-center justify-between pb-2 mb-2 border-b border-brand-gold/30">
@@ -325,7 +324,7 @@ body.bg-lightened {
       </div>
     </div>
 
-    <!-- RIGHT SCROLLER -->
+    <!-- RIGHT SCROLLER (additionalinfo.txt) -->
     <aside class="w-full lg:w-[380px] xl:w-[440px] shrink-0 flex flex-col">
       <div class="bg-black/85 backdrop-blur-md border border-brand-gold/60 rounded-xl p-3.5 h-full flex flex-col justify-between shadow-2xl">
         <div class="flex items-center justify-between pb-2 mb-2 border-b border-brand-gold/30">
@@ -357,23 +356,31 @@ body.bg-lightened {
   </div>
 </section>
 
-<!-- Published Books Section -->
+<!-- Published Books Section (Loads dynamically from books.txt) -->
 <section id="published-books" class="max-w-[1800px] mx-auto px-4 sm:px-6 pt-10 pb-16 scroll-mt-28 border-t border-brand-gold/30">
   <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 bg-black/85 p-5 rounded-2xl border border-brand-gold/40 backdrop-blur-md">
     <div>
       <span class="text-xs font-mono uppercase tracking-wider text-brand-gold text-stroke-strong">Literary Works · साहित्यिक रचनाएँ</span>
       <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 text-stroke-strong">Published Books · प्रकाशित पुस्तकें</h3>
+      <p class="text-base text-amber-100 font-semibold mt-1 text-stroke-strong">प्रकाशित पुस्तकों एवं काव्य संकलनों के मुख्य पृष्ठ</p>
+    </div>
+    <div class="text-xs sm:text-sm text-amber-200/90 max-w-sm text-stroke-strong font-semibold">
+      Click any cover to preview or download PDF · मुख्य पृष्ठ पर क्लिक करके देखें।
     </div>
   </div>
   <div id="gallery" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4"></div>
 </section>
 
-<!-- Videos Section -->
+<!-- Videos Section (Loads dynamically from videos.txt) -->
 <section id="all-videos" class="max-w-[1800px] mx-auto px-4 sm:px-6 pt-10 pb-16 scroll-mt-28 border-t border-brand-gold/30">
   <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 bg-black/85 p-5 rounded-2xl border border-brand-gold/40 backdrop-blur-md">
     <div>
       <span class="text-xs font-mono uppercase tracking-wider text-brand-gold text-stroke-strong">DadaRahi-NAVGEET Official Archive</span>
       <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 text-stroke-strong">Videos and Video transformation of works</h3>
+      <p class="text-base text-amber-100 font-semibold mt-1 text-stroke-strong">यूट्यूब चैनल @Rahi100-YatindraNath के सभी प्रकाशित वीडियो</p>
+    </div>
+    <div class="text-xs sm:text-sm text-amber-200/90 max-w-sm text-stroke-strong font-semibold">
+      Click any video thumbnail to watch in full-screen · पूर्ण स्क्रीन में देखें।
     </div>
   </div>
 
@@ -404,7 +411,7 @@ body.bg-lightened {
       </div>
     </a>
 
-    <a href="https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1" target="_blank" rel="noopener noreferrer" onclick="handleSubscribeAndPlay(event)" class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 group shadow-xl cursor-pointer">
+    <a href="https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1" target="_blank" rel="noopener noreferrer" onclick="handleSubscribe(event)" class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 group shadow-xl cursor-pointer">
       <div>
         <div class="w-10 h-10 rounded-lg bg-black/90 text-brand-gold flex items-center justify-center mb-4 border border-brand-gold/40 group-hover:scale-110 transition-transform">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
@@ -431,16 +438,6 @@ body.bg-lightened {
 
 <!-- 1-Click Fullscreen Theater Video Modal -->
 <div id="videoModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden items-center justify-center p-2 sm:p-6 transition-all duration-300">
-  
-  <!-- Floating Close Pill for YouTube Subscription Popup -->
-  <div id="subCloseBanner" class="hidden absolute top-4 left-1/2 -translate-x-1/2 z-30 bg-black/95 border border-brand-gold text-white px-5 py-2 rounded-full shadow-2xl flex items-center gap-3 backdrop-blur-md animate-bounce">
-    <span class="text-xs sm:text-sm text-amber-200 font-medium">सब्सक्राइब करने के बाद:</span>
-    <button type="button" onclick="closeSubPopup()" class="px-3 py-1 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-full shadow transition-transform hover:scale-105 cursor-pointer flex items-center gap-1">
-      <i data-lucide="check" class="w-3.5 h-3.5"></i>
-      <span>विंडो बंद करें (Close Window)</span>
-    </button>
-  </div>
-
   <button id="closeModalBtn" onclick="closeVideoModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/80 hover:text-white bg-black/60 hover:bg-red-600/80 p-2.5 rounded-full border border-white/20 transition-all z-10 flex items-center justify-center shadow-lg" aria-label="Close modal">
     <i data-lucide="x" class="w-6 h-6"></i>
   </button>
@@ -461,17 +458,7 @@ body.bg-lightened {
 </div>
 
 <script>
-// --- 1. PUBLISHED BOOKS COVERS ARRAY ---
-const cardImages = [
-  "Abhee.jpeg", "Anjuri.jpeg", "Bahon.jpeg", "Chuppiyan.jpeg",
-  "Jindagee.jpeg", "Kandhon.jpeg", "Kuhreele.jpeg", "Mahapran.jpeg",
-  "Mahashor.jpeg", "Reshami.jpeg", "Ret.jpeg", "Sandhya.jpeg",
-  "Titalee.jpeg", "bansuri.jpeg", "dard.jpeg", "ghronde.jpeg",
-  "dadeeman.jpeg", "khushbu.jpeg", "patthar.jpeg", "moun.jpeg",
-  "astmit.jpeg", "Panv.jpeg"
-];
-
-// --- 2. 4 FEATURED YOUTUBE VIDEOS ---
+// --- 1. 4 FEATURED HERO VIDEOS ---
 const featuredVideosData = [
   { id: "YDPRdS7dP6o", title: "Farewell Jolly", subtitle: "बिदाई (एक श्वान बाला की)", tag: "काव्य पाठ" },
   { id: "5luDNgXOdm0", title: "Kahani Dadee Kee", subtitle: "दादी की कहानी", tag: "बालगीत" },
@@ -479,30 +466,7 @@ const featuredVideosData = [
   { id: "16wDKAUM0LY", title: "Shree Krishna Prayer", subtitle: "भगवान श्रीकृष्ण प्रार्थना", tag: "प्रार्थना" }
 ];
 
-// --- 3. ALL PUBLISHED VIDEOS FROM CHANNEL ---
-const longFormVideos = [
-  { id: "hxL3pOZn7dM", title: "Amma dekho! Dher kabootar", subtitle: "अम्मा देखो! ढेर कबूतर" },
-  { id: "45zXxqT2htg", title: "Tun-Tun-Tunna-Nursery rhyme", subtitle: "तुन-तुन-तुन्ना-बालगीत" },
-  { id: "16wDKAUM0LY", title: "Shree Krishna Prayer", subtitle: "भगवान श्रीकृष्ण प्रार्थना" },
-  { id: "HJ9B1QpScrM", title: "Chidiya Rani- Nursery rhyme", subtitle: "चिड़िया रानी-बालगीत" },
-  { id: "34Co0HZymWo", title: "Jindagee Ravani Hai", subtitle: "जिंदगी रवानी है" },
-  { id: "STxi83sJAE0", title: "अस्तमित सुर्ख़ियाँ – डॉ. संध्या बालवटे", subtitle: "Fading Headlines" },
-  { id: "fKqIocLzIVY", title: "Astmit Surkhiyan vimochan", subtitle: "अस्तमित सुर्खियाँ विमोचन" },
-  { id: "PWeR_uh-V3o", title: "Soja Raj Dulare Soja", subtitle: "सो जा राज दुलारे सो जा" },
-  { id: "_xyMsxco4mU", title: "Rahi Shatabdi Varsh 2025-26", subtitle: "Jindagee, Rahatgarh, Abu Dhabi" },
-  { id: "9wXLmGN03Zo", title: "जिंदगी को जिंदगी सा जी नहीं पाते", subtitle: "Hindi Diwas 2026" },
-  { id: "Agz3OtOAirE", title: "Rakhee Ka Tyohar", subtitle: "राखी का त्यौहार" },
-  { id: "KRsMqbrSq7k", title: "Himalay- A Grand Vision", subtitle: "हिमालय - एक विराट दर्शन" }
-];
-
-const shortsVideos = [
-  { id: "lH0NARYQmbc", title: "श्री अवधेश राणा", subtitle: "Hindi Diwas 2026, ISC Abu Dhabi" },
-  { id: "ifI41l_-Qts", title: "कविश्री बिपिन श्रीवास्तव", subtitle: "ISC Abu Dhabi" },
-  { id: "ofQN7Sjb4Vg", title: "श्री सत्येन्द्रनाथ गुप्ता", subtitle: "ISC Abu Dhabi 2026" },
-  { id: "4YOA0WmEvwE", title: "श्रीमती विनीता स्वरूप", subtitle: "सुप्रसिद्ध कवयित्री" }
-];
-
-// --- 4. 1-CLICK FULLSCREEN THEATER MODAL LOGIC ---
+// --- 2. 1-CLICK FULLSCREEN THEATER MODAL LOGIC ---
 const videoModal = document.getElementById('videoModal');
 const modalIframe = document.getElementById('modalIframe');
 const videoModalContainer = document.getElementById('videoModalContainer');
@@ -531,7 +495,6 @@ function closeVideoModal() {
     if (document.exitFullscreen) { document.exitFullscreen().catch(() => {});
     } else if (document.webkitExitFullscreen) { try { document.webkitExitFullscreen(); } catch (_) {} }
   }
-  closeSubPopup();
   modalIframe.src = '';
   videoModal.classList.add('hidden');
   videoModal.classList.remove('flex');
@@ -545,69 +508,14 @@ window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideoMo
   });
 });
 
-// --- 5. SUBSCRIBE & PLAY FULLSCREEN VIDEO HANDLER (AUTO-CLOSE + PERSISTENT BANNER) ---
-let subPopup = null;
-let popupMonitorTimer = null;
-
-function closeSubPopup() {
-  if (subPopup && !subPopup.closed) {
-    try {
-      subPopup.close();
-    } catch (_) {}
-  }
-  const banner = document.getElementById('subCloseBanner');
-  if (banner) banner.classList.add('hidden');
-}
-
-function handleSubscribeAndPlay(event) {
+// --- 3. STREAMLINED SUBSCRIBE HANDLER (NO VIDEO COMPLICATION) ---
+function handleSubscribe(event) {
   if (event) event.preventDefault();
   burstConfetti();
-
-  // 1. Immediately launch video in theater modal so playback starts without delay
-  openFullscreenVideo('pwnUTasOQoo');
-
-  // 2. Open YouTube subscription confirmation popup on top
-  const width = 560;
-  const height = 620;
-  const left = Math.max(0, (window.innerWidth - width) / 2 + (window.screenX || window.screenLeft || 0));
-  const top = Math.max(0, (window.innerHeight - height) / 2 + (window.screenY || window.screenTop || 0));
-
-  try {
-    subPopup = window.open(
-      'https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1',
-      'ytSubscriptionWindow',
-      `width=${width},height=${height},top=${top},left=${left},menubar=no,toolbar=no,status=no,resizable=yes`
-    );
-
-    // 3. Show the floating quick-close pill over the video
-    const banner = document.getElementById('subCloseBanner');
-    if (banner) {
-      banner.classList.remove('hidden');
-      if (window.lucide) lucide.createIcons();
-    }
-
-    // 4. Auto-close timer: closes popup after 7 seconds if the user does not close it manually
-    setTimeout(() => {
-      closeSubPopup();
-    }, 7000);
-
-    // 5. Monitor if the user closes it manually earlier
-    if (popupMonitorTimer) clearInterval(popupMonitorTimer);
-    popupMonitorTimer = setInterval(() => {
-      if (subPopup && subPopup.closed) {
-        clearInterval(popupMonitorTimer);
-        const bannerEl = document.getElementById('subCloseBanner');
-        if (bannerEl) bannerEl.classList.add('hidden');
-        showPdfNotice("Subscribed! Enjoying recitation...", "सदस्यता के लिए धन्यवाद! काव्य पाठ जारी है...");
-      }
-    }, 500);
-
-  } catch (err) {
-    console.warn("Popup blocked or failed:", err);
-  }
+  window.open('https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1', '_blank');
 }
 
-// --- 6. TOAST ALERT LOGIC ---
+// --- 4. TOAST ALERT LOGIC ---
 const toastAlert = document.getElementById('toastAlert');
 const toastMainText = document.getElementById('toastMainText');
 const toastSubText = document.getElementById('toastSubText');
@@ -621,99 +529,36 @@ function showPdfNotice(main = "PDF copy coming soon", sub = "पीडीएफ 
   toastTimer = setTimeout(() => {
     toastAlert.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
     toastAlert.classList.remove('opacity-100', 'translate-y-0');
-  }, 4000);
+  }, 3500);
 }
 
-// --- 7. RENDER PUBLISHED BOOKS GALLERY ---
-const gallery = document.getElementById('gallery');
-gallery.innerHTML = '';
-cardImages.forEach((url) => {
-  const div = document.createElement('div');
-  div.className = 'glass-card rounded-xl overflow-hidden hover:border-brand-gold transition-all duration-300 group shadow-lg cursor-pointer transform hover:-translate-y-1';
-  div.onclick = () => showPdfNotice();
-  div.innerHTML = `
-    <div class="photo-card relative">
-      <img src="${url}" class="group-hover:scale-105 transition-transform duration-300" loading="lazy">
-      <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-        <span class="bg-black/80 text-[10px] text-brand-gold px-2.5 py-1 rounded-full border border-brand-gold/60 font-semibold">PDF Coming Soon</span>
-      </div>
-    </div>
-  `;
-  gallery.appendChild(div);
-});
-
-// --- 8. RENDER 4 FEATURED VIDEOS ---
+// --- 5. RENDER 4 FEATURED VIDEOS ---
 const featuredContainer = document.getElementById('featuredVideoThumbnails');
-featuredContainer.innerHTML = '';
-featuredVideosData.forEach((video) => {
-  const card = document.createElement('div');
-  card.className = 'glass-card rounded-lg overflow-hidden hover:border-brand-gold transition-all duration-300 group shadow-md cursor-pointer transform hover:-translate-y-0.5 flex flex-col justify-between';
-  card.onclick = () => openFullscreenVideo(video.id);
-  const thumbUrl = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
-  card.innerHTML = `
-    <div>
-      <div class="relative aspect-video bg-black/80 overflow-hidden">
-        <img src="${thumbUrl}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition-colors flex items-center justify-center">
-          <div class="w-7 h-7 rounded-full bg-red-600/95 group-hover:bg-red-600 flex items-center justify-center text-white transform group-hover:scale-110 transition-transform">
-            <i data-lucide="play" class="w-3.5 h-3.5 ml-0.5 fill-current"></i>
+if (featuredContainer) {
+  featuredContainer.innerHTML = '';
+  featuredVideosData.forEach((video) => {
+    const card = document.createElement('div');
+    card.className = 'glass-card rounded-lg overflow-hidden hover:border-brand-gold transition-all duration-300 group shadow-md cursor-pointer transform hover:-translate-y-0.5 flex flex-col justify-between';
+    card.onclick = () => openFullscreenVideo(video.id);
+    const thumbUrl = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
+    card.innerHTML = `
+      <div>
+        <div class="relative aspect-video bg-black/80 overflow-hidden">
+          <img src="${thumbUrl}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition-colors flex items-center justify-center">
+            <div class="w-7 h-7 rounded-full bg-red-600/95 group-hover:bg-red-600 flex items-center justify-center text-white transform group-hover:scale-110 transition-transform">
+              <i data-lucide="play" class="w-3.5 h-3.5 ml-0.5 fill-current"></i>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="p-1.5 text-center">
-        <h4 class="text-[11px] font-bold text-white line-clamp-1 leading-tight">${video.title}</h4>
-      </div>
-    </div>
-  `;
-  featuredContainer.appendChild(card);
-});
-
-// --- 9. RENDER FULL VIDEOS SECTION ---
-const longVideosGrid = document.getElementById('longVideosGrid');
-longVideosGrid.innerHTML = '';
-longFormVideos.forEach((video) => {
-  const card = document.createElement('div');
-  card.className = 'glass-card rounded-xl overflow-hidden hover:border-brand-gold transition-all duration-300 group shadow-md cursor-pointer transform hover:-translate-y-1 flex flex-col justify-between';
-  card.onclick = () => openFullscreenVideo(video.id);
-  const thumbUrl = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
-  card.innerHTML = `
-    <div>
-      <div class="relative aspect-video bg-black/80 overflow-hidden">
-        <img src="${thumbUrl}" alt="${video.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-black/25 group-hover:bg-black/10 transition-colors flex items-center justify-center">
-          <div class="w-8 h-8 rounded-full bg-red-600/90 group-hover:bg-red-600 flex items-center justify-center text-white transform group-hover:scale-110 transition-transform">
-            <i data-lucide="play" class="w-3.5 h-3.5 ml-0.5 fill-current"></i>
-          </div>
+        <div class="p-1.5 text-center">
+          <h4 class="text-[11px] font-bold text-white line-clamp-1 leading-tight">${video.title}</h4>
         </div>
       </div>
-      <div class="p-2.5"><h4 class="text-xs font-bold text-white line-clamp-1 leading-tight">${video.title}</h4></div>
-    </div>
-  `;
-  longVideosGrid.appendChild(card);
-});
-
-// --- 10. RENDER SHORTS GRID ---
-const shortsVideosGrid = document.getElementById('shortsVideosGrid');
-shortsVideosGrid.innerHTML = '';
-shortsVideos.forEach((short) => {
-  const card = document.createElement('div');
-  card.className = 'glass-card rounded-lg overflow-hidden hover:border-brand-gold transition-all duration-300 group cursor-pointer transform hover:-translate-y-0.5 flex flex-col justify-between';
-  card.onclick = () => openFullscreenVideo(short.id);
-  const thumbUrl = `https://img.youtube.com/vi/${short.id}/hqdefault.jpg`;
-  card.innerHTML = `
-    <div>
-      <div class="relative aspect-[9/16] bg-black/80 overflow-hidden">
-        <img src="${thumbUrl}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
-        <div class="absolute inset-0 bg-black/25 group-hover:bg-black/5 flex items-center justify-center">
-          <div class="w-6 h-6 rounded-full bg-red-600 flex items-center justify-center text-white transform group-hover:scale-110 transition-transform">
-            <i data-lucide="play" class="w-2.5 h-2.5 ml-0.5 fill-current"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-  shortsVideosGrid.appendChild(card);
-});
+    `;
+    featuredContainer.appendChild(card);
+  });
+}
 
 function burstConfetti() { try { if (typeof confetti === 'function') confetti({ particleCount: 80, spread: 60, origin: { y: 0.8 } }); } catch (err) {} }
 
@@ -721,7 +566,7 @@ const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 if (menuToggle && mobileMenu) menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
 
-// --- 11. DYNAMIC LATEST VIDEOS (NO BORDERS, NO PLAY BUTTON, CLEAN) ---
+// --- 6. UTILITY: EXTRACT YOUTUBE ID ---
 function extractYouTubeId(url) {
   if (!url) return null;
   const match = url.match(/(?:studio\.youtube\.com\/video\/|youtube\.com\/(?:watch\?.*v=|embed\/|v\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
@@ -730,6 +575,7 @@ function extractYouTubeId(url) {
   return fallback ? fallback[1] : null;
 }
 
+// --- 7. DYNAMIC LATEST VIDEOS (FROM latest-videos.txt) ---
 async function loadLatestVideos() {
   const section = document.getElementById('latestVideosSection');
   const container = document.getElementById('latestVideosRow');
@@ -762,7 +608,6 @@ async function loadLatestVideos() {
     videos.forEach((video) => {
       const card = document.createElement('div');
       card.className = 'bg-transparent rounded-md overflow-hidden transition-all duration-300 group shadow-sm flex flex-col hover:-translate-y-0.5 cursor-pointer';
-      
       const thumbUrl = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
 
       card.innerHTML = `
@@ -786,7 +631,144 @@ async function loadLatestVideos() {
   }
 }
 
-// --- 12. DYNAMIC SCROLLERS ---
+// --- 8. DYNAMIC PUBLISHED BOOKS LOADER (FROM books.txt or book.txt) ---
+async function loadBooks() {
+  const gallery = document.getElementById('gallery');
+  if (!gallery) return;
+
+  try {
+    let res = await fetch(`books.txt?t=${Date.now()}`);
+    if (!res.ok) res = await fetch(`book.txt?t=${Date.now()}`);
+    if (!res.ok) return;
+
+    const rawText = await res.text();
+    const images = rawText.split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('#'));
+
+    if (images.length === 0) return;
+
+    gallery.innerHTML = '';
+    images.forEach((url) => {
+      const div = document.createElement('div');
+      div.className = 'glass-card rounded-xl overflow-hidden hover:border-brand-gold transition-all duration-300 group shadow-lg cursor-pointer transform hover:-translate-y-1';
+      div.onclick = () => showPdfNotice();
+      div.innerHTML = `
+        <div class="photo-card relative">
+          <img src="${url}" alt="Book Cover" class="group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="bg-black/80 text-[10px] text-brand-gold px-2.5 py-1 rounded-full border border-brand-gold/60 font-semibold">PDF Coming Soon</span>
+          </div>
+        </div>
+      `;
+      gallery.appendChild(div);
+    });
+  } catch (err) {
+    console.error('Error loading books:', err);
+  }
+}
+
+// --- 9. DYNAMIC VIDEOS LOADER (FROM videos.txt: LONG-FORM & SHORTS) ---
+async function loadVideos() {
+  const longGrid = document.getElementById('longVideosGrid');
+  const shortsGrid = document.getElementById('shortsVideosGrid');
+  if (!longGrid && !shortsGrid) return;
+
+  try {
+    const res = await fetch(`videos.txt?t=${Date.now()}`);
+    if (!res.ok) return;
+
+    const rawText = await res.text();
+    const lines = rawText.split('\n');
+
+    let currentSection = 'long';
+    const longVideos = [];
+    const shorts = [];
+
+    for (const rawLine of lines) {
+      const line = rawLine.trim();
+      if (!line) continue;
+
+      if (line.toLowerCase().includes('### shorts')) {
+        currentSection = 'shorts';
+        continue;
+      } else if (line.toLowerCase().includes('### long')) {
+        currentSection = 'long';
+        continue;
+      }
+
+      const match = line.match(/\[([^\]]+)\]\(([^)]+)\)/);
+      if (match) {
+        const title = match[1].replace(/\\([!*_[\]()#+-.])/g, '$1').trim();
+        const url = match[2].trim();
+        const id = extractYouTubeId(url);
+        if (id) {
+          if (currentSection === 'shorts') {
+            shorts.push({ title, id });
+          } else {
+            longVideos.push({ title, id });
+          }
+        }
+      }
+    }
+
+    if (longGrid && longVideos.length > 0) {
+      longGrid.innerHTML = '';
+      longVideos.forEach((video) => {
+        const card = document.createElement('div');
+        card.className = 'glass-card rounded-xl overflow-hidden hover:border-brand-gold transition-all duration-300 group shadow-md cursor-pointer transform hover:-translate-y-1 flex flex-col justify-between';
+        card.onclick = () => openFullscreenVideo(video.id);
+        const thumbUrl = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
+        card.innerHTML = `
+          <div>
+            <div class="relative aspect-video bg-black/80 overflow-hidden">
+              <img src="${thumbUrl}" alt="${video.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
+              <div class="absolute inset-0 bg-black/25 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                <div class="w-8 h-8 rounded-full bg-red-600/90 group-hover:bg-red-600 flex items-center justify-center text-white transform group-hover:scale-110 transition-transform">
+                  <i data-lucide="play" class="w-3.5 h-3.5 ml-0.5 fill-current"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-2.5">
+              <h4 class="text-xs font-bold text-white line-clamp-2 leading-tight">${video.title}</h4>
+            </div>
+          </div>
+        `;
+        longGrid.appendChild(card);
+      });
+    }
+
+    if (shortsGrid && shorts.length > 0) {
+      shortsGrid.innerHTML = '';
+      shorts.forEach((short) => {
+        const card = document.createElement('div');
+        card.className = 'glass-card rounded-lg overflow-hidden hover:border-brand-gold transition-all duration-300 group cursor-pointer transform hover:-translate-y-0.5 flex flex-col justify-between';
+        card.onclick = () => openFullscreenVideo(short.id);
+        const thumbUrl = `https://img.youtube.com/vi/${short.id}/hqdefault.jpg`;
+        card.innerHTML = `
+          <div>
+            <div class="relative aspect-[9/16] bg-black/80 overflow-hidden">
+              <img src="${thumbUrl}" alt="${short.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" loading="lazy">
+              <div class="absolute inset-0 bg-black/25 group-hover:bg-black/5 flex items-center justify-center">
+                <div class="w-6 h-6 rounded-full bg-red-600 flex items-center justify-center text-white transform group-hover:scale-110 transition-transform">
+                  <i data-lucide="play" class="w-2.5 h-2.5 ml-0.5 fill-current"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-1.5">
+              <h4 class="text-[10px] font-bold text-white line-clamp-2 leading-tight">${short.title}</h4>
+            </div>
+          </div>
+        `;
+        shortsGrid.appendChild(card);
+      });
+    }
+
+    if (window.lucide) lucide.createIcons();
+  } catch (err) {
+    console.error('Error loading videos.txt:', err);
+  }
+}
+
+// --- 10. DYNAMIC SCROLLERS (information.txt & additionalinfo.txt) ---
 async function loadTextScroller(file, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
@@ -808,7 +790,10 @@ async function loadTextScroller(file, containerId) {
   } catch (err) {}
 }
 
+// Initialize dynamic loaders
 loadLatestVideos();
+loadBooks();
+loadVideos();
 loadTextScroller('information.txt', 'infoScrollerContent');
 loadTextScroller('additionalinfo.txt', 'additionalInfoScrollerContent');
 lucide.createIcons();
