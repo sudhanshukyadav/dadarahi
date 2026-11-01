@@ -129,11 +129,11 @@ body.bg-lightened {
 <header class="sticky top-0 z-40 bg-black/90 backdrop-blur-md border-b border-white/20">
   <div class="max-w-7xl mx-auto px-4 sm:px-8 h-24 sm:h-28 flex items-center justify-between gap-6">
     
-    <a href="https://www.youtube.com/@DadaRahi-NAVGEET" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 group shrink-0">
+    <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 group shrink-0">
       <img src="https://i.imgur.com/W6t2NCzh.jpeg" alt="Yatindra Nath Rahi" class="w-14 h-14 sm:w-20 sm:h-20 rounded-full border-2 border-brand-gold object-cover object-top shadow-xl group-hover:scale-105 transition-transform">
       <div>
         <h1 class="font-bold text-lg sm:text-2xl leading-snug tracking-wide text-brand-amberGold text-stroke-strong group-hover:text-white transition-colors">Yatindra Nath Yadav 'Rahi'</h1>
-        <p class="text-xs sm:text-sm text-amber-100 text-stroke-strong font-semibold">यतीन्द्र नाथ यादव 'राही' · @DadaRahi-NAVGEET</p>
+        <p class="text-xs sm:text-sm text-amber-100 text-stroke-strong font-semibold">यतीन्द्र नाथ यादव 'राही' · @Rahi100-YatindraNath</p>
       </div>
     </a>
 
@@ -151,7 +151,8 @@ body.bg-lightened {
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
         <span>LinkedIn</span>
       </a>
-      <a href="https://www.youtube.com/@DadaRahi-NAVGEET" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="nav-link flex items-center gap-1.5 text-sm font-medium text-amber-100 text-stroke-strong hover:text-brand-amberGold transition-colors">
+      <!-- Direct Working YouTube Header Link -->
+      <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="nav-link flex items-center gap-1.5 text-sm font-medium text-amber-100 text-stroke-strong hover:text-brand-amberGold transition-colors">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span>YouTube</span>
       </a>
@@ -161,16 +162,16 @@ body.bg-lightened {
       </a>
     </nav>
 
-    <!-- Header Actions (Direct Subscribe Prompt) -->
+    <!-- Header Actions (Subscribes & Plays Video Fullscreen) -->
     <div class="hidden sm:flex items-center gap-3 shrink-0 font-sans">
       <a href="contact.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm rounded-full shadow-lg transition-all hover:scale-105 border border-emerald-400">
         <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
         <span class="text-stroke-strong">Call Back</span>
       </a>
-      <a href="https://www.youtube.com/@DadaRahi-NAVGEET?sub_confirmation=1" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="inline-flex items-center gap-1.5 px-4 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs sm:text-sm rounded-full shadow-lg transition-all hover:scale-105 border border-black/50 cursor-pointer">
+      <button type="button" onclick="handleSubscribeAndPlay(event)" class="inline-flex items-center gap-1.5 px-4 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs sm:text-sm rounded-full shadow-lg transition-all hover:scale-105 border border-black/50 cursor-pointer">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span class="text-stroke-strong">Subscribe</span>
-      </a>
+      </button>
     </div>
 
     <!-- Mobile Toggle -->
@@ -187,10 +188,10 @@ body.bg-lightened {
           <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
           <span class="text-stroke-strong">Call Back</span>
         </a>
-        <a href="https://www.youtube.com/@DadaRahi-NAVGEET?sub_confirmation=1" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-full shadow cursor-pointer">
+        <button type="button" onclick="handleSubscribeAndPlay(event)" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-full shadow cursor-pointer">
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
           <span class="text-stroke-strong">Subscribe</span>
-        </a>
+        </button>
       </div>
       <a href="#all-videos" onclick="document.getElementById('mobileMenu').classList.remove('open')" class="flex items-center gap-3 py-2 text-sm font-semibold text-white text-stroke-strong">
         <i data-lucide="film" class="w-4 h-4 text-white"></i>
@@ -204,7 +205,7 @@ body.bg-lightened {
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
         <span>LinkedIn · लिंक्डइन</span>
       </a>
-      <a href="https://www.youtube.com/@DadaRahi-NAVGEET" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-strong">
+      <a href="https://www.youtube.com/@Rahi100-YatindraNath" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="flex items-center gap-3 py-2 text-sm font-medium text-amber-100 text-stroke-strong">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         <span>YouTube · यूट्यूब</span>
       </a>
@@ -240,7 +241,7 @@ body.bg-lightened {
 <!-- Hero Section with Dual Left & Right Scrollers -->
 <section class="relative pt-3 pb-8 px-4 sm:px-6 overflow-hidden">
   
-  <!-- 1. Centered Top Headings and Text -->
+  <!-- Centered Headings and Subtext -->
   <div class="max-w-4xl mx-auto text-center mb-5">
     <h2 class="font-extrabold mb-2 text-white">
       <span class="gold-gradient-text block text-2xl sm:text-4xl md:text-5xl leading-tight">शब्दों में जीवन की लय</span>
@@ -257,10 +258,10 @@ body.bg-lightened {
     </div>
   </div>
 
-  <!-- 2. Symmetrical 3-Column Level (Buttons & Thumbnails centered, flanked by Left & Right Scrollers) -->
+  <!-- Symmetrical 3-Column Level (Buttons & Thumbnails in center, flanked by scrollers) -->
   <div class="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-start justify-center gap-4">
 
-    <!-- LEFT SCROLLER (information.txt) - Top level with buttons, Bottom level with thumbnails -->
+    <!-- LEFT SCROLLER (information.txt) -->
     <aside class="w-full lg:w-80 xl:w-96 shrink-0 flex flex-col">
       <div class="bg-black/85 backdrop-blur-md border border-brand-gold/60 rounded-xl p-3 h-full flex flex-col justify-between shadow-2xl">
         <div class="flex items-center justify-between pb-2 mb-2 border-b border-brand-gold/30">
@@ -276,7 +277,7 @@ body.bg-lightened {
           <span class="text-[9px] text-amber-200/80 font-mono">information.txt</span>
         </div>
 
-        <div class="scroller-window relative flex-1 min-h-[100px] overflow-hidden rounded-lg bg-black/50 border border-white/10 p-1.5 cursor-pointer">
+        <div class="scroller-window relative h-[50px] overflow-hidden rounded-lg bg-black/50 border border-white/10 p-1.5 cursor-pointer">
           <div class="absolute inset-x-0 top-0 h-6 bg-gradient-to-b from-black/90 to-transparent z-10 pointer-events-none"></div>
           <div class="absolute inset-x-0 bottom-0 h-6 bg-gradient-to-t from-black/90 to-transparent z-10 pointer-events-none"></div>
 
@@ -291,7 +292,7 @@ body.bg-lightened {
       </div>
     </aside>
 
-    <!-- CENTER COLUMN: 4 Playlist Buttons on top + 4 Thumbnails on bottom (Strict Center) -->
+    <!-- CENTER COLUMN: 4 Playlist Buttons on top + 4 Thumbnails on bottom -->
     <div class="w-full max-w-2xl shrink-0 flex flex-col justify-between">
       
       <!-- 4 Series Playlist Buttons -->
@@ -331,7 +332,7 @@ body.bg-lightened {
         </div>
       </div>
 
-      <!-- 4 Featured Video Thumbnails (Coincides with bottom of left & right scrollers) -->
+      <!-- 4 Featured Video Thumbnails -->
       <div id="featured-videos" class="w-full scroll-mt-28">
         <div id="featuredVideoThumbnails" class="grid grid-cols-2 sm:grid-cols-4 gap-2">
           <!-- Injected dynamically -->
@@ -340,7 +341,7 @@ body.bg-lightened {
 
     </div>
 
-    <!-- RIGHT SCROLLER (additionalinfo.txt) - Top level with buttons, Bottom level with thumbnails -->
+    <!-- RIGHT SCROLLER (additionalinfo.txt) -->
     <aside class="w-full lg:w-80 xl:w-96 shrink-0 flex flex-col">
       <div class="bg-black/85 backdrop-blur-md border border-brand-gold/60 rounded-xl p-3 h-full flex flex-col justify-between shadow-2xl">
         <div class="flex items-center justify-between pb-2 mb-2 border-b border-brand-gold/30">
@@ -356,7 +357,7 @@ body.bg-lightened {
           <span class="text-[9px] text-amber-200/80 font-mono">additionalinfo.txt</span>
         </div>
 
-        <div class="scroller-window relative flex-1 min-h-[120px] overflow-hidden rounded-lg bg-black/50 border border-white/10 p-1.5 cursor-pointer">
+        <div class="scroller-window relative h-[50px] overflow-hidden rounded-lg bg-black/50 border border-white/10 p-1.5 cursor-pointer">
           <div class="absolute inset-x-0 top-0 h-6 bg-gradient-to-b from-black/90 to-transparent z-10 pointer-events-none"></div>
           <div class="absolute inset-x-0 bottom-0 h-6 bg-gradient-to-t from-black/90 to-transparent z-10 pointer-events-none"></div>
 
@@ -403,7 +404,7 @@ body.bg-lightened {
         Videos and Video transformation of works (वीडियो और कार्यों का वीडियो रूपांतरण)
       </h3>
       <p class="text-base text-amber-100 font-semibold mt-1 text-stroke-strong">
-        यूट्यूब चैनल @DadaRahi-NAVGEET के सभी प्रकाशित वीडियो एवं काव्य रूपांतरण
+        यूट्यूब चैनल @Rahi100-YatindraNath के सभी प्रकाशित वीडियो एवं काव्य रूपांतरण
       </p>
     </div>
     <div class="text-xs sm:text-sm text-amber-200/90 max-w-sm text-stroke-strong font-semibold">
@@ -463,13 +464,13 @@ body.bg-lightened {
       </div>
     </a>
 
-    <a href="https://www.youtube.com/@DadaRahi-NAVGEET?sub_confirmation=1" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 group shadow-xl">
+    <a href="https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1" target="_blank" rel="noopener noreferrer" onclick="burstConfetti()" class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 group shadow-xl">
       <div>
         <div class="w-10 h-10 rounded-lg bg-black/90 text-brand-gold flex items-center justify-center mb-4 border border-brand-gold/40 group-hover:scale-110 transition-transform">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
         </div>
         <h4 class="text-lg font-bold text-brand-gold mb-1 text-stroke-strong group-hover:text-white transition-colors">YouTube Channel</h4>
-        <p class="text-xs text-brand-amberGold font-devanagari mb-3 text-stroke-strong font-semibold">यूट्यूब चैनल @DadaRahi-NAVGEET</p>
+        <p class="text-xs text-brand-amberGold font-devanagari mb-3 text-stroke-strong font-semibold">यूट्यूब चैनल @Rahi100-YatindraNath</p>
         <p class="text-xs text-white leading-relaxed mb-2 text-stroke-strong">Grand poetry symposiums, children's song series and international poetry recitations — all videos in one place.</p>
         <p class="text-xs text-white font-devanagari leading-relaxed mb-4 text-stroke-strong font-semibold">भव्य कवि सम्मेलन, तुन-तुन-तुन्ना बालगीत श्रृंखला एवं अंतर्राष्ट्रीय काव्य पाठ — सभी वीडियो एक स्थान पर।</p>
       </div>
@@ -500,7 +501,7 @@ body.bg-lightened {
   <p class="mb-2 text-stroke-strong">© 2026 Yatindra Nath 'Rahi' — All rights reserved. · यतीन्द्र नाथ यादव 'राही' — सर्वाधिकार सुरक्षित।</p>
   <div class="flex flex-wrap items-center justify-center gap-4 font-mono text-[11px]">
     <a href="https://share.google/BT4RiFS6ZYaijoYhi" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-strong">LinkedIn</a>
-    <a href="https://www.youtube.com/@DadaRahi-NAVGEET?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-strong">YouTube Subscribe</a>
+    <a href="https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-strong">YouTube Subscribe</a>
     <a href="https://facebook.com/share/1BcPLox5nd" target="_blank" rel="noopener noreferrer" class="text-brand-gold underline hover:text-white text-stroke-strong">Facebook</a>
   </div>
 </footer>
@@ -671,7 +672,17 @@ window.addEventListener('keydown', (e) => {
   });
 });
 
-// --- 5. TOAST ALERT LOGIC ---
+// --- 5. SUBSCRIBE & PLAY FULLSCREEN VIDEO HANDLER ---
+function handleSubscribeAndPlay(event) {
+  if (event) event.preventDefault();
+  burstConfetti();
+  // Opens subscription prompt in new tab
+  window.open('https://www.youtube.com/@Rahi100-YatindraNath?sub_confirmation=1', '_blank');
+  // Simultaneously plays video on fullscreen modal
+  openFullscreenVideo('pwnUTasOQoo');
+}
+
+// --- 6. TOAST ALERT LOGIC ---
 const toastAlert = document.getElementById('toastAlert');
 const toastMainText = document.getElementById('toastMainText');
 const toastSubText = document.getElementById('toastSubText');
@@ -691,7 +702,7 @@ function showPdfNotice(main = "PDF copy coming soon", sub = "पीडीएफ 
   }, 3000);
 }
 
-// --- 6. RENDER PUBLISHED BOOKS GALLERY ---
+// --- 7. RENDER PUBLISHED BOOKS GALLERY ---
 const gallery = document.getElementById('gallery');
 gallery.innerHTML = '';
 cardImages.forEach((url, i) => {
@@ -710,7 +721,7 @@ cardImages.forEach((url, i) => {
   gallery.appendChild(div);
 });
 
-// --- 7. RENDER 4 FEATURED VIDEOS ---
+// --- 8. RENDER 4 FEATURED VIDEOS ---
 const featuredContainer = document.getElementById('featuredVideoThumbnails');
 featuredContainer.innerHTML = '';
 featuredVideosData.forEach((video) => {
@@ -746,7 +757,7 @@ featuredVideosData.forEach((video) => {
   featuredContainer.appendChild(card);
 });
 
-// --- 8. RENDER FULL VIDEOS SECTION ---
+// --- 9. RENDER FULL VIDEOS SECTION ---
 const longVideosGrid = document.getElementById('longVideosGrid');
 longVideosGrid.innerHTML = '';
 longFormVideos.forEach((video) => {
@@ -779,7 +790,7 @@ longFormVideos.forEach((video) => {
   longVideosGrid.appendChild(card);
 });
 
-// --- 9. RENDER SHORTS GRID ---
+// --- 10. RENDER SHORTS GRID ---
 const shortsVideosGrid = document.getElementById('shortsVideosGrid');
 shortsVideosGrid.innerHTML = '';
 shortsVideos.forEach((short) => {
@@ -808,7 +819,7 @@ shortsVideos.forEach((short) => {
   shortsVideosGrid.appendChild(card);
 });
 
-// --- 10. SAFE CONFETTI EFFECT ---
+// --- 11. CONFETTI EFFECT ---
 function burstConfetti() {
   try {
     if (typeof confetti === 'function') {
@@ -821,7 +832,7 @@ function burstConfetti() {
   } catch (err) {}
 }
 
-// --- 11. MOBILE MENU TOGGLE ---
+// --- 12. MOBILE MENU TOGGLE ---
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 if (menuToggle && mobileMenu) {
@@ -830,7 +841,7 @@ if (menuToggle && mobileMenu) {
   });
 }
 
-// --- 12. DYNAMIC LATEST VIDEOS (MINI 25% THUMBNAILS) ---
+// --- 13. DYNAMIC LATEST VIDEOS LOADER ---
 function extractYouTubeId(url) {
   if (!url) return null;
   const match = url.match(/(?:studio\.youtube\.com\/video\/|youtube\.com\/(?:watch\?.*v=|embed\/|v\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
@@ -913,7 +924,7 @@ async function loadLatestVideos() {
   }
 }
 
-// --- 13. REUSABLE SLOW TEXT SCROLLER LOADER (information.txt & additionalinfo.txt) ---
+// --- 14. DYNAMIC SCROLLERS FOR information.txt & additionalinfo.txt ---
 async function loadTextScroller(file, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
@@ -937,7 +948,6 @@ async function loadTextScroller(file, containerId) {
       </div>
     `;
 
-    // Render items twice to create seamless loop
     const firstSet = items.map(renderCard).join('');
     const secondSet = items.map(renderCard).join('');
 
